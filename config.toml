@@ -1,4 +1,4 @@
-baseURL = 'https://github.com/ToniCzyrnik/ToniCzyrnik.github.io'
+baseURL = 'https://czyrnik.me'
 languageCode = 'en-us'
 title = 'Tonis Blog'
 theme = "anubis"
