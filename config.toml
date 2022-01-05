@@ -1,6 +1,6 @@
 baseURL = 'https://czyrnik.me'
 languageCode = 'en-us'
-title = 'Tonis Blog'
+title = "Toni's Blog"
 theme = "anubis"
 
 [author]
