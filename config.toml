@@ -9,7 +9,7 @@ name = "Toni Czyrnik"
 [params]
 author = "Toni Czyrnik"
 description = "Personal Blog"
-dateFormat = "01.01.2022"
+dateFormat = "02 Jan 2006"
 paginationSinglePost = true
 style = "auto"
 readMore = false

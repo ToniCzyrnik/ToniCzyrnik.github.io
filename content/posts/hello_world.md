@@ -1,9 +1,22 @@
 ---
-title: "Hello World!"
-date: 2022-01-05T19:00:00+01:00
+title: "Hello World! :)"
+date: 2022-01-05
+publishDate: 2022-01-05
+lastmod: 2022-01-05
 draft: false
 
-keywords: 
+keywords:
 description:
-summary: My first Post
+summary: Its very first post.
 ---
+
+# Hey!
+
+
+Welcome to my blog!
+
+I'm glad you are here.
+
+I'll keep you updated in the following weeks and months!
+
+See you in the next one.
