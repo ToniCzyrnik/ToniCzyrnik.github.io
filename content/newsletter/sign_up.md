@@ -1,6 +1,8 @@
 ---
 title: "Newsletter 💌"
+hidden: false
 ---
+
 
 If you would like to stay updated on all new posts, I'd be happy to have join our list of friends!
 

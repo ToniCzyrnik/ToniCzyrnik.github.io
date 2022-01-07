@@ -1,3 +1,11 @@
+---
+title: "Newsletter"
+author: "Toni Czyrnik"
+
+tags:
+  - "Newsletter"
+---
+
 Thanks for considering joing my newsletter! 🙂
 
 <br>

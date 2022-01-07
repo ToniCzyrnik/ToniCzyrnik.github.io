@@ -40,13 +40,19 @@ url = "mailto:mail@czyrnik.me"
 identifier = "about"
 name = "About"
 url = "/about/"
-weight = 1
+weight = 3
 
 [[menu.main]]
 identifier = "newsletter"
 name = "Newsletter"
-url = "/newsletter/"
+url = "/newsletter/sign_up"
 weight = 2
+
+[[menu.main]]
+name = "Posts"
+identifier = "posts"
+url = "/posts/"
+weight = 1
 
 [markup.goldmark.renderer]
 unsafe = true
