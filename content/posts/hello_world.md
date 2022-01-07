@@ -7,7 +7,7 @@ draft: false
 
 keywords:
 description:
-summary: Its my very first post.
+summary: That's my very first post.
 ---
 
 # Hey!
