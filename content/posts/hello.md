@@ -1,17 +1,12 @@
 ---
 title: "Hello World! :)"
+author: "Toni Czyrnik"
 date: 2022-01-05
 publishDate: 2022-01-05
 lastmod: 2022-01-05
 draft: false
-
-keywords:
-description:
 summary: That's my very first post.
 ---
-
-# Hey!
-
 
 Welcome to my blog!
 
