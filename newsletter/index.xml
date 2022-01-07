@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Newsletter on Toni&#39;s Blog</title>
+    <link>https://czyrnik.me/newsletter/</link>
+    <description>Toni&#39;s Blog (Newsletter)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+    <atom:link href="https://czyrnik.me/newsletter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thank you for subscribing! ❤️</title>
+      <link>https://czyrnik.me/newsletter/thanks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/newsletter/thanks/</guid>
+      <description>&lt;p&gt;You will be updated, when any new posts are avaiable!&lt;/p&gt;
+&lt;p&gt;See you soon. 👋&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
