@@ -11,13 +11,27 @@
     
     
     <item>
-      <title>Thank you for subscribing! ❤️</title>
-      <link>https://czyrnik.me/newsletter/thanks/</link>
+      <title>Newsletter 💌</title>
+      <link>https://czyrnik.me/newsletter/sign_up/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://czyrnik.me/newsletter/thanks/</guid>
-      <description>&lt;p&gt;You will be updated, when any new posts are avaiable!&lt;/p&gt;
-&lt;p&gt;See you soon. 👋&lt;/p&gt;
+      <guid>https://czyrnik.me/newsletter/sign_up/</guid>
+      <description>&lt;p&gt;If you would like to stay updated on all new posts, I&amp;rsquo;d be happy to have join our list of friends!&lt;/p&gt;
+&lt;!-- Begin Mailchimp Signup Form --&gt;
+&lt;link href=&#34;//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7_dtp.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&gt;
+&lt;div id=&#34;mc_embed_signup&#34;&gt;
+&lt;form action=&#34;https://czyrnik.us20.list-manage.com/subscribe/post?u=f7ddccf772ea4e90b7ffc9a11&amp;amp;id=bab481ddc0&#34; method=&#34;post&#34; id=&#34;mc-embedded-subscribe-form&#34; name=&#34;mc-embedded-subscribe-form&#34; class=&#34;validate&#34; target=&#34;_blank&#34; novalidate&gt;
+    &lt;div id=&#34;mc_embed_signup_scroll&#34;&gt;
+	&lt;input type=&#34;email&#34; value=&#34;&#34; name=&#34;EMAIL&#34; class=&#34;email&#34; id=&#34;mce-EMAIL&#34; placeholder=&#34;email address&#34; required&gt;
+    &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
+    &lt;div style=&#34;position: absolute; left: -5000px;&#34; aria-hidden=&#34;true&#34;&gt;&lt;input type=&#34;text&#34; name=&#34;b_f7ddccf772ea4e90b7ffc9a11_bab481ddc0&#34; tabindex=&#34;-1&#34; value=&#34;&#34;&gt;&lt;/div&gt;
+        &lt;div class=&#34;clear foot&#34;&gt;
+           &lt;input type=&#34;submit&#34; value=&#34;Subscribe&#34; name=&#34;subscribe&#34; id=&#34;mc-embedded-subscribe&#34; class=&#34;button&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;!--End mc_embed_signup--&gt;
 </description>
     </item>
     
