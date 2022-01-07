@@ -1,4 +1,9 @@
-# Thank you for considering!
+---
+title: "Newsletter"
+---
+
+If you would like to stay updated on all news posts, I'd be happy to have join our list of friends!
+
 
 <!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7_dtp.css" rel="stylesheet" type="text/css">
