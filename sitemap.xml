@@ -14,6 +14,9 @@
     <loc>https://czyrnik.me/about/</loc>
     <priority>0</priority>
   </url><url>
+    <loc>https://czyrnik.me/newsletter/</loc>
+    <priority>0</priority>
+  </url><url>
     <loc>https://czyrnik.me/categories/</loc>
   </url><url>
     <loc>https://czyrnik.me/tags/</loc>
