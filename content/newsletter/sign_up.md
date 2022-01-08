@@ -1,6 +1,8 @@
 ---
 title: "Newsletter 💌"
-hidden: false
+hidden: true
+aliases:
+  - "signup"
 ---
 
 
