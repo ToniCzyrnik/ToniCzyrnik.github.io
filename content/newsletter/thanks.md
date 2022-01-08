@@ -1,8 +1,8 @@
 ---
 title: "Thank you for subscribing! ❤️"
-hidden: True
+hidden: true
 ---
 
-You will be updated, when any new posts are avaiable!
+You will be updated, when any new posts are available!
 
 See you soon. 👋
