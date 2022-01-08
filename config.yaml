@@ -1,0 +1,48 @@
+baseURL: "https://czyrnik.me"
+languageCode: "en-us"
+title: "Toni's Blog"
+theme: "anubis"
+
+params:
+  author: "Toni Czyrnik"
+  description: "Personal Blog"
+  dateFormat: "2006-01-02"
+  paginationSinglePost: true
+  style: "auto"
+  readMore: false
+
+  # utteranc.es support
+  utterancesRepo: ""  # mandatory
+  utterancesTheme: "" # optional
+  utterancesIssue: "" # optional
+  utterancesLabel: "" # optional
+
+
+  social:
+    - id: "linkedin"
+      url: "https://www.linkedin.com/in/czyrnik/"
+    - id: "github"
+      url: "https://github.com/ToniCzyrnik/ToniCzyrnik.github.io"
+    - id: "email"
+      url: "mailto:mail@czyrnik.me"
+
+
+menu:
+  main:
+    - identifier: blog
+      name: "Blog"
+      url: "/blog/"
+      weight: 1
+    - identifier:  "newsletter"
+      name: "Newsletter"
+      url:  "/newsletter/sign_up"
+      weight:  2
+    - identifier:  "about"
+      name:  "About"
+      url: "/about/"
+      weight:  3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
