@@ -1,12 +1,13 @@
 ---
 title: "Newsletter"
 author: "Toni Czyrnik"
-
+aliases:
+  - "follow"
 tags:
   - "Newsletter"
 ---
 
-Thanks for considering joing my newsletter! 🙂
+Thanks for considering joining my newsletter! 🙂
 
 <br>
 
