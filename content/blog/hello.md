@@ -1,10 +1,11 @@
 ---
 title: "Hello World! :)"
-author: "Toni Czyrnik"
 date: 2022-01-05
 publishDate: 2022-01-05
-lastmod: 2022-01-05
+lastmod: 2022-01-07
 draft: false
+
+
 summary: That's my very first post.
 ---
 
