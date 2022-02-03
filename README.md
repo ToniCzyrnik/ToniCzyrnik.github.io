@@ -9,7 +9,9 @@ The main blog directory needs to have the most files. Otherwise, the postings wi
     $ brew install hugo
 
 ### Install submodules
-$ git submodule update --init --recursive
+
+	$ git submodule update --init --recursive
+ 
 
 ### Build locally
-$ hugo server
+	$ hugo server
