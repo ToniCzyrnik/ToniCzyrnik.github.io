@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Toni&#39;s Blog</title>
+    <link>https://czyrnik.me/blog/</link>
+    <description>Recent content in Blog on Toni&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://czyrnik.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World! :)</title>
+      <link>https://czyrnik.me/blog/hello/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/blog/hello/</guid>
+      <description>That&amp;rsquo;s my very first post.</description>
+    </item>
+    
+    <item>
+      <title>In progress</title>
+      <link>https://czyrnik.me/blog/hello2/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/blog/hello2/</guid>
+      <description>That&amp;rsquo;s my second post.</description>
+    </item>
+    
+    <item>
+      <title>In progress 2</title>
+      <link>https://czyrnik.me/blog/hello3/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/blog/hello3/</guid>
+      <description>That&amp;rsquo;s my second post.</description>
+    </item>
+    
+  </channel>
+</rss>

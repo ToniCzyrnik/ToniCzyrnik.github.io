@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Toni&#39;s Blog</title>
+    <link>https://czyrnik.me/</link>
+    <description>Recent content on Toni&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://czyrnik.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World! :)</title>
+      <link>https://czyrnik.me/blog/hello/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/blog/hello/</guid>
+      <description>That&amp;rsquo;s my very first post.</description>
+    </item>
+    
+    <item>
+      <title>In progress</title>
+      <link>https://czyrnik.me/blog/hello2/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/blog/hello2/</guid>
+      <description>That&amp;rsquo;s my second post.</description>
+    </item>
+    
+    <item>
+      <title>In progress 2</title>
+      <link>https://czyrnik.me/blog/hello3/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/blog/hello3/</guid>
+      <description>That&amp;rsquo;s my second post.</description>
+    </item>
+    
+    <item>
+      <title>Hi, I&#39;m Toni! 🙃</title>
+      <link>https://czyrnik.me/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/about/</guid>
+      <description>I&amp;rsquo;m an electrical power student.</description>
+    </item>
+    
+    <item>
+      <title>Newsletter 💌</title>
+      <link>https://czyrnik.me/newsletter/sign_up/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/newsletter/sign_up/</guid>
+      <description>If you would like to stay updated on all new posts, I&amp;rsquo;d be happy to have join our list of friends!
+     </description>
+    </item>
+    
+    <item>
+      <title>Thank you for subscribing! ❤️</title>
+      <link>https://czyrnik.me/newsletter/thanks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/newsletter/thanks/</guid>
+      <description>You will be updated, when any new posts are available!
+See you soon. 👋</description>
+    </item>
+    
+  </channel>
+</rss>

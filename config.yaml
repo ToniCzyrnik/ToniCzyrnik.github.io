@@ -10,7 +10,7 @@ params:
   paginationSinglePost: true
   style: "auto"
   readMore: false
-
+  
   # utteranc.es support
   utterancesRepo: ""  # mandatory
   utterancesTheme: "" # optional

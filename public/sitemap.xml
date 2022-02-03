@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://czyrnik.me/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://czyrnik.me/blog/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://czyrnik.me/blog/hello/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://czyrnik.me/blog/hello2/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://czyrnik.me/blog/hello3/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://czyrnik.me/categories/</loc>
+  </url><url>
+    <loc>https://czyrnik.me/about/</loc>
+  </url><url>
+    <loc>https://czyrnik.me/tags/newsletter/</loc>
+  </url><url>
+    <loc>https://czyrnik.me/newsletter/</loc>
+  </url><url>
+    <loc>https://czyrnik.me/newsletter/sign_up/</loc>
+  </url><url>
+    <loc>https://czyrnik.me/tags/</loc>
+  </url><url>
+    <loc>https://czyrnik.me/newsletter/thanks/</loc>
+  </url>
+</urlset>
