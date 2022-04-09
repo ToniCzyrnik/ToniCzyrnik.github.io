@@ -5,8 +5,8 @@ date: 2022-03-31
 publishDate: 2022-04-08
 lastmod: 2022-04-01
 
-draft: True
-hidden: false
+draft: false
+hidden: True
 
 categories:
   - Raspberry Pi
