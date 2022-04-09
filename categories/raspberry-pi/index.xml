@@ -57,9 +57,147 @@ password: raspberry
 &lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;d like to change your credentials in the future, just use the raspi-config! There are many more things to tweak as well. Have a look!&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo raspi-config
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;update-software&#34;&gt;Update Software
+&lt;span&gt;&lt;a href=&#34;#update-software&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;You probably want to update your Raspberry Pi down the line. Just use this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get update 
+sudo apt-get upgrade 
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
 &lt;span&gt;&lt;a href=&#34;#conclusion&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;That was the fast track to get your Raspberry Pi up and running. We&amp;rsquo;ll use this setup for the following topics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-(macos)&#34;&gt;Emulating a Time Capusle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to use a Raspberry as Time Capsule (MacOS)</title>
+      <link>https://czyrnik.me/blog/how-to-set-a-raspberry-as-time-capsule/</link>
+      <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/blog/how-to-set-a-raspberry-as-time-capsule/</guid>
+      <description>&lt;h2 id=&#34;setup-raspberry-pi&#34;&gt;Setup Raspberry Pi
+&lt;span&gt;&lt;a href=&#34;#setup-raspberry-pi&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;If you want to read about our basic Raspberry Setup: &lt;a href=&#34;https://czyrnik.me/blog/how-to-set-up-a-raspberry-pi/&#34;&gt;Here you go!&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;prepare-the-external-drive&#34;&gt;Prepare the external drive
+&lt;span&gt;&lt;a href=&#34;#prepare-the-external-drive&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;The most important thing is going to be our connected hard drive. I used a SSD connected via USB to the Pi. We need a drive that uses HFS+ or APFS. Otherwise, we cannot use it for Time Machine. Currently, there&amp;rsquo;s only a reliable read-only version for APFS on Linux. So, we are going to use HFS+ instead.&lt;/p&gt;
+&lt;p&gt;Please make sure you format your drive correctly and do not forget to give read and write permissions to everyone using &amp;ldquo;get info&amp;rdquo; on your Mac.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./permissions.png&#34; alt=&#34;Permissions&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;mounting-our-hard-drive&#34;&gt;Mounting our Hard Drive
+&lt;span&gt;&lt;a href=&#34;#mounting-our-hard-drive&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;After we connected your drive to the Pi, we need to mount it. Otherwise we cannot access it. The Format HFS+ is not native to Linux. So, we need to install it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install hfsprogs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After installing it, we need to find the name of our drive.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;lsblk -f
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The name of my drive is &amp;ldquo;sda2&amp;rdquo;. You&amp;rsquo;ll find yours looking at the format and the size.&lt;/p&gt;
+&lt;h3 id=&#34;creating-a-mount-point&#34;&gt;Creating a Mount Point
+&lt;span&gt;&lt;a href=&#34;#creating-a-mount-point&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Before mounting a drive, we&amp;rsquo;ll need a mount point! Let&amp;rsquo;s create a directory. You can choose the path to your point as you like. I chose &amp;ldquo;/TM&amp;rdquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo mkdir -p /TM
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s mount our drive!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo mount -t hfsplus -o force,rw /dev/name_of_your_drive /your_mount_point
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Unfortunately, the drive is not yet mounted permantly. Let&amp;rsquo;s do that! Let&amp;rsquo;s find the &amp;ldquo;PARTUUID&amp;rdquo; of your drive fist.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo blkid /dev/sda2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s open the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/fstab
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Add this line with your &amp;ldquo;PARTUUID&amp;rdquo; to the bottom of the file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;PARTUUID=&amp;quot;your_partuuid&amp;quot; /your_mountpoint     hfsplus force,rw,user,auto        0       0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, our drive will be mounted after every boot of the pi! 🤯&lt;/p&gt;
+&lt;h2 id=&#34;preparing-everything-for-time-machine&#34;&gt;Preparing everything for Time Machine
+&lt;span&gt;&lt;a href=&#34;#preparing-everything-for-time-machine&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Before the can access the drive from our Mac, we need couple of additional tweaks.&lt;/p&gt;
+&lt;h3 id=&#34;install-samba-and-avahi&#34;&gt;Install Samba and Avahi
+&lt;span&gt;&lt;a href=&#34;#install-samba-and-avahi&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Samba is used for the file server.&lt;/p&gt;
+&lt;p&gt;Avahi emulates a Time Capsule and our drive get&amp;rsquo;s automatically discovered by MacOS. 🔎&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s install everything on our Raspberry Pi.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install samba avahi-daemon
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;creating-a-new-user-on-the-pi&#34;&gt;Creating a new user on the Pi
+&lt;span&gt;&lt;a href=&#34;#creating-a-new-user-on-the-pi&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Let&amp;rsquo;s add a user &amp;ldquo;timemachine&amp;rdquo; for dealing with all our Time Machine stuff!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo adduser timemachine
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After creating the user, you&amp;rsquo;ll be prompted to enter a password for the new user on your Raspberry Pi.&lt;/p&gt;
+&lt;h3 id=&#34;configurating-samba&#34;&gt;Configurating Samba
+&lt;span&gt;&lt;a href=&#34;#configurating-samba&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;We need to define a password for Samba. I used the same password for convenience.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo smbpasswd -a timemachine
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The need to define same details for Samba. &amp;ldquo;Time Machine&amp;rdquo; will be the name for our server.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/samba/smb.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Add these lines to end of the file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Time Machine]
+	comment = Backups
+	path = /your_mount_point
+	valid users = timemachine
+	read only = no
+	vfs objects = catia fruit streams_xattr
+	fruit:time machine = yes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The changes will be affective after reloading Samba!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo service smbd reload
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;configurating-avahi&#34;&gt;Configurating Avahi
+&lt;span&gt;&lt;a href=&#34;#configurating-avahi&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Allmost done! 🙂&lt;/p&gt;
+&lt;p&gt;We need to configure Avahi. Lets open the following file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/avahi/services/samba.service
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The need to copy all the following into this file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; standalone=&#39;no&#39;?&amp;gt;&amp;lt;!--*-nxml-*--&amp;gt;
+&amp;lt;!DOCTYPE service-group SYSTEM &amp;quot;avahi-service.dtd&amp;quot;&amp;gt;
+&amp;lt;service-group&amp;gt;
+  &amp;lt;name replace-wildcards=&amp;quot;yes&amp;quot;&amp;gt;%h&amp;lt;/name&amp;gt;
+  &amp;lt;service&amp;gt;
+    &amp;lt;type&amp;gt;_smb._tcp&amp;lt;/type&amp;gt;
+    &amp;lt;port&amp;gt;445&amp;lt;/port&amp;gt;
+  &amp;lt;/service&amp;gt;
+  &amp;lt;service&amp;gt;
+    &amp;lt;type&amp;gt;_device-info._tcp&amp;lt;/type&amp;gt;
+    &amp;lt;port&amp;gt;9&amp;lt;/port&amp;gt;
+    &amp;lt;txt-record&amp;gt;model=TimeCapsule8,119&amp;lt;/txt-record&amp;gt;
+  &amp;lt;/service&amp;gt;
+  &amp;lt;service&amp;gt;
+    &amp;lt;type&amp;gt;_adisk._tcp&amp;lt;/type&amp;gt;
+    &amp;lt;port&amp;gt;9&amp;lt;/port&amp;gt;
+    &amp;lt;txt-record&amp;gt;dk0=adVN=Time Machine,adVF=0x82&amp;lt;/txt-record&amp;gt;
+    &amp;lt;txt-record&amp;gt;sys=adVF=0x100&amp;lt;/txt-record&amp;gt;
+  &amp;lt;/service&amp;gt;
+&amp;lt;/service-group&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s reload the service, so the changes will be affective:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo service avahi-daemon reload
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, your raspberry should be recognized as a Time Capsule!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./time_capsule.png&#34; alt=&#34;Show what you got!&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Time Machine, here I come! 🚀&lt;/p&gt;
+&lt;h2 id=&#34;optional-read-only-and-backup-the-pi&#34;&gt;Optional: Read only and Backup the Pi
+&lt;span&gt;&lt;a href=&#34;#optional-read-only-and-backup-the-pi&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;read-only&#34;&gt;Read only
+&lt;span&gt;&lt;a href=&#34;#read-only&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;You can make your Raspberry Pi read only, so nothing can be changed. That should increase your reliability of the system and the longevity of your SD card. The lifetime of SD cards are mainly dependent on the write cycles they endure.&lt;/p&gt;
+&lt;p&gt;You will find the setting here:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo raspi-config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Go to &amp;ldquo;Performance Options&amp;rdquo; and &amp;ldquo;Overlay File System&amp;rdquo;.&lt;/p&gt;
+&lt;h3 id=&#34;backup&#34;&gt;Backup
+&lt;span&gt;&lt;a href=&#34;#backup&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;The most simple way to backup your Pi is just to copy all the files on the SD card. You could store the files on your Mac.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;span&gt;&lt;a href=&#34;#conclusion&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;We&amp;rsquo;ve seen how to emulate a Time Capsule using a Raspberry Pi. Due to the small size of the Raspberry Pi, it&amp;rsquo;s a very portable backup solution, which can be taken everywhere!&lt;/p&gt;
 </description>
     </item>
     
