@@ -88,4 +88,4 @@ You probably want to update your Raspberry Pi down the line. Just use this:
 
 That was the fast track to get your Raspberry Pi up and running. We'll use this setup for the following topics:
 
-- [Emulating a Time Capsule](https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-(macos))
+- [Emulating a Time Capsule](https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos)
