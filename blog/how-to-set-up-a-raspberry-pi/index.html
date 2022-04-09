@@ -10,13 +10,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer-when-downgrade">
 
-<title>Categories - Toni&#39;s Blog</title>
+<title>How to set up a Raspberry Pi - Toni&#39;s Blog</title>
 
-<meta name="description" content="Personal Blog">
+<meta name="description" content="Initial Raspberry Pi Setup. 👨‍💻">
 
 
 
-<link rel="alternate" type="application/rss+xml" href="https://czyrnik.me/categories/index.xml" title="Toni's Blog" />
 <link rel="icon" type="image/x-icon" href="https://czyrnik.me/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="https://czyrnik.me/favicon.png">
 
@@ -43,15 +42,17 @@
 
 
 
-<meta property="og:title" content="Categories" />
-<meta property="og:description" content="Personal Blog" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://czyrnik.me/categories/" />
+<meta property="og:title" content="How to set up a Raspberry Pi" />
+<meta property="og:description" content="Initial Raspberry Pi Setup. 👨‍💻" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://czyrnik.me/blog/how-to-set-up-a-raspberry-pi/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-04-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-09T00:00:00+00:00" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="Personal Blog"/>
+<meta name="twitter:title" content="How to set up a Raspberry Pi"/>
+<meta name="twitter:description" content="Initial Raspberry Pi Setup. 👨‍💻"/>
 
 
 
@@ -150,42 +151,117 @@
         </header>
         <main id="main" tabindex="-1"> 
             
-    <div class="index-content">
+    
+
+    <article class="post h-entry">
+        <div class="post-header">
+            <header>
+                <h1 class="p-name post-title">How to set up a Raspberry Pi</h1>
+
+                
+            </header>
+        </div>
+        <div class="content e-content">
+            <h1 id="why-should-you-care">Why should you care?
+<span><a href="#why-should-you-care">#</a></span>
+</h1><p>Did you ever wonder would be possible to do with a small computer? What could possibly be worth your time to get into programming a Raspberry Pi?</p>
+<p>Yeah, me too. Especially all the time that could be necessary to maintain our weekend projects along the way. In last couple of months I used my Raspberry Pi to ease my life as digital nomad! That&rsquo;s why, I want to share with you my journey!</p>
+<h2 id="set-up">Set up
+<span><a href="#set-up">#</a></span>
+</h2><p>There are great tutorial on the process of setting up a Raspberry Pi. I wanted to keep it simple. So, I used <strong>Raspberry Pi OS</strong>. There&rsquo;s an <a href="https://www.raspberrypi.com/software/">official tool</a> for creating the SD card.</p>
+<p><img src="./tool.png" alt="Official Tool"></p>
+<p>Because of my Raspberry Pi 4, I chose the <strong>64 bit</strong> version. I also went with the <strong>lite</strong> version, meaning command line only.</p>
+<p>If you want to set further settings like ssh, custom credentials and wireless LAN, click on the gearwheel.</p>
+<p><img src="./options.png" alt="Advanced Options"></p>
+<p>Now, your SD card is ready to go! 🎉</p>
+<h3 id="connect-to-your-raspberry-pi">Connect to your Raspberry Pi
+<span><a href="#connect-to-your-raspberry-pi">#</a></span>
+</h3><p>Your Pi boots automatically after powering it. Give it couple of moments!</p>
+<p>Meanwhile, let&rsquo;s make sure your ssh connection will run smoothly.</p>
+<p>If you&rsquo;d like to clear old references:</p>
+<pre><code>ssh-keygen -R raspberrypi.local
+</code></pre>
+<p>You can connect to your Pi using your chosen credentials:</p>
+<pre><code>ssh username@ip
+e.g.: ssh pi@raspberrypi.local
+</code></pre>
+<p>The default credentials for any raspberry pi running Raspberry Pi OS:</p>
+<pre><code>username: pi
+password: raspberry
+</code></pre>
+<h3 id="preventing-wifi-dropping">Preventing WiFi Dropping
+<span><a href="#preventing-wifi-dropping">#</a></span>
+</h3><p>If you want to be on the safe side, you should disable the power management for your wlan on the pi. Open the following file.</p>
+<pre><code>sudo nano /etc/rc.local
+</code></pre>
+<p>Insert above the &ldquo;exit 0&rdquo; the following:</p>
+<pre><code>/sbin/iw wlan0 set power_save off
+</code></pre>
+<h3 id="change-credentials-and-further-configuration">Change credentials and further configuration
+<span><a href="#change-credentials-and-further-configuration">#</a></span>
+</h3><p>If you&rsquo;d like to change your credentials in the future, just use the raspi-config! There are many more things to tweak as well. Have a look!</p>
+<pre><code>sudo raspi-config
+</code></pre>
+<h2 id="conclusion">Conclusion
+<span><a href="#conclusion">#</a></span>
+</h2><p>That was the fast track to get your Raspberry Pi up and running. We&rsquo;ll use this setup for the following topics:</p>
+
+        </div>
         
+
+    
+
+
+<div class="post-info">
+    
+        <div class="post-date dt-published">2022-04-09</div>
+    
+
+    <a class="post-hidden-url u-url" href="https://czyrnik.me/blog/how-to-set-up-a-raspberry-pi/">https://czyrnik.me/blog/how-to-set-up-a-raspberry-pi/</a>
+    <a href="https://czyrnik.me" class="p-name p-author post-hidden-author h-card" rel="me">Toni Czyrnik</a>
+
+
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    
+                    <li><a href="">Raspberry Pi</a></li>
+                
+                    
+                    <li><a href="https://czyrnik.me/categories/coding/">Coding</a></li>
+                
+            </ul>
+            
+            
+    </div>
+</div>
+
+    </article>
+
+    
+        
+    <div class="pagination post-pagination">
+        <div class="left pagination-item disabled">
+            
+        </div>
+        <div class="right pagination-item ">
+            
+                <a href="/blog/how-to-set-a-raspberry-as-time-capsule/">How to set a Raspberry as Time Capsule (MacOS)</a>
+            
+        </div>
     </div>
 
-    <h1>Categories</h1>
-    <ul class="terms">
-        
-            
-            
-                <li>
-                    <a href="/categories/coding/">Coding</a>
-                    (1)
-                </li>
-            
-        
-            
-            
-        
-            
-            
-        
-            
-            
-                <li>
-                    <a href="/categories/raspberry-pi/">Raspberry Pi</a>
-                    (1)
-                </li>
-            
-        
-            
-            
-        
-            
-            
-        
-    </ul>
+
+
+
+    
+
+    
+
+    
+
+    
 
 
         </main>
