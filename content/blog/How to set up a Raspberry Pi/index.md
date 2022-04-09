@@ -20,7 +20,7 @@ keywords: (meta keywords)
 summary: Initial Raspberry Pi Setup. 👨‍💻
 ---
 
-# Why should you care?
+## Why should you care?
 
 Did you ever wonder would be possible to do with a small computer? What could possibly be worth your time to get into programming a Raspberry Pi?
 
