@@ -20,11 +20,10 @@ tags:
   - 
   -
 
-keywords: (meta keywords)
+keywords:
   - 
   - 
 
-keywords: meta keywords
 summary: text used when providing a summary of the article
 ---
 

@@ -12,10 +12,12 @@ categories:
   - Ads
   - Growth
 
-keywords: (meta keywords)
+keywords: 
   - Digital Nomad
   - Student
   - Growth
+
+summary:
 ---
 
 # The Six Templates for successful Ads

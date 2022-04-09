@@ -12,11 +12,13 @@ categories:
   - Personal
   - Digital Nomad
 
-keywords: (meta keywords)
+keywords:
   - Digital Nomad
   - Tallinn
   - Riga
   - Aachen
+
+summary:
 ---
 
 # Starting a Life as Digital Nomad

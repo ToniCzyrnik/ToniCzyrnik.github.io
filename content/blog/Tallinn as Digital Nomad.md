@@ -14,12 +14,14 @@ categories:
   - Travel
   - Tallinn
 
-keywords: (meta keywords)
+keywords:
   - Digital Nomad
   - Remote
   - Student
   - Tallinn
   - Riga
+
+summary:
 ---
 
 # Tallinn

@@ -12,11 +12,13 @@ categories:
   - Raspberry Pi
   - Coding
 
-keywords: (meta keywords)
+keywords:
   - Raspberry Pi
   - Remote
   - Student
   - Tallinn
+
+summary:
 ---
 
 
@@ -24,35 +26,6 @@ keywords: (meta keywords)
 
 ## Setup Raspberry Pi
 
-https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-bridged-wireless-access-point
-
-### Pi OS
-
-https://www.raspberrypi.com/software/
-
-### Choose Credentials and Network Settings
-
-### Change Credentials
-
-	sudo raspi-config
-
-## Remote Access
-
-clear old references
-
-	ssh-keygen -R raspberrypi.local
-	
-Connect to the new pi
-
-	ssh pi@gw.wlan
-	
-## Turn off Power Management
-
-	sudo nano /etc/rc.local
-	
-Insert above the "exit 0" the following: 
-
-	/sbin/iw wlan0 set power_save off
 	
 ## Prepare the external drive
 
