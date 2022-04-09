@@ -77,7 +77,15 @@ If you'd like to change your credentials in the future, just use the raspi-confi
 
 	sudo raspi-config
 
+### Update Software
+
+You probably want to update your Raspberry Pi down the line. Just use this:
+
+	sudo apt-get update 
+	sudo apt-get upgrade 
+
 ## Conclusion
 
 That was the fast track to get your Raspberry Pi up and running. We'll use this setup for the following topics:
 
+- [Emulating a Time Capusle](https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-(macos))

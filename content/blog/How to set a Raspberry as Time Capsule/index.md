@@ -1,112 +1,177 @@
 ---
-title: "How to set a Raspberry as Time Capsule (MacOS)"
+title: "How to use a Raspberry as Time Capsule (MacOS)"
 author: "Toni Czyrnik"
-date: 2022-03-31
-publishDate: 2022-04-08
-lastmod: 2022-04-01
+date: 2022-04-09
+publishDate: 2022-04-09
+lastmod: 2022-04-09
 
 draft: false
-hidden: True
+hidden: false
 
 categories:
   - Raspberry Pi
   - Coding
 
-keywords:
+keywords: (meta keywords)
   - Raspberry Pi
-  - Remote
-  - Student
-  - Tallinn
+  - Raspbian
+  - Digital Nomad
 
-summary:
+summary: Let's emulate a Time Capsule! 🚀
 ---
 
 
-# How to set a Raspberry as Time Capsule (MacOS)
-
 ## Setup Raspberry Pi
 
+If you want to read about our basic Raspberry Setup: [Here you go!](https://czyrnik.me/blog/how-to-set-up-a-raspberry-pi/)
 	
 ## Prepare the external drive
 
-We need a hard drive that uses the HFS+ or APFS System. Otherwise, we cannot use it for Time Machine.
+The most important thing is going to be our connected hard drive. I used a SSD connected via USB to the Pi. We need a drive that uses HFS+ or APFS. Otherwise, we cannot use it for Time Machine. Currently, there's only a reliable read-only version for APFS on Linux. So, we are going to use HFS+ instead. 
 
-Currently, there's only a reliable read-only version for APFS on linux. So, we are going to use HFS+ instead. 
+Please make sure you format your drive correctly and do not forget to give read and write permissions to everyone using "get info" on your Mac.
 
-Don't forget to give read and write permissions for everyone using "get info".
+![Permissions](./permissions.png)
 
-### Mount Disk
+## Mounting our Hard Drive
 
-sudo apt-get install hfsprogs
+After we connected your drive to the Pi, we need to mount it. Otherwise we cannot access it. The Format HFS+ is not native to Linux. So, we need to install it.
 
-lsblk -f
+	sudo apt-get install hfsprogs
 
-create moint point
+After installing it, we need to find the name of our drive.
+	
+	lsblk -f
 
-sudo mkdir -p /TM
+The name of my drive is "sda2". You'll find yours looking at the format and the size.
 
-sudo mount -t hfsplus -o force,rw /dev/sda2 /TM
+### Creating a Mount Point
 
-sudo nano /etc/fstab
+Before mounting a drive, we'll need a mount point! Let's create a directory. You can choose the path to your point as you like. I chose "/TM"
 
-PARTUUID="2db15007-b5b1-4054-9b9b-b4fe7c3d7294" /TM     hfsplus force,rw,user,auto        0       0
+	sudo mkdir -p /TM
 
-## Prepare Time Machine
+Let's mount our drive!
+	
+	sudo mount -t hfsplus -o force,rw /dev/name_of_your_drive /your_mount_point
 
-### Install Samba and avahi
+Unfortunately, the drive is not yet mounted permantly. Let's do that! Let's find the "PARTUUID" of your drive fist. 
 
-sudo apt-get install samba avahi-daemon
+	sudo blkid /dev/sda2
+	
+Let's open the following:
 
-### create user 
+	sudo nano /etc/fstab
 
-sudo adduser timemachine
+Add this line with your "PARTUUID" to the bottom of the file.
 
-choose a password for the new user on your pi
+	PARTUUID="your_partuuid" /your_mountpoint     hfsplus force,rw,user,auto        0       0
 
-### Configure Samba
+Now, our drive will be mounted after every boot of the pi! 🤯
 
-sudo smbpasswd -a timemachine
+## Preparing everything for Time Machine
 
-sudo nano /etc/samba/smb.conf
+Before the can access the drive from our Mac, we need couple of additional tweaks.
 
-[Time Machine]
-    comment = Backups
-    path = /TM
-    valid users = timemachine
-    read only = no
-    vfs objects = catia fruit streams_xattr
-    fruit:time machine = yes
-    
-sudo service smbd reload
+### Install Samba and Avahi
 
-### configure Avahi
+Samba is used for the file server. 
 
-sudo nano /etc/avahi/services/samba.service
+Avahi emulates a Time Capsule and our drive get's automatically discovered by MacOS. 🔎
 
-<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
-<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
-<service-group>
-  <name replace-wildcards="yes">%h</name>
-  <service>
-    <type>_smb._tcp</type>
-    <port>445</port>
-  </service>
-  <service>
-    <type>_device-info._tcp</type>
-    <port>9</port>
-    <txt-record>model=TimeCapsule8,119</txt-record>
-  </service>
-  <service>
-    <type>_adisk._tcp</type>
-    <port>9</port>
-    <txt-record>dk0=adVN=Time Machine,adVF=0x82</txt-record>
-    <txt-record>sys=adVF=0x100</txt-record>
-  </service>
-</service-group>
+Let's install everything on our Raspberry Pi.
 
-sudo service avahi-daemon reload
+	sudo apt-get install samba avahi-daemon
 
+### Creating a new user on the Pi
 
-## Make the Pi read only!
+Let's add a user "timemachine" for dealing with all our Time Machine stuff! 
 
-https://core-electronics.com.au/tutorials/read-only-raspberry-pi.html
+	sudo adduser timemachine
+
+After creating the user, you'll be prompted to enter a password for the new user on your Raspberry Pi.
+
+### Configurating Samba
+
+We need to define a password for Samba. I used the same password for convenience.
+
+	sudo smbpasswd -a timemachine
+
+The need to define same details for Samba. "Time Machine" will be the name for our server. 
+
+	sudo nano /etc/samba/smb.conf
+
+Add these lines to end of the file:
+
+	[Time Machine]
+		comment = Backups
+		path = /your_mount_point
+		valid users = timemachine
+		read only = no
+		vfs objects = catia fruit streams_xattr
+		fruit:time machine = yes
+ 
+The changes will be affective after reloading Samba!
+
+	sudo service smbd reload
+
+### Configurating Avahi
+
+Allmost done! 🙂
+
+We need to configure Avahi. Lets open the following file:
+
+	sudo nano /etc/avahi/services/samba.service
+
+The need to copy all the following into this file:
+
+	<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+	<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+	<service-group>
+	  <name replace-wildcards="yes">%h</name>
+	  <service>
+	    <type>_smb._tcp</type>
+	    <port>445</port>
+	  </service>
+	  <service>
+	    <type>_device-info._tcp</type>
+	    <port>9</port>
+	    <txt-record>model=TimeCapsule8,119</txt-record>
+	  </service>
+	  <service>
+	    <type>_adisk._tcp</type>
+	    <port>9</port>
+	    <txt-record>dk0=adVN=Time Machine,adVF=0x82</txt-record>
+	    <txt-record>sys=adVF=0x100</txt-record>
+	  </service>
+	</service-group>
+
+Let's reload the service, so the changes will be affective:
+
+	sudo service avahi-daemon reload
+
+Now, your raspberry should be recognized as a Time Capsule!
+
+![Show what you got!](./time_capsule.png)
+
+Time Machine, here I come! 🚀
+
+## Optional: Read only and Backup the Pi
+
+### Read only
+
+You can make your Raspberry Pi read only, so nothing can be changed. That should increase your reliability of the system and the longevity of your SD card. The lifetime of SD cards are mainly dependent on the write cycles they endure.
+
+You will find the setting here:
+
+	sudo raspi-config
+	
+Go to "Performance Options" and "Overlay File System".
+
+### Backup
+
+The most simple way to backup your Pi is just to copy all the files on the SD card. You could store the files on your Mac. 
+
+## Conclusion
+
+We've seen how to emulate a Time Capsule using a Raspberry Pi. Due to the small size of the Raspberry Pi, it's a very portable backup solution, which can be taken everywhere!
