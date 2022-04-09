@@ -21,8 +21,8 @@
 &lt;span&gt;&lt;a href=&#34;#why-should-you-care&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;Did you ever wonder would be possible to do with a small computer? What could possibly be worth your time to get into programming a Raspberry Pi?&lt;/p&gt;
 &lt;p&gt;Yeah, me too. Especially all the time that could be necessary to maintain our weekend projects along the way. In last couple of months I used my Raspberry Pi to ease my life as digital nomad! That&amp;rsquo;s why, I want to share with you my journey!&lt;/p&gt;
-&lt;h2 id=&#34;set-up&#34;&gt;Set up
-&lt;span&gt;&lt;a href=&#34;#set-up&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;h2 id=&#34;setting-up-the-sd-card&#34;&gt;Setting up the SD Card
+&lt;span&gt;&lt;a href=&#34;#setting-up-the-sd-card&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;There are great tutorial on the process of setting up a Raspberry Pi. I wanted to keep it simple. So, I used &lt;strong&gt;Raspberry Pi OS&lt;/strong&gt;. There&amp;rsquo;s an &lt;a href=&#34;https://www.raspberrypi.com/software/&#34;&gt;official tool&lt;/a&gt; for creating the SD card.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./tool.png&#34; alt=&#34;Official Tool&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Because of my Raspberry Pi 4, I chose the &lt;strong&gt;64 bit&lt;/strong&gt; version. I also went with the &lt;strong&gt;lite&lt;/strong&gt; version, meaning command line only.&lt;/p&gt;
@@ -40,25 +40,25 @@
 &lt;pre&gt;&lt;code&gt;ssh username@ip
 e.g.: ssh pi@raspberrypi.local
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The default credentials for any raspberry pi running Raspberry Pi OS:&lt;/p&gt;
+&lt;p&gt;The default credentials for any Raspberry Pi running Raspberry Pi OS:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;username: pi
 password: raspberry
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;preventing-wifi-dropping&#34;&gt;Preventing WiFi Dropping
 &lt;span&gt;&lt;a href=&#34;#preventing-wifi-dropping&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
-&lt;/h3&gt;&lt;p&gt;If you want to be on the safe side, you should disable the power management for your wlan on the pi. Open the following file.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;If you want to be on the safe side, you should disable the power management for your wlan on the Pi. Open the following file.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo nano /etc/rc.local
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Insert above the &amp;ldquo;exit 0&amp;rdquo; the following:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;/sbin/iw wlan0 set power_save off
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;change-credentials-and-further-configuration&#34;&gt;Change credentials and further configuration
-&lt;span&gt;&lt;a href=&#34;#change-credentials-and-further-configuration&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;h3 id=&#34;changing-credentials-and-further-configuration&#34;&gt;Changing Credentials and Further Configuration
+&lt;span&gt;&lt;a href=&#34;#changing-credentials-and-further-configuration&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;d like to change your credentials in the future, just use the raspi-config! There are many more things to tweak as well. Have a look!&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo raspi-config
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;update-software&#34;&gt;Update Software
-&lt;span&gt;&lt;a href=&#34;#update-software&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;h3 id=&#34;updating-software&#34;&gt;Updating Software
+&lt;span&gt;&lt;a href=&#34;#updating-software&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h3&gt;&lt;p&gt;You probably want to update your Raspberry Pi down the line. Just use this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo apt-get update 
 sudo apt-get upgrade 
@@ -67,24 +67,24 @@ sudo apt-get upgrade
 &lt;span&gt;&lt;a href=&#34;#conclusion&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;That was the fast track to get your Raspberry Pi up and running. We&amp;rsquo;ll use this setup for the following topics:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-(macos)&#34;&gt;Emulating a Time Capusle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-(macos)&#34;&gt;Emulating a Time Capsule&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>How to use a Raspberry as Time Capsule (MacOS)</title>
-      <link>https://czyrnik.me/blog/how-to-set-a-raspberry-as-time-capsule/</link>
+      <link>https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos/</link>
       <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://czyrnik.me/blog/how-to-set-a-raspberry-as-time-capsule/</guid>
+      <guid>https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos/</guid>
       <description>&lt;h2 id=&#34;setup-raspberry-pi&#34;&gt;Setup Raspberry Pi
 &lt;span&gt;&lt;a href=&#34;#setup-raspberry-pi&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;If you want to read about our basic Raspberry Setup: &lt;a href=&#34;https://czyrnik.me/blog/how-to-set-up-a-raspberry-pi/&#34;&gt;Here you go!&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;prepare-the-external-drive&#34;&gt;Prepare the external drive
 &lt;span&gt;&lt;a href=&#34;#prepare-the-external-drive&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;The most important thing is going to be our connected hard drive. I used a SSD connected via USB to the Pi. We need a drive that uses HFS+ or APFS. Otherwise, we cannot use it for Time Machine. Currently, there&amp;rsquo;s only a reliable read-only version for APFS on Linux. So, we are going to use HFS+ instead.&lt;/p&gt;
-&lt;p&gt;Please make sure you format your drive correctly and do not forget to give read and write permissions to everyone using &amp;ldquo;get info&amp;rdquo; on your Mac.&lt;/p&gt;
+&lt;p&gt;Please make sure you format your drive correctly and do not forget to give read and write permissions to everyone using &amp;ldquo;Get Info&amp;rdquo; on your Mac.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./permissions.png&#34; alt=&#34;Permissions&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;mounting-our-hard-drive&#34;&gt;Mounting our Hard Drive
 &lt;span&gt;&lt;a href=&#34;#mounting-our-hard-drive&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
@@ -97,7 +97,7 @@ sudo apt-get upgrade
 &lt;p&gt;The name of my drive is &amp;ldquo;sda2&amp;rdquo;. You&amp;rsquo;ll find yours looking at the format and the size.&lt;/p&gt;
 &lt;h3 id=&#34;creating-a-mount-point&#34;&gt;Creating a Mount Point
 &lt;span&gt;&lt;a href=&#34;#creating-a-mount-point&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
-&lt;/h3&gt;&lt;p&gt;Before mounting a drive, we&amp;rsquo;ll need a mount point! Let&amp;rsquo;s create a directory. You can choose the path to your point as you like. I chose &amp;ldquo;/TM&amp;rdquo;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Before mounting a drive, we&amp;rsquo;ll need a mount point! Let&amp;rsquo;s create a directory. You can choose the path to your point as you like. I chose &amp;ldquo;/TM&amp;rdquo;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo mkdir -p /TM
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Let&amp;rsquo;s mount our drive!&lt;/p&gt;
@@ -112,7 +112,7 @@ sudo apt-get upgrade
 &lt;p&gt;Add this line with your &amp;ldquo;PARTUUID&amp;rdquo; to the bottom of the file.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;PARTUUID=&amp;quot;your_partuuid&amp;quot; /your_mountpoint     hfsplus force,rw,user,auto        0       0
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, our drive will be mounted after every boot of the pi! 🤯&lt;/p&gt;
+&lt;p&gt;Now, your drive will be mounted after every boot of the Pi! 🤯&lt;/p&gt;
 &lt;h2 id=&#34;preparing-everything-for-time-machine&#34;&gt;Preparing everything for Time Machine
 &lt;span&gt;&lt;a href=&#34;#preparing-everything-for-time-machine&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;Before the can access the drive from our Mac, we need couple of additional tweaks.&lt;/p&gt;
@@ -194,7 +194,7 @@ sudo apt-get upgrade
 &lt;p&gt;Go to &amp;ldquo;Performance Options&amp;rdquo; and &amp;ldquo;Overlay File System&amp;rdquo;.&lt;/p&gt;
 &lt;h3 id=&#34;backup&#34;&gt;Backup
 &lt;span&gt;&lt;a href=&#34;#backup&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
-&lt;/h3&gt;&lt;p&gt;The most simple way to backup your Pi is just to copy all the files on the SD card. You could store the files on your Mac.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;The most simple way to backup your Pi is just to copy all the files from the SD card. You could store these files on your Mac or iCloud.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
 &lt;span&gt;&lt;a href=&#34;#conclusion&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;We&amp;rsquo;ve seen how to emulate a Time Capsule using a Raspberry Pi. Due to the small size of the Raspberry Pi, it&amp;rsquo;s a very portable backup solution, which can be taken everywhere!&lt;/p&gt;

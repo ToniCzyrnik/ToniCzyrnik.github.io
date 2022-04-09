@@ -45,7 +45,7 @@
 <meta property="og:title" content="How to use a Raspberry as Time Capsule (MacOS)" />
 <meta property="og:description" content="Let&rsquo;s emulate a Time Capsule! 🚀" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://czyrnik.me/blog/how-to-set-a-raspberry-as-time-capsule/" /><meta property="article:section" content="blog" />
+<meta property="og:url" content="https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2022-04-09T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-04-09T00:00:00+00:00" />
 
@@ -168,7 +168,7 @@
 <h2 id="prepare-the-external-drive">Prepare the external drive
 <span><a href="#prepare-the-external-drive">#</a></span>
 </h2><p>The most important thing is going to be our connected hard drive. I used a SSD connected via USB to the Pi. We need a drive that uses HFS+ or APFS. Otherwise, we cannot use it for Time Machine. Currently, there&rsquo;s only a reliable read-only version for APFS on Linux. So, we are going to use HFS+ instead.</p>
-<p>Please make sure you format your drive correctly and do not forget to give read and write permissions to everyone using &ldquo;get info&rdquo; on your Mac.</p>
+<p>Please make sure you format your drive correctly and do not forget to give read and write permissions to everyone using &ldquo;Get Info&rdquo; on your Mac.</p>
 <p><img src="./permissions.png" alt="Permissions"></p>
 <h2 id="mounting-our-hard-drive">Mounting our Hard Drive
 <span><a href="#mounting-our-hard-drive">#</a></span>
@@ -181,7 +181,7 @@
 <p>The name of my drive is &ldquo;sda2&rdquo;. You&rsquo;ll find yours looking at the format and the size.</p>
 <h3 id="creating-a-mount-point">Creating a Mount Point
 <span><a href="#creating-a-mount-point">#</a></span>
-</h3><p>Before mounting a drive, we&rsquo;ll need a mount point! Let&rsquo;s create a directory. You can choose the path to your point as you like. I chose &ldquo;/TM&rdquo;</p>
+</h3><p>Before mounting a drive, we&rsquo;ll need a mount point! Let&rsquo;s create a directory. You can choose the path to your point as you like. I chose &ldquo;/TM&rdquo;.</p>
 <pre><code>sudo mkdir -p /TM
 </code></pre>
 <p>Let&rsquo;s mount our drive!</p>
@@ -196,7 +196,7 @@
 <p>Add this line with your &ldquo;PARTUUID&rdquo; to the bottom of the file.</p>
 <pre><code>PARTUUID=&quot;your_partuuid&quot; /your_mountpoint     hfsplus force,rw,user,auto        0       0
 </code></pre>
-<p>Now, our drive will be mounted after every boot of the pi! 🤯</p>
+<p>Now, your drive will be mounted after every boot of the Pi! 🤯</p>
 <h2 id="preparing-everything-for-time-machine">Preparing everything for Time Machine
 <span><a href="#preparing-everything-for-time-machine">#</a></span>
 </h2><p>Before the can access the drive from our Mac, we need couple of additional tweaks.</p>
@@ -278,7 +278,7 @@
 <p>Go to &ldquo;Performance Options&rdquo; and &ldquo;Overlay File System&rdquo;.</p>
 <h3 id="backup">Backup
 <span><a href="#backup">#</a></span>
-</h3><p>The most simple way to backup your Pi is just to copy all the files on the SD card. You could store the files on your Mac.</p>
+</h3><p>The most simple way to backup your Pi is just to copy all the files from the SD card. You could store these files on your Mac or iCloud.</p>
 <h2 id="conclusion">Conclusion
 <span><a href="#conclusion">#</a></span>
 </h2><p>We&rsquo;ve seen how to emulate a Time Capsule using a Raspberry Pi. Due to the small size of the Raspberry Pi, it&rsquo;s a very portable backup solution, which can be taken everywhere!</p>
@@ -294,7 +294,7 @@
         <div class="post-date dt-published">2022-04-09</div>
     
 
-    <a class="post-hidden-url u-url" href="https://czyrnik.me/blog/how-to-set-a-raspberry-as-time-capsule/">https://czyrnik.me/blog/how-to-set-a-raspberry-as-time-capsule/</a>
+    <a class="post-hidden-url u-url" href="https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos/">https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos/</a>
     <a href="https://czyrnik.me" class="p-name p-author post-hidden-author h-card" rel="me">Toni Czyrnik</a>
 
 

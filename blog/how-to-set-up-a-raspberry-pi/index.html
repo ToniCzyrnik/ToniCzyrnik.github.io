@@ -166,8 +166,8 @@
 <span><a href="#why-should-you-care">#</a></span>
 </h2><p>Did you ever wonder would be possible to do with a small computer? What could possibly be worth your time to get into programming a Raspberry Pi?</p>
 <p>Yeah, me too. Especially all the time that could be necessary to maintain our weekend projects along the way. In last couple of months I used my Raspberry Pi to ease my life as digital nomad! That&rsquo;s why, I want to share with you my journey!</p>
-<h2 id="set-up">Set up
-<span><a href="#set-up">#</a></span>
+<h2 id="setting-up-the-sd-card">Setting up the SD Card
+<span><a href="#setting-up-the-sd-card">#</a></span>
 </h2><p>There are great tutorial on the process of setting up a Raspberry Pi. I wanted to keep it simple. So, I used <strong>Raspberry Pi OS</strong>. There&rsquo;s an <a href="https://www.raspberrypi.com/software/">official tool</a> for creating the SD card.</p>
 <p><img src="./tool.png" alt="Official Tool"></p>
 <p>Because of my Raspberry Pi 4, I chose the <strong>64 bit</strong> version. I also went with the <strong>lite</strong> version, meaning command line only.</p>
@@ -185,25 +185,25 @@
 <pre><code>ssh username@ip
 e.g.: ssh pi@raspberrypi.local
 </code></pre>
-<p>The default credentials for any raspberry pi running Raspberry Pi OS:</p>
+<p>The default credentials for any Raspberry Pi running Raspberry Pi OS:</p>
 <pre><code>username: pi
 password: raspberry
 </code></pre>
 <h3 id="preventing-wifi-dropping">Preventing WiFi Dropping
 <span><a href="#preventing-wifi-dropping">#</a></span>
-</h3><p>If you want to be on the safe side, you should disable the power management for your wlan on the pi. Open the following file.</p>
+</h3><p>If you want to be on the safe side, you should disable the power management for your wlan on the Pi. Open the following file.</p>
 <pre><code>sudo nano /etc/rc.local
 </code></pre>
 <p>Insert above the &ldquo;exit 0&rdquo; the following:</p>
 <pre><code>/sbin/iw wlan0 set power_save off
 </code></pre>
-<h3 id="change-credentials-and-further-configuration">Change credentials and further configuration
-<span><a href="#change-credentials-and-further-configuration">#</a></span>
+<h3 id="changing-credentials-and-further-configuration">Changing Credentials and Further Configuration
+<span><a href="#changing-credentials-and-further-configuration">#</a></span>
 </h3><p>If you&rsquo;d like to change your credentials in the future, just use the raspi-config! There are many more things to tweak as well. Have a look!</p>
 <pre><code>sudo raspi-config
 </code></pre>
-<h3 id="update-software">Update Software
-<span><a href="#update-software">#</a></span>
+<h3 id="updating-software">Updating Software
+<span><a href="#updating-software">#</a></span>
 </h3><p>You probably want to update your Raspberry Pi down the line. Just use this:</p>
 <pre><code>sudo apt-get update 
 sudo apt-get upgrade 
@@ -212,7 +212,7 @@ sudo apt-get upgrade
 <span><a href="#conclusion">#</a></span>
 </h2><p>That was the fast track to get your Raspberry Pi up and running. We&rsquo;ll use this setup for the following topics:</p>
 <ul>
-<li><a href="https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-(macos)">Emulating a Time Capusle</a></li>
+<li><a href="https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-(macos)">Emulating a Time Capsule</a></li>
 </ul>
 
         </div>
@@ -256,7 +256,7 @@ sudo apt-get upgrade
         </div>
         <div class="right pagination-item ">
             
-                <a href="/blog/how-to-set-a-raspberry-as-time-capsule/">How to use a Raspberry as Time Capsule (MacOS)</a>
+                <a href="/blog/how-to-use-a-raspberry-as-time-capsule-macos/">How to use a Raspberry as Time Capsule (MacOS)</a>
             
         </div>
     </div>
