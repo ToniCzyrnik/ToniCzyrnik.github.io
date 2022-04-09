@@ -183,6 +183,13 @@ sudo apt-get upgrade
 &lt;p&gt;Now, your raspberry should be recognized as a Time Capsule!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./time_capsule.png&#34; alt=&#34;Show what you got!&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Time Machine, here I come! 🚀&lt;/p&gt;
+&lt;h2 id=&#34;configuration-time-machine&#34;&gt;Configuration Time Machine
+&lt;span&gt;&lt;a href=&#34;#configuration-time-machine&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Your drive should now be detected by the Time Machine.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./time_machine.png&#34; alt=&#34;Safety First!&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Do not forget to encrypt your backups!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./connect.png&#34; alt=&#34;pwnd&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You can use the user &amp;ldquo;timemachine&amp;rdquo; and the Samba password you chose earlier.&lt;/p&gt;
 &lt;h2 id=&#34;optional-read-only-and-backup-the-pi&#34;&gt;Optional: Read only and Backup the Pi
 &lt;span&gt;&lt;a href=&#34;#optional-read-only-and-backup-the-pi&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;h3 id=&#34;read-only&#34;&gt;Read only
