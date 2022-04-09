@@ -9,11 +9,11 @@ draft: True
 hidden: True
 
 categories:
-  - Raspberry
+  - Raspberry Pi
   - Coding
 
 keywords: (meta keywords)
-  - Digital Nomad
+  - Raspberry Pi
   - Remote
   - Student
   - Tallinn
