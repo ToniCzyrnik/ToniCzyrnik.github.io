@@ -156,6 +156,18 @@ Now, your raspberry should be recognized as a Time Capsule!
 
 Time Machine, here I come! 🚀
 
+## Configuration Time Machine
+
+Your drive should now be detected by the Time Machine. 
+
+![Safety First!](./time_machine.png)
+
+Do not forget to encrypt your backups!
+
+![pwnd](./connect.png)
+
+You can use the user "timemachine" and the Samba password you chose earlier.
+
 ## Optional: Read only and Backup the Pi
 
 ### Read only
