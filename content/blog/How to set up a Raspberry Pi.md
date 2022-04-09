@@ -6,7 +6,7 @@ publishDate: 2022-04-10
 lastmod: 2022-04-10
 
 draft: True
-hidden: True
+hidden: false
 
 categories:
   - Raspberry Pi
@@ -16,6 +16,8 @@ keywords: (meta keywords)
   - Raspberry Pi
   - Raspbian
   - Digital Nomad
+
+summary: Initial Raspberry Pi Setup.
 ---
 
 # Why should you care?

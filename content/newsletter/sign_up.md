@@ -24,5 +24,4 @@ If you would like to stay updated on all new posts, I'd be happy to have join ou
     </div>
 </form>
 </div>
-
 <!--End mc_embed_signup-->

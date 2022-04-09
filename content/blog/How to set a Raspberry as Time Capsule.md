@@ -2,11 +2,11 @@
 title: "How to set a Raspberry as Time Capsule (MacOS)"
 author: "Toni Czyrnik"
 date: 2022-03-31
-publishDate: 2022-04-10
+publishDate: 2022-04-08
 lastmod: 2022-04-01
 
 draft: True
-hidden: True
+hidden: false
 
 categories:
   - Raspberry Pi
