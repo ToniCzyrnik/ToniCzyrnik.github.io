@@ -26,7 +26,7 @@ Did you ever wonder would be possible to do with a small computer? What could po
 
 Yeah, me too. Especially all the time that could be necessary to maintain our weekend projects along the way. In last couple of months I used my Raspberry Pi to ease my life as digital nomad! That's why, I want to share with you my journey! 
 
-## Set up
+## Setting up the SD Card
 
 There are great tutorial on the process of setting up a Raspberry Pi. I wanted to keep it simple. So, I used **Raspberry Pi OS**. There's an [official tool](https://www.raspberrypi.com/software/) for creating the SD card. 
 
@@ -55,7 +55,7 @@ You can connect to your Pi using your chosen credentials:
 	ssh username@ip
 	e.g.: ssh pi@raspberrypi.local
 
-The default credentials for any raspberry pi running Raspberry Pi OS:
+The default credentials for any Raspberry Pi running Raspberry Pi OS:
 
 	username: pi
 	password: raspberry
@@ -63,7 +63,7 @@ The default credentials for any raspberry pi running Raspberry Pi OS:
 
 ### Preventing WiFi Dropping
 
-If you want to be on the safe side, you should disable the power management for your wlan on the pi. Open the following file.
+If you want to be on the safe side, you should disable the power management for your wlan on the Pi. Open the following file.
 
 	sudo nano /etc/rc.local
 	
@@ -71,13 +71,13 @@ Insert above the "exit 0" the following:
 
 	/sbin/iw wlan0 set power_save off
 	
-### Change credentials and further configuration
+### Changing Credentials and Further Configuration
 
 If you'd like to change your credentials in the future, just use the raspi-config! There are many more things to tweak as well. Have a look!
 
 	sudo raspi-config
 
-### Update Software
+### Updating Software
 
 You probably want to update your Raspberry Pi down the line. Just use this:
 
@@ -88,4 +88,4 @@ You probably want to update your Raspberry Pi down the line. Just use this:
 
 That was the fast track to get your Raspberry Pi up and running. We'll use this setup for the following topics:
 
-- [Emulating a Time Capusle](https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-(macos))
+- [Emulating a Time Capsule](https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-(macos))

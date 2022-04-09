@@ -29,7 +29,7 @@ If you want to read about our basic Raspberry Setup: [Here you go!](https://czyr
 
 The most important thing is going to be our connected hard drive. I used a SSD connected via USB to the Pi. We need a drive that uses HFS+ or APFS. Otherwise, we cannot use it for Time Machine. Currently, there's only a reliable read-only version for APFS on Linux. So, we are going to use HFS+ instead. 
 
-Please make sure you format your drive correctly and do not forget to give read and write permissions to everyone using "get info" on your Mac.
+Please make sure you format your drive correctly and do not forget to give read and write permissions to everyone using "Get Info" on your Mac.
 
 ![Permissions](./permissions.png)
 
@@ -47,7 +47,7 @@ The name of my drive is "sda2". You'll find yours looking at the format and the 
 
 ### Creating a Mount Point
 
-Before mounting a drive, we'll need a mount point! Let's create a directory. You can choose the path to your point as you like. I chose "/TM"
+Before mounting a drive, we'll need a mount point! Let's create a directory. You can choose the path to your point as you like. I chose "/TM".
 
 	sudo mkdir -p /TM
 
@@ -67,7 +67,7 @@ Add this line with your "PARTUUID" to the bottom of the file.
 
 	PARTUUID="your_partuuid" /your_mountpoint     hfsplus force,rw,user,auto        0       0
 
-Now, our drive will be mounted after every boot of the pi! 🤯
+Now, your drive will be mounted after every boot of the Pi! 🤯
 
 ## Preparing everything for Time Machine
 
@@ -170,7 +170,7 @@ Go to "Performance Options" and "Overlay File System".
 
 ### Backup
 
-The most simple way to backup your Pi is just to copy all the files on the SD card. You could store the files on your Mac. 
+The most simple way to backup your Pi is just to copy all the files from the SD card. You could store these files on your Mac or iCloud. 
 
 ## Conclusion
 
