@@ -90,4 +90,4 @@ That was the fast track to get your Raspberry Pi up and running. If you need fur
 
 We'll use this setup for the following topics:
 
-- [Emulating a Time Capsule](https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos)
+- [Emulating a Time Capsule](https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule)
