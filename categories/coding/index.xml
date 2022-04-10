@@ -6,10 +6,107 @@
     <description>Toni&#39;s Blog (Coding)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Apr 2022 00:00:00 +0000</lastBuildDate>
     
     <atom:link href="https://czyrnik.me/categories/coding/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Configure a Raspberry Pi</title>
+      <link>https://czyrnik.me/blog/how-to-configure-a-raspberry-pi/</link>
+      <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/blog/how-to-configure-a-raspberry-pi/</guid>
+      <description>&lt;p&gt;We will secure your Raspberry Pi, create a wireless access point and learn how backup the SD Card of the Raspberry Pi. 🤓&lt;/p&gt;
+&lt;h2 id=&#34;securing-your-raspberry-pi&#34;&gt;Securing your Raspberry Pi
+&lt;span&gt;&lt;a href=&#34;#securing-your-raspberry-pi&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Please make sure, that your Overlay File System is deactivated and the boot partition writable.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo raspi-config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After you deactivated the Overlay File System, please reboot.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo reboot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;passwordless-ssh-access&#34;&gt;Passwordless SSH Access
+&lt;span&gt;&lt;a href=&#34;#passwordless-ssh-access&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Please check, whether you have already created SSH Keys in the past. If there are files like &amp;ldquo;id_rsa.pub&amp;rdquo; or &amp;ldquo;id_dsa.pub&amp;rdquo;, you don&amp;rsquo;t need to generate new keys.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ls ~/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;generate-new-ssh-keys&#34;&gt;Generate new SSH Keys
+&lt;span&gt;&lt;a href=&#34;#generate-new-ssh-keys&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;You can generate the keys with or without a passphrase using:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh-keygen
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You check them with this line:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cat ~/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;copy-the-key-to-the-raspberry-pi&#34;&gt;Copy the Key to the Raspberry Pi
+&lt;span&gt;&lt;a href=&#34;#copy-the-key-to-the-raspberry-pi&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;Now, you can transfer your Key to the Raspberry Pi using ssh.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh-copy-id &amp;lt;USERNAME&amp;gt;@&amp;lt;IP-ADDRESS&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;storing-the-passphrase-in-the-macos-keychain&#34;&gt;Storing the passphrase in the macOS keychain
+&lt;span&gt;&lt;a href=&#34;#storing-the-passphrase-in-the-macos-keychain&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;You can store your passphrase in the macOS keychain using:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh-add --apple-use-keychain ~/.ssh/id_rsa
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;allow-and-deny-ssh-access&#34;&gt;Allow and Deny SSH Access
+&lt;span&gt;&lt;a href=&#34;#allow-and-deny-ssh-access&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;You can specify which users are allowed to use SSH using:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Append to the end of the file&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AllowUsers alice bob
+DenyUsers jane john
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can find all created users, which have a home directory:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cat /etc/passwd | grep home
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;using-key-based-authentication-only&#34;&gt;Using key-based authentication only
+&lt;span&gt;&lt;a href=&#34;#using-key-based-authentication-only&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;Let&amp;rsquo;s make one additional adjustment, so only key-based authentication are allowed.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Search and edit the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ChallengeResponseAuthentication no
+PasswordAuthentication no
+UsePAM no
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;wireless-access-point&#34;&gt;Wireless Access Point
+&lt;span&gt;&lt;a href=&#34;#wireless-access-point&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;If your WiFi is unreliable but you have access to an ethernet cable, you could try to set up a wireless access point with your Raspberry Pi!&lt;/p&gt;
+&lt;p&gt;You can read a great tutorial for setting up a Routed Wireless Access Point in the &lt;a href=&#34;https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point&#34;&gt;official documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;backing-up-the-sd-card&#34;&gt;Backing up the SD Card
+&lt;span&gt;&lt;a href=&#34;#backing-up-the-sd-card&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;The most simple way to backup your Pi is coping all the files from the SD card. But creating an image is more reliable. You could store these files on your Mac or iCloud.&lt;/p&gt;
+&lt;h3 id=&#34;creating-an-image-using-macos&#34;&gt;Creating an image using macOS
+&lt;span&gt;&lt;a href=&#34;#creating-an-image-using-macos&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Let&amp;rsquo;s find the name of our SD card using&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;diskutil list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s create the image&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo dd if=/dev/disk_name of=PiBackup.dmg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This takes a while and will save the image into your user directory.&lt;/p&gt;
+&lt;h3 id=&#34;restoring-the-image-using-macos&#34;&gt;Restoring the image using macOS
+&lt;span&gt;&lt;a href=&#34;#restoring-the-image-using-macos&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Before we can restore a backup, we need to unmount the SD card.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;diskutil unmountDisk /dev/disk_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, we can restore our backup image.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo dd if=~/PiBackup.dmg of=/dev/disk_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;optional-overlay-file-system&#34;&gt;Optional: Overlay File System
+&lt;span&gt;&lt;a href=&#34;#optional-overlay-file-system&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Changes made are not permanently during Overlay File System is activated. Everything that was changed will not be available once the Pi rebooted. Also, you can make your boot partition read only. That should increase your reliability of the system. But don&amp;rsquo;t forget to disable it before starting your next project!&lt;/p&gt;
+&lt;p&gt;You will find the setting here:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo raspi-config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Go to &amp;ldquo;Performance Options&amp;rdquo; and &amp;ldquo;Overlay File System&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;span&gt;&lt;a href=&#34;#conclusion&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;That were a few first useful configurations for your Raspberry Pi!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>How to use a Raspberry as Time Capsule</title>
