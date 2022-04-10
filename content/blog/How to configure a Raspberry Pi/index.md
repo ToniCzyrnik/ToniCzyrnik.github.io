@@ -2,7 +2,7 @@
 title: "How to Configure a Raspberry Pi"
 author: "Toni Czyrnik"
 date: 2022-04-10
-publishDate: 2022-04-11
+publishDate: 2022-04-10
 lastmod: 2022-04-10
 
 draft: false
