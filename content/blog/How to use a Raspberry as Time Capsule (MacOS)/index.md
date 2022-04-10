@@ -75,7 +75,7 @@ Now, your drive will be mounted after every boot of the Pi! 🤯
 
 Before the can access the drive from our Mac, we need couple of additional tweaks.
 
-### Install Samba and Avahi
+### Installing Samba and Avahi
 
 Samba is used for the file server. 
 

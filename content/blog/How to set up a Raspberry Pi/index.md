@@ -12,7 +12,7 @@ categories:
   - Raspberry Pi
   - Coding
 
-keywords: (meta keywords)
+keywords:
   - Raspberry Pi
   - Raspberry Pi OS
   - Digital Nomad
