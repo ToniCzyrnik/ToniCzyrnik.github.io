@@ -19,8 +19,7 @@ keywords:
   - Coding
   - Digital Nomad
 
-
-summary: Configuration of your Raspberry Pi: Passwordless SSH Access, Wireless Access Point, Backup and Restoring the SD Card
+summary: "Configuration of your Raspberry Pi: Passwordless SSH Access, Wireless Access Point, Backup and Restoring the SD Card"
 ---
 
 We will secure your Raspberry Pi, create a wireless access point and learn how backup the SD Card of the Raspberry Pi. 🤓
