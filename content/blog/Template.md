@@ -16,10 +16,6 @@ categories:
   - 
   - 
 
-tags:
-  - 
-  -
-
 keywords:
   - 
   - 
@@ -27,4 +23,4 @@ keywords:
 summary: text used when providing a summary of the article
 ---
 
-# Heading 1
+## Heading 1

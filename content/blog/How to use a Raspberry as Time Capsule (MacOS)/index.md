@@ -1,9 +1,9 @@
 ---
-title: "How to use a Raspberry as Time Capsule (MacOS)"
+title: "How to use a Raspberry as Time Capsule (macOS)"
 author: "Toni Czyrnik"
 date: 2022-04-09
-publishDate: 2022-04-09
-lastmod: 2022-04-09
+publishDate: 2022-04-10
+lastmod: 2022-04-10
 
 draft: false
 hidden: false
@@ -14,7 +14,9 @@ categories:
 
 keywords: (meta keywords)
   - Raspberry Pi
-  - Raspbian
+  - Raspberry Pi OS
+  - Time Machine
+  - Time Capsule
   - Digital Nomad
 
 summary: Let's emulate a Time Capsule! 🚀
@@ -27,7 +29,7 @@ If you want to read about our basic Raspberry Setup: [Here you go!](https://czyr
 	
 ## Prepare the external drive
 
-The most important thing is going to be our connected hard drive. I used a SSD connected via USB to the Pi. We need a drive that uses HFS+ or APFS. Otherwise, we cannot use it for Time Machine. Currently, there's only a reliable read-only version for APFS on Linux. So, we are going to use HFS+ instead. 
+The most important thing is going to be your connected hard drive. We need a drive that uses HFS+ or APFS. Otherwise, we cannot use it for Time Machine. Currently, there's only a reliable read-only version for APFS on Linux. So, we are going to use HFS+ instead. 
 
 Please make sure you format your drive correctly and do not forget to give read and write permissions to everyone using "Get Info" on your Mac.
 
@@ -55,7 +57,7 @@ Let's mount our drive!
 	
 	sudo mount -t hfsplus -o force,rw /dev/name_of_your_drive /your_mount_point
 
-Unfortunately, the drive is not yet mounted permantly. Let's do that! Let's find the "PARTUUID" of your drive fist. 
+Unfortunately, the drive is not yet mounted permanently. Let's do that! Let's find the "PARTUUID" of your drive fist. 
 
 	sudo blkid /dev/sda2
 	
@@ -117,7 +119,7 @@ The changes will be affective after reloading Samba!
 
 ### Configurating Avahi
 
-Allmost done! 🙂
+Almost done! 🙂
 
 We need to configure Avahi. Lets open the following file:
 
@@ -167,22 +169,6 @@ Do not forget to encrypt your backups!
 ![pwnd](./connect.png)
 
 You can use the user "timemachine" and the Samba password you chose earlier.
-
-## Optional: Read only and Backup the Pi
-
-### Read only
-
-You can make your Raspberry Pi read only, so nothing can be changed. That should increase your reliability of the system and the longevity of your SD card. The lifetime of SD cards are mainly dependent on the write cycles they endure.
-
-You will find the setting here:
-
-	sudo raspi-config
-	
-Go to "Performance Options" and "Overlay File System".
-
-### Backup
-
-The most simple way to backup your Pi is just to copy all the files from the SD card. You could store these files on your Mac or iCloud. 
 
 ## Conclusion
 

@@ -1,8 +1,8 @@
 ---
 title: "How to set up a Raspberry Pi"
 author: "Toni Czyrnik"
-date: 2022-04-09
-publishDate: 2022-04-09
+date: 2022-04-08
+publishDate: 2022-04-08
 lastmod: 2022-04-09
 
 draft: false
@@ -14,7 +14,7 @@ categories:
 
 keywords: (meta keywords)
   - Raspberry Pi
-  - Raspbian
+  - Raspberry Pi OS
   - Digital Nomad
 
 summary: Initial Raspberry Pi Setup. 👨‍💻
@@ -86,6 +86,8 @@ You probably want to update your Raspberry Pi down the line. Just use this:
 
 ## Conclusion
 
-That was the fast track to get your Raspberry Pi up and running. We'll use this setup for the following topics:
+That was the fast track to get your Raspberry Pi up and running. If you need further assistance, check out the [official documentation](https://www.raspberrypi.com/documentation/computers/getting-started.html).
+
+We'll use this setup for the following topics:
 
 - [Emulating a Time Capsule](https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos)
