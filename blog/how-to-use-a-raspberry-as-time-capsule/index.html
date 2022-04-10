@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer-when-downgrade">
 
-<title>How to use a Raspberry as Time Capsule (MacOS) - Toni&#39;s Blog</title>
+<title>How to use a Raspberry as Time Capsule - Toni&#39;s Blog</title>
 
 <meta name="description" content="Let&rsquo;s emulate a Time Capsule! 🚀">
 
@@ -42,16 +42,16 @@
 
 
 
-<meta property="og:title" content="How to use a Raspberry as Time Capsule (MacOS)" />
+<meta property="og:title" content="How to use a Raspberry as Time Capsule" />
 <meta property="og:description" content="Let&rsquo;s emulate a Time Capsule! 🚀" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2022-04-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-04-09T00:00:00+00:00" />
+<meta property="og:url" content="https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-04-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-10T00:00:00+00:00" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How to use a Raspberry as Time Capsule (MacOS)"/>
+<meta name="twitter:title" content="How to use a Raspberry as Time Capsule"/>
 <meta name="twitter:description" content="Let&rsquo;s emulate a Time Capsule! 🚀"/>
 
 
@@ -156,7 +156,7 @@
     <article class="post h-entry">
         <div class="post-header">
             <header>
-                <h1 class="p-name post-title">How to use a Raspberry as Time Capsule (MacOS)</h1>
+                <h1 class="p-name post-title">How to use a Raspberry as Time Capsule</h1>
 
                 
             </header>
@@ -167,7 +167,7 @@
 </h2><p>If you want to read about our basic Raspberry Setup: <a href="https://czyrnik.me/blog/how-to-set-up-a-raspberry-pi/">Here you go!</a></p>
 <h2 id="prepare-the-external-drive">Prepare the external drive
 <span><a href="#prepare-the-external-drive">#</a></span>
-</h2><p>The most important thing is going to be our connected hard drive. I used a SSD connected via USB to the Pi. We need a drive that uses HFS+ or APFS. Otherwise, we cannot use it for Time Machine. Currently, there&rsquo;s only a reliable read-only version for APFS on Linux. So, we are going to use HFS+ instead.</p>
+</h2><p>The most important thing is going to be your connected hard drive. We need a drive that uses HFS+ or APFS. Otherwise, we cannot use it for Time Machine. Currently, there&rsquo;s only a reliable read-only version for APFS on Linux. So, we are going to use HFS+ instead.</p>
 <p>Please make sure you format your drive correctly and do not forget to give read and write permissions to everyone using &ldquo;Get Info&rdquo; on your Mac.</p>
 <p><img src="./permissions.png" alt="Permissions"></p>
 <h2 id="mounting-our-hard-drive">Mounting our Hard Drive
@@ -187,7 +187,7 @@
 <p>Let&rsquo;s mount our drive!</p>
 <pre><code>sudo mount -t hfsplus -o force,rw /dev/name_of_your_drive /your_mount_point
 </code></pre>
-<p>Unfortunately, the drive is not yet mounted permantly. Let&rsquo;s do that! Let&rsquo;s find the &ldquo;PARTUUID&rdquo; of your drive fist.</p>
+<p>Unfortunately, the drive is not yet mounted permanently. Let&rsquo;s do that! Let&rsquo;s find the &ldquo;PARTUUID&rdquo; of your drive fist.</p>
 <pre><code>sudo blkid /dev/sda2
 </code></pre>
 <p>Let&rsquo;s open the following:</p>
@@ -200,8 +200,8 @@
 <h2 id="preparing-everything-for-time-machine">Preparing everything for Time Machine
 <span><a href="#preparing-everything-for-time-machine">#</a></span>
 </h2><p>Before the can access the drive from our Mac, we need couple of additional tweaks.</p>
-<h3 id="install-samba-and-avahi">Install Samba and Avahi
-<span><a href="#install-samba-and-avahi">#</a></span>
+<h3 id="installing-samba-and-avahi">Installing Samba and Avahi
+<span><a href="#installing-samba-and-avahi">#</a></span>
 </h3><p>Samba is used for the file server.</p>
 <p>Avahi emulates a Time Capsule and our drive get&rsquo;s automatically discovered by MacOS. 🔎</p>
 <p>Let&rsquo;s install everything on our Raspberry Pi.</p>
@@ -235,7 +235,7 @@
 </code></pre>
 <h3 id="configurating-avahi">Configurating Avahi
 <span><a href="#configurating-avahi">#</a></span>
-</h3><p>Allmost done! 🙂</p>
+</h3><p>Almost done! 🙂</p>
 <p>We need to configure Avahi. Lets open the following file:</p>
 <pre><code>sudo nano /etc/avahi/services/samba.service
 </code></pre>
@@ -274,18 +274,6 @@
 <p>Do not forget to encrypt your backups!</p>
 <p><img src="./connect.png" alt="pwnd"></p>
 <p>You can use the user &ldquo;timemachine&rdquo; and the Samba password you chose earlier.</p>
-<h2 id="optional-read-only-and-backup-the-pi">Optional: Read only and Backup the Pi
-<span><a href="#optional-read-only-and-backup-the-pi">#</a></span>
-</h2><h3 id="read-only">Read only
-<span><a href="#read-only">#</a></span>
-</h3><p>You can make your Raspberry Pi read only, so nothing can be changed. That should increase your reliability of the system and the longevity of your SD card. The lifetime of SD cards are mainly dependent on the write cycles they endure.</p>
-<p>You will find the setting here:</p>
-<pre><code>sudo raspi-config
-</code></pre>
-<p>Go to &ldquo;Performance Options&rdquo; and &ldquo;Overlay File System&rdquo;.</p>
-<h3 id="backup">Backup
-<span><a href="#backup">#</a></span>
-</h3><p>The most simple way to backup your Pi is just to copy all the files from the SD card. You could store these files on your Mac or iCloud.</p>
 <h2 id="conclusion">Conclusion
 <span><a href="#conclusion">#</a></span>
 </h2><p>We&rsquo;ve seen how to emulate a Time Capsule using a Raspberry Pi. Due to the small size of the Raspberry Pi, it&rsquo;s a very portable backup solution, which can be taken everywhere!</p>
@@ -301,7 +289,7 @@
         <div class="post-date dt-published">2022-04-09</div>
     
 
-    <a class="post-hidden-url u-url" href="https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos/">https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule-macos/</a>
+    <a class="post-hidden-url u-url" href="https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule/">https://czyrnik.me/blog/how-to-use-a-raspberry-as-time-capsule/</a>
     <a href="https://czyrnik.me" class="p-name p-author post-hidden-author h-card" rel="me">Toni Czyrnik</a>
 
 
@@ -326,14 +314,12 @@
     
         
     <div class="pagination post-pagination">
-        <div class="left pagination-item ">
-            
-                <a href="/blog/how-to-set-up-a-raspberry-pi/">How to set up a Raspberry Pi</a>
+        <div class="left pagination-item disabled">
             
         </div>
         <div class="right pagination-item ">
             
-                <a href="/blog/tallinn-as-digital-nomad/">Tallinn as Digital Nomad</a>
+                <a href="/blog/how-to-set-up-a-raspberry-pi/">How to set up a Raspberry Pi</a>
             
         </div>
     </div>
