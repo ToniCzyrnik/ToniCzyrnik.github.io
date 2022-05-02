@@ -20,7 +20,7 @@ keywords:
   - 
   - 
 
-summary: text used when providing a summary of the article
+summary: ""
 ---
 
 ## Heading 1

@@ -15,3 +15,12 @@ The main blog directory needs to have the most files. Otherwise, the postings wi
 
 ### Build locally
 	$ hugo server
+
+## Memes
+
+- Font: Comic Sans
+- Black Edge: 7 pt
+
+## Grammar Check
+
+	$ https://www.reverso.net/spell-checker/english-spelling-grammar/

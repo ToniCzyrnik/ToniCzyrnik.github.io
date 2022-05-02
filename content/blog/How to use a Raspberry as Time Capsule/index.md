@@ -20,7 +20,7 @@ keywords: (meta keywords)
   - Digital Nomad
   - macOS
 
-summary: Let's emulate a Time Capsule! 🚀
+summary: "Let's emulate a Time Capsule! 🚀"
 ---
 
 

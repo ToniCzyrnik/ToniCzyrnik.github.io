@@ -17,7 +17,7 @@ keywords:
   - Student
   - Growth
 
-summary:
+summary: ""
 ---
 
 # The Six Templates for successful Ads
