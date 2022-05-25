@@ -281,22 +281,28 @@ wmm_ac_vo_acm=0
 <h3 id="testing-the-connection">Testing the Connection
 <span><a href="#testing-the-connection">#</a></span>
 </h3><p>You can test the connection speed between your computer and the Pi using iPerf.</p>
-<p>Install iperf on the Pi:</p>
+<h4 id="preparing-the-raspberry-pi">Preparing the Raspberry Pi
+<span><a href="#preparing-the-raspberry-pi">#</a></span>
+</h4><p>Install iperf:</p>
 <pre><code>sudo apt-get install iperf3
 </code></pre>
 <p>If you don&rsquo;t know the IP address of your pi. Use the following on your Raspberry Pi.</p>
 <pre><code>hostname -I
 </code></pre>
-<p>Let&rsquo;s choose the Pi as the server:</p>
+<p>Let&rsquo;s start the server!</p>
 <pre><code>iperf3 -s
 </code></pre>
-<p>Let&rsquo;s prepare the Mac. Install iperf:</p>
+<h4 id="preparing-the-mac">Preparing the Mac
+<span><a href="#preparing-the-mac">#</a></span>
+</h4><p>Install iperf:</p>
 <pre><code>brew install iperf
 </code></pre>
 <p>Run your mac as client:</p>
 <pre><code>iperf -c IP_ADDRESS -p PORT
 </code></pre>
-<p>Now, you can see your network speed between your Mac and Raspberry Pi.</p>
+<h4 id="results">Results
+<span><a href="#results">#</a></span>
+</h4><p>Now, you can see your network speed between your Mac and Raspberry Pi.</p>
 <h2 id="backing-up-the-sd-card">Backing up the SD Card
 <span><a href="#backing-up-the-sd-card">#</a></span>
 </h2><p>The most simple way to backup your Pi is coping all the files from the SD card. But creating an image is more reliable. You could store these files on your Mac or iCloud.</p>
