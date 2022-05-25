@@ -23,4 +23,4 @@ The main blog directory needs to have the most files. Otherwise, the postings wi
 
 ## Grammar Check
 
-	$ https://www.reverso.net/spell-checker/english-spelling-grammar/
+	https://www.reverso.net/spell-checker/english-spelling-grammar/

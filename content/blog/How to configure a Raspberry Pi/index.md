@@ -158,25 +158,27 @@ I used the following "hostapd.conf":
 
 You can test the connection speed between your computer and the Pi using iPerf.
 
-Install iperf on the pi:
+Install iperf on the Pi:
 
 	sudo apt-get install iperf3
 
-Install iperf on mac:
-
-	brew install iperf
-
-Let's choose the pi as the server.
-	
-	iperf3 -s
-
-If you don't know the IP address of your pi.
+If you don't know the IP address of your pi. Use the following on your Raspberry Pi. 
 
 	hostname -I
 
-Run your mac as client
+Let's choose the Pi as the server:
+	
+	iperf3 -s
+
+Let's prepare the Mac. Install iperf:
+
+	brew install iperf
+
+Run your mac as client:
 
 	iperf -c IP_ADDRESS -p PORT
+	
+Now, you can see your network speed between your Mac and Raspberry Pi.
 	
 ## Backing up the SD Card
 
