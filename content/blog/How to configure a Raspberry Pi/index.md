@@ -104,12 +104,46 @@ driver=nl80211
 
 	### IEEE 802.11
 	ssid=YOUR__SSID
+	wpa_passphrase=YOUR__PASSWORD
 	# a = 5 GHz, g = 2.4 GHz
 	hw_mode=a
-	# 0 = automatic, least interference
-	channel=36
+	# 36 or 149
+	channel=149
 	# 1=wpa, 2=wep, 3=both
 	auth_algs=1
+
+	### DFS
+	country_code=US
+	# allowed channels and transmit power levels based on the regulatory limits
+	ieee80211d=1
+	# enables radar detection and DFS support
+	ieee80211h=1
+
+	### IEEE 802.11n
+	ieee80211n=1
+	require_ht=1
+	ht_capab=[HT20][HT40+][SHORT-GI-20][SHORT-GI-40][DSSS_CCK-40]
+
+	### IEEE 802.11ac
+	ieee80211ac=1
+	# 0 = 20 or 40 MHz operating Channel width
+	# 1 = 80 MHz channel width
+	# 2 = 160 MHz channel width
+	# 3 = 80+80 MHz channel width
+	vht_oper_chwidth=1
+	# channel + 6 for 80 MHz
+	# 42 or 155
+	vht_oper_centr_freq_seg0_idx=155
+	vht_capab=[SHORT-GI-80][MAX-MPDU-3895][SU-BEAMFORMEE]
+
+	### IEEE 802.11i
+	wpa=2
+	wpa_key_mgmt=WPA-PSK
+	rsn_pairwise=CCMP
+
+	### WMM
+	wmm_enabled=1
+	uapsd_advertisement_enabled=1
 	
 	### logging
 	# Module bitfield (-1 = all)
@@ -133,94 +167,22 @@ driver=nl80211
 	logger_stdout=-1
 	logger_stdout_level=4
 
-	### DFS
-	country_code=NL
-	# allowed channels and transmit power levels based on the regulatory limits
-	ieee80211d=1
-	# enables radar detection and DFS support
-	ieee80211h=1
-
-	### IEEE 802.11n
-	ieee80211n=1
-	require_ht=1
-	ht_capab=[HT20][HT40+][SHORT-GI-20][SHORT-GI-40][DSSS_CCK-40]
-
-	### IEEE 802.11ac
-	ieee80211ac=1
-	# 0 = 20 or 40 MHz operating Channel width
-	# 1 = 80 MHz channel width
-	# 2 = 160 MHz channel width
-	# 3 = 80+80 MHz channel width
-	vht_oper_chwidth=1
-	# center freq = 5 GHz + (5 * index)
-	# channel + 6
-	vht_oper_centr_freq_seg0_idx=42
-	vht_capab=[SHORT-GI-80][MAX-MPDU-3895][SU-BEAMFORMEE]
-
-	### IEEE 802.11i
-	wpa=2
-	wpa_key_mgmt=WPA-PSK
-	wpa_passphrase=YOUR__PASSWORD
-	#wpa_pairwise=TKIP CCMP GCMP
-	rsn_pairwise=CCMP
-
-	### WMM
-	wmm_enabled=1
-	uapsd_advertisement_enabled=1
-	# Low priority / AC_BK = background
-	wmm_ac_bk_cwmin=4
-	wmm_ac_bk_cwmax=10
-	wmm_ac_bk_aifs=7
-	wmm_ac_bk_txop_limit=0
-	wmm_ac_bk_acm=0
-	# Normal priority / AC_BE = best effort
-	wmm_ac_be_aifs=3
-	wmm_ac_be_cwmin=4
-	wmm_ac_be_cwmax=10
-	wmm_ac_be_txop_limit=0
-	wmm_ac_be_acm=0
-	# High priority / AC_VI = video
-	wmm_ac_vi_aifs=2
-	wmm_ac_vi_cwmin=3
-	wmm_ac_vi_cwmax=4
-	wmm_ac_vi_txop_limit=94
-	wmm_ac_vi_acm=0
-	# Highest priority / AC_VO = voice
-	wmm_ac_vo_aifs=2
-	wmm_ac_vo_cwmin=2
-	wmm_ac_vo_cwmax=3
-	wmm_ac_vo_txop_limit=47
-	wmm_ac_vo_acm=0
-
-	### TX queue parameters
-	# Low priority / AC_BK = background
-	tx_queue_data3_aifs=7
-	tx_queue_data3_cwmin=15
-	tx_queue_data3_cwmax=1023
-	tx_queue_data3_burst=0
-	# Normal priority / AC_BE = best effort
-	tx_queue_data2_aifs=3
-	tx_queue_data2_cwmin=15
-	tx_queue_data2_cwmax=63
-	tx_queue_data2_burst=0
-	# High priority / AC_VI = video
-	tx_queue_data1_aifs=1
-	tx_queue_data1_cwmin=7
-	tx_queue_data1_cwmax=15
-	tx_queue_data1_burst=3.0
-	# Highest priority / AC_VO = voice
-	tx_queue_data0_aifs=1
-	tx_queue_data0_cwmin=3
-	tx_queue_data0_cwmax=7
-	tx_queue_data0_burst=1.5
-
 ### Finding your channel
 
 You can view possible channels with the following.
 
-	iwlist wlan0 channel
+	iw list
 	
-If you want to know what channels are busy, you need to install nmcli.
+	
+Look at your current config
+	
+	iw dev
+
+Depending on the chosen country, there are different frequencies possible. You can look on [wikipedia](https://en.wikipedia.org/wiki/List_of_WLAN_channels#5_GHz_(802.11a/h/j/n/ac/ax)).
+
+	iw reg get
+
+If you want to know what channels are busy in your environment, you need to install nmcli.
 
 With this service, we get a list of available wifi networks.
 
@@ -266,11 +228,11 @@ Let's start the server!
 
 Install iperf:
 
-	brew install iperf
+	brew install iperf3
 
 Run your mac as client:
 
-	iperf -c IP_ADDRESS -p PORT
+	iperf3 -c IP_ADDRESS
 	
 #### Results
 
