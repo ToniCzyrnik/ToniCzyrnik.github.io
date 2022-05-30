@@ -76,20 +76,47 @@ UsePAM no
 &lt;/h2&gt;&lt;p&gt;If your WiFi is unreliable but you have access to an ethernet cable, you could try to set up a wireless access point with your Raspberry Pi!&lt;/p&gt;
 &lt;p&gt;You can read a great tutorial for setting up a Routed Wireless Access Point in the &lt;a href=&#34;https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point&#34;&gt;official documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I used the following &amp;ldquo;hostapd.conf&amp;rdquo;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ctrl_interface_group=0
+&lt;pre&gt;&lt;code&gt;#ctrl_interface=/var/run/hostapd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;#ctrl_interface_group=0
 interface=wlan0
-driver=nl80211
-
-### IEEE 802.11
-ssid=YOUR_WIFI_ID
+driver=nl80211&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;### IEEE 802.11
+ssid=YOUR__SSID
+# a = 5 GHz, g = 2.4 GHz
 hw_mode=a
+# 0 = automatic, least interference
 channel=36
-max_num_sta=128
+# 1=wpa, 2=wep, 3=both
 auth_algs=1
+
+### logging
+# Module bitfield (-1 = all)
+# bit 0 (1) = IEEE 802.11
+# bit 1 (2) = IEEE 802.1X
+# bit 2 (4) = RADIUS
+# bit 3 (8) = WPA
+# bit 4 (16) = driver interface
+# bit 5 (32) = IAPP
+# bit 6 (64) = MLME
+
+# Levels (minimum value for logged events):
+#  0 = verbose debugging
+#  1 = debugging
+#  2 = informational messages
+#  3 = notification
+#  4 = warning
+
+logger_syslog=-1
+logger_syslog_level=4
+logger_stdout=-1
+logger_stdout_level=4
 
 ### DFS
 country_code=NL
+# allowed channels and transmit power levels based on the regulatory limits
 ieee80211d=1
+# enables radar detection and DFS support
 ieee80211h=1
 
 ### IEEE 802.11n
@@ -99,39 +126,95 @@ ht_capab=[HT20][HT40+][SHORT-GI-20][SHORT-GI-40][DSSS_CCK-40]
 
 ### IEEE 802.11ac
 ieee80211ac=1
+# 0 = 20 or 40 MHz operating Channel width
+# 1 = 80 MHz channel width
+# 2 = 160 MHz channel width
+# 3 = 80+80 MHz channel width
 vht_oper_chwidth=1
+# center freq = 5 GHz + (5 * index)
+# channel + 6
 vht_oper_centr_freq_seg0_idx=42
 vht_capab=[SHORT-GI-80][MAX-MPDU-3895][SU-BEAMFORMEE]
 
 ### IEEE 802.11i
 wpa=2
 wpa_key_mgmt=WPA-PSK
-wpa_passphrase=YOUR_WIFI_PASSWORD
+wpa_passphrase=YOUR__PASSWORD
+#wpa_pairwise=TKIP CCMP GCMP
 rsn_pairwise=CCMP
 
 ### WMM
 wmm_enabled=1
 uapsd_advertisement_enabled=1
+# Low priority / AC_BK = background
 wmm_ac_bk_cwmin=4
 wmm_ac_bk_cwmax=10
 wmm_ac_bk_aifs=7
 wmm_ac_bk_txop_limit=0
 wmm_ac_bk_acm=0
+# Normal priority / AC_BE = best effort
 wmm_ac_be_aifs=3
 wmm_ac_be_cwmin=4
 wmm_ac_be_cwmax=10
 wmm_ac_be_txop_limit=0
 wmm_ac_be_acm=0
+# High priority / AC_VI = video
 wmm_ac_vi_aifs=2
 wmm_ac_vi_cwmin=3
 wmm_ac_vi_cwmax=4
 wmm_ac_vi_txop_limit=94
 wmm_ac_vi_acm=0
+# Highest priority / AC_VO = voice
 wmm_ac_vo_aifs=2
 wmm_ac_vo_cwmin=2
 wmm_ac_vo_cwmax=3
 wmm_ac_vo_txop_limit=47
 wmm_ac_vo_acm=0
+
+### TX queue parameters
+# Low priority / AC_BK = background
+tx_queue_data3_aifs=7
+tx_queue_data3_cwmin=15
+tx_queue_data3_cwmax=1023
+tx_queue_data3_burst=0
+# Normal priority / AC_BE = best effort
+tx_queue_data2_aifs=3
+tx_queue_data2_cwmin=15
+tx_queue_data2_cwmax=63
+tx_queue_data2_burst=0
+# High priority / AC_VI = video
+tx_queue_data1_aifs=1
+tx_queue_data1_cwmin=7
+tx_queue_data1_cwmax=15
+tx_queue_data1_burst=3.0
+# Highest priority / AC_VO = voice
+tx_queue_data0_aifs=1
+tx_queue_data0_cwmin=3
+tx_queue_data0_cwmax=7
+tx_queue_data0_burst=1.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;finding-your-channel&#34;&gt;Finding your channel
+&lt;span&gt;&lt;a href=&#34;#finding-your-channel&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;You can view possible channels with the following.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;iwlist wlan0 channel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want to know what channels are busy, you need to install nmcli.&lt;/p&gt;
+&lt;p&gt;With this service, we get a list of available wifi networks.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nmcli dev wifi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can force a rescan:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo nmcli dev wifi rescan
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;installing--network-management-command-line-interface-nmcli&#34;&gt;Installing  Network Management Command-Line Interface (nmcli)
+&lt;span&gt;&lt;a href=&#34;#installing--network-management-command-line-interface-nmcli&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;Let&amp;rsquo;s install it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install network-manager
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, you can start the service.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo systemctl start NetworkManager.service 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But make sure, that it is not enabled!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo systemctl disable NetworkManager.service
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;testing-the-connection&#34;&gt;Testing the Connection
 &lt;span&gt;&lt;a href=&#34;#testing-the-connection&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
@@ -158,6 +241,15 @@ wmm_ac_vo_acm=0
 &lt;h4 id=&#34;results&#34;&gt;Results
 &lt;span&gt;&lt;a href=&#34;#results&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h4&gt;&lt;p&gt;Now, you can see your network speed between your Mac and Raspberry Pi.&lt;/p&gt;
+&lt;h3 id=&#34;testing-your-internet-with-speedtest&#34;&gt;Testing your internet with speedtest
+&lt;span&gt;&lt;a href=&#34;#testing-your-internet-with-speedtest&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;You will find the official instruction &lt;a href=&#34;https://www.speedtest.net/en/apps/cli&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install curl
+
+curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
+
+sudo apt-get install speedtest
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;backing-up-the-sd-card&#34;&gt;Backing up the SD Card
 &lt;span&gt;&lt;a href=&#34;#backing-up-the-sd-card&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;The most simple way to backup your Pi is coping all the files from the SD card. But creating an image is more reliable. You could store these files on your Mac or iCloud.&lt;/p&gt;
@@ -166,10 +258,10 @@ wmm_ac_vo_acm=0
 &lt;/h3&gt;&lt;p&gt;Let&amp;rsquo;s find the name of our SD card using&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;diskutil list
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let&amp;rsquo;s create the image&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo dd if=/dev/disk_name status=progress | gzip -c &amp;gt; PiBackup.dmg.gz
+&lt;p&gt;Let&amp;rsquo;s create the image.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo dd if=/dev/DISK_NAME status=progress | gzip -c &amp;gt; PiBackup.dmg.gz
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This takes a while and will save the image into your user directory.&lt;/p&gt;
+&lt;p&gt;This takes a while and will save the image into your user directory. The whole SD-card is copied and afterwards compressed.&lt;/p&gt;
 &lt;h3 id=&#34;restoring-the-image-using-macos&#34;&gt;Restoring the image using macOS
 &lt;span&gt;&lt;a href=&#34;#restoring-the-image-using-macos&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h3&gt;&lt;p&gt;Before we can restore a backup, we need to unmount the SD card.&lt;/p&gt;
