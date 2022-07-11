@@ -48,27 +48,35 @@ After installing it, we need to find the name of our drive.
 
 The name of my drive is "sda2". You'll find yours looking at the format and the size.
 
+Format
+
+	sudo mkfs -t ext4 /dev/sda2
+
 ### Creating a Mount Point
 
 Before mounting a drive, we'll need a mount point! Let's create a directory. You can choose the path to your point as you like. I chose "/TM".
 
 	sudo mkdir -p /TM
 
-Let's mount our drive!
-	
-	sudo mount -t hfsplus -o force,rw /dev/name_of_your_drive /your_mount_point
-
 Unfortunately, the drive is not yet mounted permanently. Let's do that! Let's find the "PARTUUID" of your drive fist. 
 
-	sudo blkid /dev/sda2
+	lsblk -f
+
+You find further information with:
+
+	sudo blkid /dev/sda
 	
 Let's open the following:
 
 	sudo nano /etc/fstab
 
-Add this line with your "PARTUUID" to the bottom of the file.
+Add this line with your UUID to the bottom of the file.
 
-	PARTUUID="your_partuuid" /your_mountpoint     hfsplus force,rw,user,auto        0       0
+	UUID=200d1fa5-78c3-4cc4-adb9-0de4f8776f2a  /TM  ext4  defaults  0  0
+
+You check everything with
+	
+	sudo mount -a
 
 Now, your drive will be mounted after every boot of the Pi! 🤯
 
@@ -94,6 +102,12 @@ Let's add a user "timemachine" for dealing with all our Time Machine stuff!
 
 After creating the user, you'll be prompted to enter a password for the new user on your Raspberry Pi.
 
+#### Give permission to the drive
+
+This new user needs permission to write to the timemachine drive.
+
+	sudo chown -R timemachine /TM
+
 ### Configurating Samba
 
 We need to define a password for Samba. I used the same password for convenience.
@@ -108,7 +122,7 @@ Add these lines to end of the file:
 
 	[Time Machine]
 		comment = Backups
-		path = /your_mount_point
+		path = /TM
 		valid users = timemachine
 		read only = no
 		vfs objects = catia fruit streams_xattr

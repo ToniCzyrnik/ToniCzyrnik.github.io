@@ -71,6 +71,26 @@ Insert above the "exit 0" the following:
 
 	/sbin/iw wlan0 set power_save off
 	
+	
+### Overclocking
+
+[Research](https://qengineering.eu/overclocking-the-raspberry-pi-4.html)
+
+	sudo geany /boot/config.txt
+	
+	
+The values:
+
+	# default 0, maximum 14
+	over_voltage=2
+	# default 700 MHz, maximum: 2400 MHz
+	arm_freq=1700
+	# default 500, maximum 650 MHz
+	gpu_freq=500
+	# default 0
+	force_turbo=0
+	
+	
 ### Changing Credentials and Further Configuration
 
 If you'd like to change your credentials in the future, just use the raspi-config! There are many more things to tweak as well. Have a look!
