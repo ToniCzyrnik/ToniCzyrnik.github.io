@@ -216,17 +216,34 @@ DenyUsers jane john
 PasswordAuthentication no
 UsePAM no
 </code></pre>
+<h2 id="uselful-additions">Uselful additions
+<span><a href="#uselful-additions">#</a></span>
+</h2><h3 id="speedtest">Speedtest
+<span><a href="#speedtest">#</a></span>
+</h3><pre><code>sudo apt-get install curl
+
+curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
+
+sudo apt-get install speedtest
+</code></pre>
+<h3 id="iperf">iperf
+<span><a href="#iperf">#</a></span>
+</h3><pre><code>sudo apt-get install iperf3
+</code></pre>
 <h2 id="wireless-access-point">Wireless Access Point
 <span><a href="#wireless-access-point">#</a></span>
 </h2><p>If your WiFi is unreliable but you have access to an ethernet cable, you could try to set up a wireless access point with your Raspberry Pi!</p>
 <p>You can read a great tutorial for setting up a Routed Wireless Access Point in the <a href="https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point">official documentation</a>.</p>
+<p>open your hostapd:</p>
+<pre><code>sudo nano /etc/hostapd/hostapd.conf
+</code></pre>
 <p>I used the following &ldquo;hostapd.conf&rdquo;:</p>
 <pre><code>#ctrl_interface=/var/run/hostapd
-</code></pre>
-<p>#ctrl_interface_group=0
+#ctrl_interface_group=0
 interface=wlan0
-driver=nl80211</p>
-<pre><code>### IEEE 802.11
+driver=nl80211
+
+### IEEE 802.11
 ssid=YOUR__SSID
 wpa_passphrase=YOUR__PASSWORD
 # a = 5 GHz, g = 2.4 GHz
@@ -263,33 +280,20 @@ vht_capab=[SHORT-GI-80][MAX-MPDU-3895][SU-BEAMFORMEE]
 ### IEEE 802.11i
 wpa=2
 wpa_key_mgmt=WPA-PSK
+wpa_pairwise=CCMP
 rsn_pairwise=CCMP
 
 ### WMM
 wmm_enabled=1
+
 uapsd_advertisement_enabled=1
-
-### logging
-# Module bitfield (-1 = all)
-# bit 0 (1) = IEEE 802.11
-# bit 1 (2) = IEEE 802.1X
-# bit 2 (4) = RADIUS
-# bit 3 (8) = WPA
-# bit 4 (16) = driver interface
-# bit 5 (32) = IAPP
-# bit 6 (64) = MLME
-
-# Levels (minimum value for logged events):
-#  0 = verbose debugging
-#  1 = debugging
-#  2 = informational messages
-#  3 = notification
-#  4 = warning
-
-logger_syslog=-1
-logger_syslog_level=4
-logger_stdout=-1
-logger_stdout_level=4
+macaddr_acl=0
+ignore_broadcast_ssid=0
+</code></pre>
+<p>Hostapd need to be restarted after changing its config file.</p>
+<pre><code>sudo systemctl stop hostapd.service
+sudo systemctl start hostapd.service
+sudo systemctl status hostapd.service
 </code></pre>
 <h3 id="finding-your-channel">Finding your channel
 <span><a href="#finding-your-channel">#</a></span>
@@ -301,6 +305,9 @@ logger_stdout_level=4
 </code></pre>
 <p>Depending on the chosen country, there are different frequencies possible. You can look on <a href="https://en.wikipedia.org/wiki/List_of_WLAN_channels#5_GHz_(802.11a/h/j/n/ac/ax)">wikipedia</a>.</p>
 <pre><code>iw reg get
+</code></pre>
+<p>You can have a view at your routing with</p>
+<pre><code>route
 </code></pre>
 <p>If you want to know what channels are busy in your environment, you need to install nmcli.</p>
 <p>With this service, we get a list of available wifi networks.</p>
@@ -325,10 +332,7 @@ logger_stdout_level=4
 </h3><p>You can test the connection speed between your computer and the Pi using iPerf.</p>
 <h4 id="preparing-the-raspberry-pi">Preparing the Raspberry Pi
 <span><a href="#preparing-the-raspberry-pi">#</a></span>
-</h4><p>Install iperf:</p>
-<pre><code>sudo apt-get install iperf3
-</code></pre>
-<p>If you don&rsquo;t know the IP address of your pi. Use the following on your Raspberry Pi.</p>
+</h4><p>If you don&rsquo;t know the IP address of your pi. Use the following on your Raspberry Pi.</p>
 <pre><code>hostname -I
 </code></pre>
 <p>Let&rsquo;s start the server!</p>
@@ -363,16 +367,16 @@ sudo apt-get install speedtest
 <pre><code>diskutil list
 </code></pre>
 <p>Let&rsquo;s create the image.</p>
-<pre><code>sudo dd if=/dev/DISK_NAME status=progress | gzip -c &gt; PiBackup.dmg.gz
+<pre><code>sudo dd if=/dev/rdisk# status=progress bs=1M | gzip -c &gt; PiBackup.dmg.gz
 </code></pre>
 <p>This takes a while and will save the image into your user directory. The whole SD-card is copied and afterwards compressed.</p>
 <h3 id="restoring-the-image-using-macos">Restoring the image using macOS
 <span><a href="#restoring-the-image-using-macos">#</a></span>
 </h3><p>Before we can restore a backup, we need to unmount the SD card.</p>
-<pre><code>diskutil unmountDisk /dev/disk_name
+<pre><code>diskutil unmountDisk /dev/disk#
 </code></pre>
 <p>Now, we can restore our backup image.</p>
-<pre><code>zcat PiBackup.dmg.gz | dd of=/dev/disk_name
+<pre><code>sudo bash -c &quot;gzcat PiBackup.dmg.gz | dd of=/dev/disk# status=progress&quot;
 </code></pre>
 <h2 id="optional-overlay-file-system">Optional: Overlay File System
 <span><a href="#optional-overlay-file-system">#</a></span>
@@ -381,6 +385,10 @@ sudo apt-get install speedtest
 <pre><code>sudo raspi-config
 </code></pre>
 <p>Go to &ldquo;Performance Options&rdquo; and &ldquo;Overlay File System&rdquo;.</p>
+<h2 id="backup-speed-increase-on-a-mac">Backup Speed Increase on a Mac
+<span><a href="#backup-speed-increase-on-a-mac">#</a></span>
+</h2><pre><code>sudo sysctl debug.lowpri_throttle_enabled=0
+</code></pre>
 <h2 id="conclusion">Conclusion
 <span><a href="#conclusion">#</a></span>
 </h2><p>That were a few first useful configurations for your Raspberry Pi!</p>

@@ -179,22 +179,28 @@
 <pre><code>lsblk -f
 </code></pre>
 <p>The name of my drive is &ldquo;sda2&rdquo;. You&rsquo;ll find yours looking at the format and the size.</p>
+<p>Format</p>
+<pre><code>sudo mkfs -t ext4 /dev/sda2
+</code></pre>
 <h3 id="creating-a-mount-point">Creating a Mount Point
 <span><a href="#creating-a-mount-point">#</a></span>
 </h3><p>Before mounting a drive, we&rsquo;ll need a mount point! Let&rsquo;s create a directory. You can choose the path to your point as you like. I chose &ldquo;/TM&rdquo;.</p>
 <pre><code>sudo mkdir -p /TM
 </code></pre>
-<p>Let&rsquo;s mount our drive!</p>
-<pre><code>sudo mount -t hfsplus -o force,rw /dev/name_of_your_drive /your_mount_point
-</code></pre>
 <p>Unfortunately, the drive is not yet mounted permanently. Let&rsquo;s do that! Let&rsquo;s find the &ldquo;PARTUUID&rdquo; of your drive fist.</p>
-<pre><code>sudo blkid /dev/sda2
+<pre><code>lsblk -f
+</code></pre>
+<p>You find further information with:</p>
+<pre><code>sudo blkid /dev/sda
 </code></pre>
 <p>Let&rsquo;s open the following:</p>
 <pre><code>sudo nano /etc/fstab
 </code></pre>
-<p>Add this line with your &ldquo;PARTUUID&rdquo; to the bottom of the file.</p>
-<pre><code>PARTUUID=&quot;your_partuuid&quot; /your_mountpoint     hfsplus force,rw,user,auto        0       0
+<p>Add this line with your UUID to the bottom of the file.</p>
+<pre><code>UUID=200d1fa5-78c3-4cc4-adb9-0de4f8776f2a  /TM  ext4  defaults  0  0
+</code></pre>
+<p>You check everything with</p>
+<pre><code>sudo mount -a
 </code></pre>
 <p>Now, your drive will be mounted after every boot of the Pi! 🤯</p>
 <h2 id="preparing-everything-for-time-machine">Preparing everything for Time Machine
@@ -213,6 +219,11 @@
 <pre><code>sudo adduser timemachine
 </code></pre>
 <p>After creating the user, you&rsquo;ll be prompted to enter a password for the new user on your Raspberry Pi.</p>
+<h4 id="give-permission-to-the-drive">Give permission to the drive
+<span><a href="#give-permission-to-the-drive">#</a></span>
+</h4><p>This new user needs permission to write to the timemachine drive.</p>
+<pre><code>sudo chown -R timemachine /TM
+</code></pre>
 <h3 id="configurating-samba">Configurating Samba
 <span><a href="#configurating-samba">#</a></span>
 </h3><p>We need to define a password for Samba. I used the same password for convenience.</p>
@@ -224,7 +235,7 @@
 <p>Add these lines to end of the file:</p>
 <pre><code>[Time Machine]
 	comment = Backups
-	path = /your_mount_point
+	path = /TM
 	valid users = timemachine
 	read only = no
 	vfs objects = catia fruit streams_xattr

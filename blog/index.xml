@@ -111,17 +111,34 @@ DenyUsers jane john
 PasswordAuthentication no
 UsePAM no
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;uselful-additions&#34;&gt;Uselful additions
+&lt;span&gt;&lt;a href=&#34;#uselful-additions&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;speedtest&#34;&gt;Speedtest
+&lt;span&gt;&lt;a href=&#34;#speedtest&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;sudo apt-get install curl
+
+curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
+
+sudo apt-get install speedtest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;iperf&#34;&gt;iperf
+&lt;span&gt;&lt;a href=&#34;#iperf&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;sudo apt-get install iperf3
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;wireless-access-point&#34;&gt;Wireless Access Point
 &lt;span&gt;&lt;a href=&#34;#wireless-access-point&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;If your WiFi is unreliable but you have access to an ethernet cable, you could try to set up a wireless access point with your Raspberry Pi!&lt;/p&gt;
 &lt;p&gt;You can read a great tutorial for setting up a Routed Wireless Access Point in the &lt;a href=&#34;https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point&#34;&gt;official documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;open your hostapd:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/hostapd/hostapd.conf
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I used the following &amp;ldquo;hostapd.conf&amp;rdquo;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;#ctrl_interface=/var/run/hostapd
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;#ctrl_interface_group=0
+#ctrl_interface_group=0
 interface=wlan0
-driver=nl80211&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;### IEEE 802.11
+driver=nl80211
+
+### IEEE 802.11
 ssid=YOUR__SSID
 wpa_passphrase=YOUR__PASSWORD
 # a = 5 GHz, g = 2.4 GHz
@@ -158,33 +175,20 @@ vht_capab=[SHORT-GI-80][MAX-MPDU-3895][SU-BEAMFORMEE]
 ### IEEE 802.11i
 wpa=2
 wpa_key_mgmt=WPA-PSK
+wpa_pairwise=CCMP
 rsn_pairwise=CCMP
 
 ### WMM
 wmm_enabled=1
+
 uapsd_advertisement_enabled=1
-
-### logging
-# Module bitfield (-1 = all)
-# bit 0 (1) = IEEE 802.11
-# bit 1 (2) = IEEE 802.1X
-# bit 2 (4) = RADIUS
-# bit 3 (8) = WPA
-# bit 4 (16) = driver interface
-# bit 5 (32) = IAPP
-# bit 6 (64) = MLME
-
-# Levels (minimum value for logged events):
-#  0 = verbose debugging
-#  1 = debugging
-#  2 = informational messages
-#  3 = notification
-#  4 = warning
-
-logger_syslog=-1
-logger_syslog_level=4
-logger_stdout=-1
-logger_stdout_level=4
+macaddr_acl=0
+ignore_broadcast_ssid=0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Hostapd need to be restarted after changing its config file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo systemctl stop hostapd.service
+sudo systemctl start hostapd.service
+sudo systemctl status hostapd.service
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;finding-your-channel&#34;&gt;Finding your channel
 &lt;span&gt;&lt;a href=&#34;#finding-your-channel&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
@@ -196,6 +200,9 @@ logger_stdout_level=4
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Depending on the chosen country, there are different frequencies possible. You can look on &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_WLAN_channels#5_GHz_(802.11a/h/j/n/ac/ax)&#34;&gt;wikipedia&lt;/a&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;iw reg get
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can have a view at your routing with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;route
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you want to know what channels are busy in your environment, you need to install nmcli.&lt;/p&gt;
 &lt;p&gt;With this service, we get a list of available wifi networks.&lt;/p&gt;
@@ -220,10 +227,7 @@ logger_stdout_level=4
 &lt;/h3&gt;&lt;p&gt;You can test the connection speed between your computer and the Pi using iPerf.&lt;/p&gt;
 &lt;h4 id=&#34;preparing-the-raspberry-pi&#34;&gt;Preparing the Raspberry Pi
 &lt;span&gt;&lt;a href=&#34;#preparing-the-raspberry-pi&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
-&lt;/h4&gt;&lt;p&gt;Install iperf:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get install iperf3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you don&amp;rsquo;t know the IP address of your pi. Use the following on your Raspberry Pi.&lt;/p&gt;
+&lt;/h4&gt;&lt;p&gt;If you don&amp;rsquo;t know the IP address of your pi. Use the following on your Raspberry Pi.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;hostname -I
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Let&amp;rsquo;s start the server!&lt;/p&gt;
@@ -258,16 +262,16 @@ sudo apt-get install speedtest
 &lt;pre&gt;&lt;code&gt;diskutil list
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Let&amp;rsquo;s create the image.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo dd if=/dev/DISK_NAME status=progress | gzip -c &amp;gt; PiBackup.dmg.gz
+&lt;pre&gt;&lt;code&gt;sudo dd if=/dev/rdisk# status=progress bs=1M | gzip -c &amp;gt; PiBackup.dmg.gz
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This takes a while and will save the image into your user directory. The whole SD-card is copied and afterwards compressed.&lt;/p&gt;
 &lt;h3 id=&#34;restoring-the-image-using-macos&#34;&gt;Restoring the image using macOS
 &lt;span&gt;&lt;a href=&#34;#restoring-the-image-using-macos&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h3&gt;&lt;p&gt;Before we can restore a backup, we need to unmount the SD card.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;diskutil unmountDisk /dev/disk_name
+&lt;pre&gt;&lt;code&gt;diskutil unmountDisk /dev/disk#
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now, we can restore our backup image.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;zcat PiBackup.dmg.gz | dd of=/dev/disk_name
+&lt;pre&gt;&lt;code&gt;sudo bash -c &amp;quot;gzcat PiBackup.dmg.gz | dd of=/dev/disk# status=progress&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;optional-overlay-file-system&#34;&gt;Optional: Overlay File System
 &lt;span&gt;&lt;a href=&#34;#optional-overlay-file-system&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
@@ -276,6 +280,10 @@ sudo apt-get install speedtest
 &lt;pre&gt;&lt;code&gt;sudo raspi-config
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Go to &amp;ldquo;Performance Options&amp;rdquo; and &amp;ldquo;Overlay File System&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;backup-speed-increase-on-a-mac&#34;&gt;Backup Speed Increase on a Mac
+&lt;span&gt;&lt;a href=&#34;#backup-speed-increase-on-a-mac&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;sudo sysctl debug.lowpri_throttle_enabled=0
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
 &lt;span&gt;&lt;a href=&#34;#conclusion&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;That were a few first useful configurations for your Raspberry Pi!&lt;/p&gt;
@@ -305,22 +313,28 @@ sudo apt-get install speedtest
 &lt;pre&gt;&lt;code&gt;lsblk -f
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The name of my drive is &amp;ldquo;sda2&amp;rdquo;. You&amp;rsquo;ll find yours looking at the format and the size.&lt;/p&gt;
+&lt;p&gt;Format&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo mkfs -t ext4 /dev/sda2
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;creating-a-mount-point&#34;&gt;Creating a Mount Point
 &lt;span&gt;&lt;a href=&#34;#creating-a-mount-point&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h3&gt;&lt;p&gt;Before mounting a drive, we&amp;rsquo;ll need a mount point! Let&amp;rsquo;s create a directory. You can choose the path to your point as you like. I chose &amp;ldquo;/TM&amp;rdquo;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo mkdir -p /TM
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let&amp;rsquo;s mount our drive!&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo mount -t hfsplus -o force,rw /dev/name_of_your_drive /your_mount_point
-&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Unfortunately, the drive is not yet mounted permanently. Let&amp;rsquo;s do that! Let&amp;rsquo;s find the &amp;ldquo;PARTUUID&amp;rdquo; of your drive fist.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo blkid /dev/sda2
+&lt;pre&gt;&lt;code&gt;lsblk -f
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You find further information with:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo blkid /dev/sda
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Let&amp;rsquo;s open the following:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo nano /etc/fstab
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Add this line with your &amp;ldquo;PARTUUID&amp;rdquo; to the bottom of the file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;PARTUUID=&amp;quot;your_partuuid&amp;quot; /your_mountpoint     hfsplus force,rw,user,auto        0       0
+&lt;p&gt;Add this line with your UUID to the bottom of the file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UUID=200d1fa5-78c3-4cc4-adb9-0de4f8776f2a  /TM  ext4  defaults  0  0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You check everything with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo mount -a
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now, your drive will be mounted after every boot of the Pi! 🤯&lt;/p&gt;
 &lt;h2 id=&#34;preparing-everything-for-time-machine&#34;&gt;Preparing everything for Time Machine
@@ -339,6 +353,11 @@ sudo apt-get install speedtest
 &lt;pre&gt;&lt;code&gt;sudo adduser timemachine
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;After creating the user, you&amp;rsquo;ll be prompted to enter a password for the new user on your Raspberry Pi.&lt;/p&gt;
+&lt;h4 id=&#34;give-permission-to-the-drive&#34;&gt;Give permission to the drive
+&lt;span&gt;&lt;a href=&#34;#give-permission-to-the-drive&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;This new user needs permission to write to the timemachine drive.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo chown -R timemachine /TM
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;configurating-samba&#34;&gt;Configurating Samba
 &lt;span&gt;&lt;a href=&#34;#configurating-samba&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h3&gt;&lt;p&gt;We need to define a password for Samba. I used the same password for convenience.&lt;/p&gt;
@@ -350,7 +369,7 @@ sudo apt-get install speedtest
 &lt;p&gt;Add these lines to end of the file:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[Time Machine]
 	comment = Backups
-	path = /your_mount_point
+	path = /TM
 	valid users = timemachine
 	read only = no
 	vfs objects = catia fruit streams_xattr
@@ -446,6 +465,21 @@ password: raspberry
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Insert above the &amp;ldquo;exit 0&amp;rdquo; the following:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;/sbin/iw wlan0 set power_save off
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;overclocking&#34;&gt;Overclocking
+&lt;span&gt;&lt;a href=&#34;#overclocking&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://qengineering.eu/overclocking-the-raspberry-pi-4.html&#34;&gt;Research&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo geany /boot/config.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The values:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# default 0, maximum 14
+over_voltage=2
+# default 700 MHz, maximum: 2400 MHz
+arm_freq=1700
+# default 500, maximum 650 MHz
+gpu_freq=500
+# default 0
+force_turbo=0
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;changing-credentials-and-further-configuration&#34;&gt;Changing Credentials and Further Configuration
 &lt;span&gt;&lt;a href=&#34;#changing-credentials-and-further-configuration&#34;&gt;#&lt;/a&gt;&lt;/span&gt;

@@ -197,6 +197,21 @@ password: raspberry
 <p>Insert above the &ldquo;exit 0&rdquo; the following:</p>
 <pre><code>/sbin/iw wlan0 set power_save off
 </code></pre>
+<h3 id="overclocking">Overclocking
+<span><a href="#overclocking">#</a></span>
+</h3><p><a href="https://qengineering.eu/overclocking-the-raspberry-pi-4.html">Research</a></p>
+<pre><code>sudo geany /boot/config.txt
+</code></pre>
+<p>The values:</p>
+<pre><code># default 0, maximum 14
+over_voltage=2
+# default 700 MHz, maximum: 2400 MHz
+arm_freq=1700
+# default 500, maximum 650 MHz
+gpu_freq=500
+# default 0
+force_turbo=0
+</code></pre>
 <h3 id="changing-credentials-and-further-configuration">Changing Credentials and Further Configuration
 <span><a href="#changing-credentials-and-further-configuration">#</a></span>
 </h3><p>If you&rsquo;d like to change your credentials in the future, just use the raspi-config! There are many more things to tweak as well. Have a look!</p>
