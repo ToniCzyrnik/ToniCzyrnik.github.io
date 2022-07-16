@@ -24,6 +24,12 @@ summary: ""
 ---
 
 # Tallinn
+
+<figure>
+	<img src="./Old town Entrance.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+
 -  It's pretty flat
 
 I lived next to the oldest Cafe in the city. (Opened since 1864, Maiasmokk)
@@ -54,13 +60,31 @@ ToDo: Map of Tallinn
 
 ## Population 
 
-https://worldpopulationreview.com/world-cities/tallinn-population
+<figure>
+	<img src="./plot.png" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
 
 ## City Center
 
+<figure>
+	<img src="./Old town.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+
 ## Telliskivi
 
+<figure>
+	<img src="./Telliskivi.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+
 ### Coworking Space Lift99
+
+<figure>
+	<img src="./Coworking.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
 
 ## Public Transport
 
