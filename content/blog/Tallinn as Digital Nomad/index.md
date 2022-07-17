@@ -95,7 +95,25 @@ ToDo: Map of Tallinn
 
 ## Vegan Community 
 
+## Beach
+
+<figure>
+	<img src="./beach.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+
 ## Things to Do:
+
+<figure>
+	<img src="./museum.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+
+<figure>
+	<img src="./fotografika.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+
 
 - Jägala-Wasserfall
 - Nationalpark Lahemaa
