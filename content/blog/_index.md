@@ -7,4 +7,6 @@ aliases:
   - articles
 ---
 
-Here are all my postings.
+Here are all my postings:
+
+<meta http-equiv="refresh" content="0; URL=/">

@@ -2,11 +2,12 @@
 title: "Newsletter 💌"
 hidden: true
 aliases:
-  - "signup"
+  - "sign-up"
+  - "sign-up"  
 ---
 
 
-If you would like to stay updated on all new posts, I'd be happy to have join our list of friends!
+If you would like to stay updated on all new posts, you should join our secret circle of friends!
 
 
 <!-- Begin Mailchimp Signup Form -->

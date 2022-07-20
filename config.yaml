@@ -35,11 +35,11 @@ menu:
       weight: 1
     - identifier:  "newsletter"
       name: "Newsletter"
-      url:  "/newsletter/sign_up"
+      url:  "/newsletter/signup"
       weight:  2
     - identifier:  "about"
       name:  "About"
-      url: "/about/"
+      url: "/about/me"
       weight:  3
 
 markup:

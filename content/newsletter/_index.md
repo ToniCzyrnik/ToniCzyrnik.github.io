@@ -1,14 +1,6 @@
 ---
-title: "Newsletter"
-author: "Toni Czyrnik"
-aliases:
-  - "follow"
-tags:
-  - "Newsletter"
+title: "Newsletter 💌"
+hidden: true
 ---
 
-Thanks for considering joining my newsletter! 🙂
-
-<br>
-
-You get to the sign up page <a href="./sign_up">here</a>.
+<meta http-equiv="refresh" content="0; URL=./signup">
