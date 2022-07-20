@@ -16,35 +16,29 @@ categories:
 
 keywords:
   - Digital Nomad
-  - Remote
+  - Remote Work
   - Student
   - Tallinn
 
 summary: ""
 ---
 
-# Tallinn
+## Welcome to the Baltics
+
+Yes, I chose Tallinn. Tallinn - the tiny capital that many never heard of. I think it's one of the most underrated cities in Europe. 🇪🇺
+
+Estonia is the country with the most digital government in Europe. Your ID card provides digital access for everything like signatures, voting, medical recored and submitting tax claims - except for marriage, divorce and a credit for properties. You can even start your first business digitally. 
+
+IT education is important in Estonia. All children start learning about algorithms and coding at the age of seven. It's for the preparation of the digital age. 
 
 <figure>
 	<img src="./Old town Entrance.jpg" alt="" height=auto width="400"/>
 	<figcaption></figcaption>
 </figure>
 
--  It's pretty flat
 
-I lived next to the oldest Cafe in the city. (Opened since 1864, Maiasmokk)
 
-- probably most digital country in europe
-- Arzt Rezepte online
-- "Die Schüler erhalten ab dem Alter von 7 Jahren IT-Unterricht, nicht mit dem Ziel, dass alle den Beruf des Programmierers ergreifen, sondern um sie mit Codes und Algorithmen vertraut und für das Digitalzeitalter fit zu machen."
-- digitale Personalausweis (98% acceptance)
-	- cannot: Heirat, Scheidung und Immobilienkredite.
-- Ministerrat of Tallinn works paperless
-- Old Town is UNESCO World Heritage site
-- beach
-- rising tech and startup bubble
-- Previously Called Reval
-- A Medieval Fortress
+
 
 “Reval was in official use in Estonia until 1918.”
 
@@ -66,14 +60,17 @@ ToDo: Map of Tallinn
 </figure>
 
 ## City Center
-
+I lived next to the oldest Cafe in the city. (Opened since 1864, Maiasmokk)
+- Previously Called Reval
+- A Medieval Fortress
+- Old Town is UNESCO World Heritage site
 <figure>
 	<img src="./Old town.jpg" alt="" height=auto width="400"/>
 	<figcaption></figcaption>
 </figure>
 
 ## Telliskivi
-
+- rising tech and startup bubble
 <figure>
 	<img src="./Telliskivi.jpg" alt="" height=auto width="400"/>
 	<figcaption></figcaption>
@@ -93,10 +90,16 @@ ToDo: Map of Tallinn
 - smart card
 - qr ticket
 
-## Vegan Community 
+## Vegan Community
+
+<figure>
+	<img src="./restaurant.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+
 
 ## Beach
-
+-  It's pretty flat
 <figure>
 	<img src="./beach.jpg" alt="" height=auto width="400"/>
 	<figcaption></figcaption>
@@ -122,4 +125,4 @@ ToDo: Map of Tallinn
 - Kumu Art Museum
 - Lennusadam Seaplane Harbour
 - fotografiska
-- KGB Museum
+- KGB Museumsa

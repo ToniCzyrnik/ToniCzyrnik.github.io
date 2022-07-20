@@ -32,3 +32,13 @@ The main blog directory needs to have the most files. Otherwise, the postings wi
 ## Grammar Check
 
 	https://www.reverso.net/spell-checker/english-spelling-grammar/
+	
+## Colours
+
+https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
+
+Red: #E63946
+Light Green: #F1FAEE
+Light Blue: #A8DADC
+Blue: #457B9D
+Dark Blue: #1D3557
