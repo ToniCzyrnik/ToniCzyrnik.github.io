@@ -517,11 +517,14 @@ sudo apt-get upgrade
     
     <item>
       <title>Hi, I&#39;m Toni! 🙃</title>
-      <link>https://czyrnik.me/about/</link>
+      <link>https://czyrnik.me/about/me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://czyrnik.me/about/</guid>
+      <guid>https://czyrnik.me/about/me/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m an electrical power student.&lt;/p&gt;
+&lt;h2 id=&#34;what-am-i-doing-now&#34;&gt;What am I doing now?
+&lt;span&gt;&lt;a href=&#34;#what-am-i-doing-now&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;../now&#34;&gt;See my now page.&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

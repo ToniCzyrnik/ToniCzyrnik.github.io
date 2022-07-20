@@ -43,14 +43,16 @@
   </url><url>
     <loc>https://czyrnik.me/about/</loc>
   </url><url>
-    <loc>https://czyrnik.me/tags/newsletter/</loc>
+    <loc>https://czyrnik.me/about/me/</loc>
   </url><url>
     <loc>https://czyrnik.me/newsletter/</loc>
   </url><url>
-    <loc>https://czyrnik.me/newsletter/sign_up/</loc>
+    <loc>https://czyrnik.me/newsletter/signup/</loc>
   </url><url>
     <loc>https://czyrnik.me/tags/</loc>
   </url><url>
     <loc>https://czyrnik.me/newsletter/thanks/</loc>
+  </url><url>
+    <loc>https://czyrnik.me/about/now/</loc>
   </url>
 </urlset>
