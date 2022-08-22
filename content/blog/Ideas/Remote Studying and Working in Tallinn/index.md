@@ -44,7 +44,7 @@ Tallinn was occupied by the German until end of World War 1. Followed by the occ
 
 ## Population
 
-Tallinn experienced an extensive influx of Russian immigrants during the Soviet occupation (1944-1991). Whole new city districts were developed like Lasnamäe, which became the most populous district of Tallinn in the 1980s. *Today, about 50 % of the inhabits speak Estonian and about 46 % speak Russian as their native language.*
+Tallinn experienced an extensive influx of Russian immigrants during the Soviet occupation (1944-1991). Whole new city districts were developed like Lasnamäe,T which became the most populous district of Tallinn in the 1980s. *Today, about 50 % of the inhabits speak Estonian and about 46 % speak Russian as their native language.*
 
 <figure>
 	<img src="./plot.png" alt="" height=auto width="400"/>
