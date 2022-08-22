@@ -6,7 +6,7 @@ publishDate: 2022-04-10
 lastmod: 2022-04-10
 
 draft: false
-hidden: false
+hidden: True
 
 categories:
   - Raspberry Pi

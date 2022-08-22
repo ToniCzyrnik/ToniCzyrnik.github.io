@@ -25,34 +25,26 @@ summary: ""
 
 ## Welcome to the Baltics
 
-Yes, I chose Tallinn. Tallinn - the tiny capital that many never heard of. I think it's one of the most underrated cities in Europe. 🇪🇺
+Yes, I chose Tallinn. Tallinn - the tiny capital many never heard of. I think it's one of the most underrated cities in Europe. 🇪🇺
 
-Estonia is the country with the most digital government in Europe. Your ID card provides digital access for everything like signatures, voting, medical recored and submitting tax claims - except for marriage, divorce and a credit for properties. You can even start your first business digitally. 
+Estonia is the country with the most digital government in Europe. Their ID cards provide digital access for signatures, voting, medical records and submitting tax claims. You can even start your first business digitally. But there are things you need to do in person: marriage, divorce and a credit for properties. 
 
-IT education is important in Estonia. All children start learning about algorithms and coding at the age of seven. It's for the preparation of the digital age. 
+*IT education is important in Estonia. All children start learning about algorithms and coding at the age of seven. It's for the preparation of the digital age.*
 
 <figure>
 	<img src="./Old town Entrance.jpg" alt="" height=auto width="400"/>
 	<figcaption></figcaption>
 </figure>
 
+When walk around the city, you'll notice the lokal coffeeshops "Reval". That's the original name of the city until 1918. The name changed to Tallinn with the independence of Estonia.
 
+Reval was a significant trade hub in Europe during the 14th and 16th centuries. Today, the old town of Tallinn is one of the best-preserved medieval cities and is classified as a UNESCO World Heritage Site.
 
+Tallinn was occupied by the German until end of World War 1. Followed by the occupation by the Red Army during World War 2 in 1940. Nazi Germany occupied the city from 1941 to 1944. But Soviet occupation was quickly reestablished until 1991. Tallinn became the capital of an independent country once again in August 1991. 🎉
 
+## Population
 
-“Reval was in official use in Estonia until 1918.”
-
-“Tallinn Old Town is one of the best-preserved medieval cities in Europe and is listed as a UNESCO World Heritage Site.”
-
-“medieval port became a significant trade hub, especially in the 14–16th centuries”
-
-“On 24 February 1918, the Estonian Declaration of Independence was proclaimed in Reval (Tallinn). It was followed by Imperial German occupation until the end of World War I in November 1918, after which Tallinn became the capital of independent Estonia. During World War II, Estonia was first occupied by the Red Army and annexed into the USSR in 1940, then occupied by Nazi Germany from 1941 to 1944.”
-
-ToDo: Map of Tallinn
-—> Easy Day Trip to Helsinki with the ferry, around 40 Euros 
-
-
-## Population 
+Tallinn experienced an extensive influx of Russian immigrants during the Soviet occupation (1944-1991). Whole new city districts were developed like Lasnamäe, which became the most populous district of Tallinn in the 1980s. *Today, about 50 % of the inhabits speak Estonian and about 46 % speak Russian as their native language.*
 
 <figure>
 	<img src="./plot.png" alt="" height=auto width="400"/>
@@ -64,6 +56,8 @@ I lived next to the oldest Cafe in the city. (Opened since 1864, Maiasmokk)
 - Previously Called Reval
 - A Medieval Fortress
 - Old Town is UNESCO World Heritage site
+- almost car free, little parking slots
+--> Feeling of a car free city
 <figure>
 	<img src="./Old town.jpg" alt="" height=auto width="400"/>
 	<figcaption></figcaption>
@@ -116,6 +110,7 @@ I lived next to the oldest Cafe in the city. (Opened since 1864, Maiasmokk)
 	<img src="./fotografika.jpg" alt="" height=auto width="400"/>
 	<figcaption></figcaption>
 </figure>
+
 
 
 - Jägala-Wasserfall
