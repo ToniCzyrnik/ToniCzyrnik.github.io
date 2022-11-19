@@ -4,11 +4,15 @@ hidden: true
 
 ---
 
-Updated July 20th, 2022; from Aachen, Germany.
+Updated November 19th, 2022; from Aachen, Germany.
 
 ## Studying 📚
 
-I'm finishing my studies. It's going to be a tough semester for me. I'll take exams for my last bachelor courses and my first ones for my master degree. This should conclude my time in Aachen. All outstanding credits can be done abroad. :)
+I'm waiting for my final approval for an exchange semester in Taiwan in February 2023. 🇹🇼 Unfortunately, I won't be able to take exams this semester in Aachen. Our exam period is between February and April for the winter semester. 
+
+## Work life 
+
+I started an internship at Miele in Gütersloh in the Smart Home Department. Many of my colleagues are young and super motivated to integrate innovations into the Miele product lines. I work on glucose monitoring and a coffee bean recognition. ☕️
 
 ## IT4Kids 🧑‍🏫
 
@@ -24,6 +28,6 @@ During my expedition on the Kungsleden, I lost about 10 % of my body weight. The
 
 ## What's next? 🔮
 
-I'll start an internship in October for three months. I'm looking forward to learning new skills in tech start up scene! I don't have any plans for January yet - let's see about it. Starting in February, I'll be in Taipeh. Super hyped for my semester at Taiwan Tech!
+I don't have any plans for January yet - let's see about it. Starting in February, I'll be in Taipeh. Super hyped for my semester at Taiwan Tech! 🚀
 
 
