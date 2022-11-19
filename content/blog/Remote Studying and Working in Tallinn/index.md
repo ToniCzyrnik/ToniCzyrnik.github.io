@@ -5,8 +5,8 @@ date: 2022-03-31
 publishDate: 2022-03-31
 lastmod: 2022-07-13
 
-draft: true
-hidden: true
+draft: false
+hidden: false
 
 categories:
   - Personal
