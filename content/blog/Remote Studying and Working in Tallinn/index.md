@@ -2,7 +2,7 @@
 title: "Remote Studying and Working in Tallinn"
 author: "Toni Czyrnik"
 date: 2022-03-31
-publishDate: 2022-07-13
+publishDate: 2022-03-31
 lastmod: 2022-07-13
 
 draft: true
@@ -29,11 +29,11 @@ Yes, I chose Tallinn as the first destination as a digital nomad. Tallinn - the 
 
 Estonia is the country with the most digital government in Europe. Their ID cards provide digital access for signatures, voting, medical records and submitting tax claims. You can even start your first business digitally. But there are things you need to do in person: marriage, divorce and a credit for properties. 
 
-*IT education is important in Estonia. All children start learning about algorithms and coding at the age of seven. It's preparation for the digital age.*
+*IT education is important in Estonia. All children start learning about algorithms and coding at the age of seven. It's designed to be preparation for the digital age.*
 
 <figure>
 	<img src="./Old town Entrance.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Small Street in Tallinn Old Town</figcaption>
 </figure>
 
 Fun Fact: When you walk around the city, you'll notice the lokal coffeeshops "Reval". That's the original name of the city until 1918. The name changed to Tallinn with the independence of Estonia.
@@ -48,7 +48,7 @@ Tallinn experienced an extensive influx of Russian immigrants during the Soviet 
 
 <figure>
 	<img src="./plot.png" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Inhabitants in Estonia</figcaption>
 </figure>
 
 ## Old Town
@@ -71,36 +71,39 @@ Old Town felt like a car-free zone to me. There are just very little parking slo
 
 ## Telliskivi
 
-- rising tech and startup bubble
+I spent most of my time in Telliskivi. It's the home of the rising tech and startup scene in Tallinn. There are many (vegan) restaurants to choose for you lunch dates. There's are unique style, which attracts likeminded people. 
+
 <figure>
 	<img src="./Telliskivi.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Graffiti in Telliskivi</figcaption>
 </figure>
 
-### Coworking Space Lift99
+### Coworking Space Lift99 🚀
+
+Lift99 is one of the popular coworking spaces in Tallinn. I liked their idea leaving your shoes at the entrance to change into slippers. Their staffs is always easy to reach and coordinates the weekly/monthly social events for the community. Tea and Coffee are available for all and the internet connection is fast and reliable. I'll come back to this place.
 
 <figure>
 	<img src="./Coworking.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Lift 99 flex desk area</figcaption>
 </figure>
 
 ## Public Transport
 
-- free public transport
-- very affordable prices
-- smart card
-- qr ticket
+I used the public transport to get to the city after I arrived at the airport. Super easy, super affordable, there's a tram line which connects the city with the airport. You can buy your ticket as a QR code. These QR codes are scanned at front entry of the tram or bus. All the transport is free for residents though. Theirs smart card functions as validation.
 
 ## Vegan Community
 
+I was surprised by the many options for vegans in the city. My favourite restaurant is the [VEGAN RESTORAN V](https://www.veganrestoran.ee/en). They have small place in the centre of Old Town. Their menu is suitable for everyone, you'll find something. The self-made cakes and smoothies are as tasty as the main courses. Full recommendation. 😍
+
 <figure>
 	<img src="./restaurant.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Vegan Restaurant V, best restaurant in town.</figcaption>
 </figure>
 
 
 ## Beach
--  It's pretty flat
+
+Once you left Old Town, it's pretty flat everywhere. I enjoyed having a short run to beach and watching the sunset. ☀️
 <figure>
 	<img src="./beach.jpg" alt="" height=auto width="400"/>
 	<figcaption></figcaption>
@@ -108,23 +111,23 @@ Old Town felt like a car-free zone to me. There are just very little parking slo
 
 ## Things to Do:
 
+
+The [Lennusadam](https://meremuuseum.ee/lennusadam/en/) represents a part of the marine warfare of Tallinn. I walked in a submarine, learned about different types of sea mines and got a general overview of vessels throughout history.
+
 <figure>
 	<img src="./museum.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Lennusadam Seaplane Harbour Museum</figcaption>
 </figure>
+
+I have a thing for photography. Visiting the [Fotografiska](https://www.fotografiska.com/tallinn/en/) in Tallinn was a must-see for me. You get through quick quickly but the admission fee was worth it for me. I was astonished the mastery of photography as art can look like. The exhibitions change in every Fotografiska over the year. There's always something new to discover. 📸
 
 <figure>
 	<img src="./fotografika.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Photo in Fotografiska</figcaption>
 </figure>
 
+An other museum you could visit are the [Kumu](https://kumu.ekm.ee/en/). If nature is more your thing, have a look at the Jägala waterfall and the national park Lahemaa.
 
+## Conclusion
 
-- Jägala-Wasserfall
-- Nationalpark Lahemaa
-
-- Estonian Open Air Museum 
-- Kumu Art Museum
-- Lennusadam Seaplane Harbour
-- fotografiska
-- KGB Museumsa
+I did fall in love with Tallinn. It's a small city which offers everything I could wish for. The long sun hours in June are perfect for long evenings and fantastical experiences in the city.
