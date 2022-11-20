@@ -20,7 +20,7 @@ keywords:
   - Student
   - Tallinn
 
-summary: "Personal perception on my stay as Digital Nomad in Tallinn ."
+summary: "Personal view on my stay as Digital Nomad in Tallinn. 🤓"
 ---
 
 ## Welcome to the Baltics

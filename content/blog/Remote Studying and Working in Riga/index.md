@@ -1,26 +1,26 @@
 ---
 title: "Remote Studying and Working in Riga"
 author: "Toni Czyrnik"
-date: 2022-06-25
-publishDate: 2022-06-25
+date: 2022-06-17
+publishDate: 2022-06-17
 lastmod: 2022-11-20
 
 draft: true
-hidden: false
+hidden: true
 
 categories:
   - Personal
   - Digital Nomad
   - Travel
-  - Tallinn
+  - Riga
 
 keywords:
   - Digital Nomad
   - Remote Work
   - Student
-  - Tallinn
+  - Riga
 
-summary: "Personal perception on my time as Digital Nomad in Riga."
+summary: "Personal view on my stay as Digital Nomad in Tallinn. 👨‍💻"
 ---
 
 ## Welcome to the Baltics - Riga Edition
@@ -28,7 +28,7 @@ summary: "Personal perception on my time as Digital Nomad in Riga."
 
 <figure>
 	<img src="./city_aerial.jpg" alt="" height=auto width="400"/>
-	<figcaption>by Gilly</figcaption>
+	<figcaption>Aerial Shot by Gilly</figcaption>
 </figure>
 
 
@@ -37,7 +37,7 @@ summary: "Personal perception on my time as Digital Nomad in Riga."
 
 <figure>
 	<img src="./old_town.jpg" alt="" height=auto width="400"/>
-	<figcaption>by Jacques Bopp</figcaption>
+	<figcaption>Old Town Vibes by Jacques Bopp</figcaption>
 </figure>
 
 
@@ -46,7 +46,7 @@ summary: "Personal perception on my time as Digital Nomad in Riga."
 
 
 <figure>
-	<img src="./plot.png" alt="" height=auto width="400"/>
+	<img src="./Riga_plot.png" alt="" height=auto width="400"/>
 	<figcaption>Inhabitants in Riga</figcaption>
 </figure>
 
@@ -56,7 +56,7 @@ summary: "Personal perception on my time as Digital Nomad in Riga."
 
 <figure>
 	<img src="./beach_train.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Train Station near the beach</figcaption>
 </figure>
 
 
@@ -68,12 +68,12 @@ summary: "Personal perception on my time as Digital Nomad in Riga."
 
 <figure>
 	<img src="./beach1.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Beach near Riga</figcaption>
 </figure>
 
 <figure>
 	<img src="./beach2.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Beach near Riga</figcaption>
 </figure>
 
 ## Parks
@@ -81,13 +81,13 @@ summary: "Personal perception on my time as Digital Nomad in Riga."
 
 <figure>
 	<img src="./boat_park.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Tourist Boat in a park</figcaption>
 </figure>
 
 
 <figure>
 	<img src="./water_park.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Flowing Water</figcaption>
 </figure>
 
 
@@ -95,5 +95,5 @@ summary: "Personal perception on my time as Digital Nomad in Riga."
 
 <figure>
 	<img src="./me.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Me in Riga, June 2022</figcaption>
 </figure>
