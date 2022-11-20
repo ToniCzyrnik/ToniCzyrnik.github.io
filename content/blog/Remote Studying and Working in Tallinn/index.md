@@ -1,9 +1,9 @@
 ---
 title: "Remote Studying and Working in Tallinn"
 author: "Toni Czyrnik"
-date: 2022-03-31
-publishDate: 2022-03-31
-lastmod: 2022-07-13
+date: 2022-06-01
+publishDate: 2022-06-01
+lastmod: 2022-11-20
 
 draft: false
 hidden: false
@@ -20,7 +20,7 @@ keywords:
   - Student
   - Tallinn
 
-summary: ""
+summary: "Personal perception on my stay as Digital Nomad in Tallinn ."
 ---
 
 ## Welcome to the Baltics
@@ -33,7 +33,7 @@ Estonia is the country with the most digital government in Europe. Their ID card
 
 <figure>
 	<img src="./Old town Entrance.jpg" alt="" height=auto width="400"/>
-	<figcaption>Small Street in Tallinn Old Town</figcaption>
+	<figcaption>Small Street in Tallinn Old Town by 66 north</figcaption>
 </figure>
 
 Fun Fact: When you walk around the city, you'll notice the lokal coffeeshops "Reval". That's the original name of the city until 1918. The name changed to Tallinn with the independence of Estonia.
@@ -57,7 +57,8 @@ I was lucky to live in the middle of the city. My apartment was next to the town
 
 <figure>
 	<img src="./Old town.jpg" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Small streets in Old Town by 
+Nikola Johnny Mirkovic</figcaption>
 </figure>
 
 Interestingly, the Russian embassy was always guarded by at least one Estonian police car. Estonias do support the Ukrainians in the war. 🇺🇦
@@ -122,7 +123,7 @@ The [Lennusadam](https://meremuuseum.ee/lennusadam/en/) represents a part of the
 I have a thing for photography. Visiting the [Fotografiska](https://www.fotografiska.com/tallinn/en/) in Tallinn was a must-see for me. You get through quick quickly but the admission fee was worth it for me. I was astonished the mastery of photography as art can look like. The exhibitions change in every Fotografiska over the year. There's always something new to discover. 📸
 
 <figure>
-	<img src="./fotografika.jpg" alt="" height=auto width="400"/>
+	<img src="./Fotografika.jpg" alt="" height=auto width="400"/>
 	<figcaption>Photo in Fotografiska</figcaption>
 </figure>
 

@@ -16,7 +16,7 @@ I started an internship at Miele in Gütersloh in the Smart Home Department. Man
 
 ## IT4Kids 🧑‍🏫
 
-IT4Kids is part of my life. I currently work on expanding our location in Ulm, Germany.
+We are working on accelerating the digital transformation of the German education system. I currently work on expanding our location in Ulm, Germany.
 
 ## Reading 🤓
 

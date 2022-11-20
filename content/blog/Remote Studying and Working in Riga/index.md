@@ -20,15 +20,24 @@ keywords:
   - Student
   - Tallinn
 
-summary: ""
+summary: "Personal perception on my time as Digital Nomad in Riga."
 ---
 
-## Welcome to the Baltics
+## Welcome to the Baltics - Riga Edition
 
 
 <figure>
-	<img src="./Old town Entrance.jpg" alt="" height=auto width="400"/>
-	<figcaption>Small Street in Tallinn Old Town</figcaption>
+	<img src="./city_aerial.jpg" alt="" height=auto width="400"/>
+	<figcaption>by Gilly</figcaption>
+</figure>
+
+
+### Old Town 
+
+
+<figure>
+	<img src="./old_town.jpg" alt="" height=auto width="400"/>
+	<figcaption>by Jacques Bopp</figcaption>
 </figure>
 
 
@@ -38,30 +47,53 @@ summary: ""
 
 <figure>
 	<img src="./plot.png" alt="" height=auto width="400"/>
-	<figcaption>Inhabitants in Estonia</figcaption>
+	<figcaption>Inhabitants in Riga</figcaption>
 </figure>
 
 
 
 ## Public Transport
 
-I used the public transport to get to the city after I arrived at the airport. Super easy, super affordable, there's a tram line which connects the city with the airport. You can buy your ticket as a QR code. These QR codes are scanned at front entry of the tram or bus. All the transport is free for residents though. Theirs smart card functions as validation.
+<figure>
+	<img src="./beach_train.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+
 
 ## Vegan Community
 
-I was surprised by the many options for vegans in the city. My favourite restaurant is the [VEGAN RESTORAN V](https://www.veganrestoran.ee/en). They have small place in the centre of Old Town. Their menu is suitable for everyone, you'll find something. The self-made cakes and smoothies are as tasty as the main courses. Full recommendation. 😍
-
-<figure>
-	<img src="./restaurant.jpg" alt="" height=auto width="400"/>
-	<figcaption>Vegan Restaurant V, best restaurant in town.</figcaption>
-</figure>
 
 
 ## Beach
 
+<figure>
+	<img src="./beach1.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
 
-## Things to Do:
+<figure>
+	<img src="./beach2.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
 
+## Parks
+
+
+<figure>
+	<img src="./boat_park.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+
+
+<figure>
+	<img src="./water_park.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
 
 
 ## Conclusion
+
+<figure>
+	<img src="./me.jpg" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
