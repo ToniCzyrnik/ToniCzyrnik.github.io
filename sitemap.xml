@@ -41,10 +41,6 @@
     <loc>https://czyrnik.me/blog/hello/</loc>
     <lastmod>2022-01-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://czyrnik.me/about/</loc>
-  </url><url>
-    <loc>https://czyrnik.me/about/me/</loc>
-  </url><url>
     <loc>https://czyrnik.me/newsletter/</loc>
   </url><url>
     <loc>https://czyrnik.me/newsletter/signup/</loc>
@@ -53,6 +49,8 @@
   </url><url>
     <loc>https://czyrnik.me/newsletter/thanks/</loc>
   </url><url>
-    <loc>https://czyrnik.me/about/now/</loc>
+    <loc>https://czyrnik.me/about/</loc>
+  </url><url>
+    <loc>https://czyrnik.me/now/</loc>
   </url>
 </urlset>
