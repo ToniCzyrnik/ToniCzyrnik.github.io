@@ -4,7 +4,7 @@ hidden: true
 
 ---
 
-Updated February 7th 2023 from Taipei in Taiwan. 🇹🇼
+Update on February 7th, 2023 from Taipei, Taiwan. 🇹🇼
 
 ## Studying 📚
 
