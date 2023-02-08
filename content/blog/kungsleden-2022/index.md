@@ -60,7 +60,7 @@ The beauty of this view was incomparable. I will return to the Sarek in the futu
 
 <figure>
 	<img src="./near_kaitumjaure.jpeg" alt="" height=auto width="400"/>
-	<figcaption>Kaitumjaure</figcaption>
+	<figcaption>Near Kaitumjaure</figcaption>
 </figure>
 
 As I continued north, I met other hikers from all over the world and we shared our experiences, stories, and the conditions ahead. This made the trip even more memorable. 🗣️
