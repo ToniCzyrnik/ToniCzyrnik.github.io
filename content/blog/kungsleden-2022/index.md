@@ -100,7 +100,7 @@ Total: ~185 km
 
 ## Lake Crossings
 
-One of the key features of the trail are the numerous lake crossings that provide scenic views. The crossings vary in difficulty and length, from short and easy to long and strenuous. The more challenging crossings require the use of boats. You can read more about [the boats in the mountains] (https://www.swedishtouristassociation.com/boats-in-the-mountains/). 🚣
+One of the key features of the trail are the numerous lake crossings that provide scenic views. The crossings vary in difficulty and length, from short and easy to long and strenuous. The more challenging crossings require the use of boats. You can read more about [the boats in the mountains](https://www.swedishtouristassociation.com/boats-in-the-mountains/). 🚣
 
 Do not underestimate the current & wind on the lake. ⚠️
 
