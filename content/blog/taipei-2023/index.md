@@ -17,6 +17,7 @@ keywords:
   - Taiwan
   - Taipei
   - NTUST
+  - National Taiwan University of Science and Technology
 
 summary: "Taiwan offers a unique blend of ancient and modern culture, making it a fascinating destination for travelers. 🏖️"
 ---
@@ -56,49 +57,6 @@ Taipei's subway system is one of the most efficient in the world. It covers most
 
 In addition to the Taipei Metro, the city offers bus and bike-sharing options for those looking for a more environmentally friendly way to travel. The bus network covers a wide area, providing connections to outlying areas and between metro lines.
 
-## NTUST
-
-The National University of Science and Technology (NTUST) is one of Taiwan's top universities, known for its strong programs in engineering, computer science, and business. Located in the heart of Taipei, it is a popular destination for students from around the world.
-
-<figure>
-	<img src="./name.jpeg" alt="" height=auto width="400"/>
-	<figcaption>Me at NTUST</figcaption>
-</figure>
-
-### Facilities on Campus
-
-The campus is designed to provide a convenient and accessible environment for students. With everything within a 5-minute walk, the compact campus is easy to navigate and provides a stress-free atmosphere. The campus is largely car-free, promoting a clean and quiet environment. The NTUST campus is equipped with well-maintained facilities, providing students with a comfortable and supportive environment for their academic and personal growth.
-
-<figure>
-	<img src="./food.jpeg" alt="" height=auto width="400"/>
-	<figcaption>Vegetarian Meal from the canteen</figcaption>
-</figure>
-
-There is a spacious library offering a wide range of resources and study spaces. The campus offers several student residences, providing a convenient and affordable living option. Unfortunately, on-campus housing is only available to students staying longer than six months.
-
-<figure>
-	<img src="./name.jpeg" alt="" height=auto width="400"/>
-	<figcaption>LOUISA Cafe on Campus</figcaption>
-</figure>
-
-There are several dining options available on campus, such as cafes, canteens, and restaurants. The whole campus is covered by eduroam, fast internet guaranteed! The dining halls offer a variety of cuisines such as (vegetarian) buffet, Japanese cuisine and noodles & dumplings.
-
-<figure>
-	<img src="./name.jpeg" alt="" height=auto width="400"/>
-	<figcaption>Food</figcaption>
-</figure>
-
-The campus offers sports facilities, including a free gym, an inexpensive swimming pool, and free playing fields for various sports. There are several student clubs and organizations, providing students with the opportunity to get involved in extracurricular activities and connect with others who share their interests. 
-
-<figure>
-	<img src="./name.jpeg" alt="" height=auto width="400"/>
-	<figcaption>Gym</figcaption>
-</figure>
-
-### My Study
-
-- 2 courses from NTU and NTUT
-
 
 ## First days
 
@@ -109,29 +67,7 @@ There are many things to do and see in Taipei, from visiting the city's many mus
 	<figcaption>Taipei 101</figcaption>
 </figure>
 
-### Lantern Festival
 
-#### Taipei
-
-https://tw-light.taipei/en/exhibition/center
-
-
-
-#### Pingxi
-
-https://2023skylantern.ntpc.gov.tw
-
-The Shifen Lantern Festival is a part of the larger Taipei Lantern Festival and takes place annually in the small town of Shifen, Taiwan. The highlight of the festival is the release of sky lanterns, made of paper with a candle or fuel cell inside, which rise into the sky after participants write their wishes on them. The release of sky lanterns is a breathtaking sight, with the sky filled with floating lanterns of different colors and sizes. The festival attracts thousands of visitors each year. It is a celebration of local culture and a time for families and friends to come together.
-
-<figure>
-	<img src="./lantern.gif" alt="" height=auto width="400"/>
-	<figcaption>Start of the lanterns</figcaption>
-</figure>
-
-<figure>
-	<img src="./name.jpeg" alt="" height=auto width="400"/>
-	<figcaption>Shifen</figcaption>
-</figure>
 
 ### Jiufen
 
@@ -146,4 +82,4 @@ In addition to its architecture, Jiufen is known for its stunning views of the P
 
 
 *P.S. Don't forget to use both hands for anything of value, such as receipts and money! \
-谢谢! (Xièxie, Thanks!)*
+谢谢! (Xièxie, Thanks!)
