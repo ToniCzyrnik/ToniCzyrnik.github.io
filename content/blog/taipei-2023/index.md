@@ -57,6 +57,10 @@ Taipei's subway system is one of the most efficient in the world. It covers most
 
 In addition to the Taipei Metro, the city offers bus and bike-sharing options for those looking for a more environmentally friendly way to travel. The bus network covers a wide area, providing connections to outlying areas and between metro lines.
 
+## Economy
+
+https://en.wikipedia.org/wiki/Taipei#Economy
+
 
 ## First days
 
