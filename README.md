@@ -62,7 +62,7 @@ To reduce the image to a target size:
 https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
 
 Red: #E63946
-Light Green: #F1FAEE
-Light Blue: #A8DADC
-Blue: #457B9D
 Dark Blue: #1D3557
+Blue: #457B9D
+Light Blue: #A8DADC
+Light Green: #F1FAEE

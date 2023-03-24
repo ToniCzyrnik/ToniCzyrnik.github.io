@@ -47,3 +47,14 @@ The Shifen Lantern Festival is a part of the larger Taipei Lantern Festival and 
 	<img src="./name.jpeg" alt="" height=auto width="400"/>
 	<figcaption>Shifen</figcaption>
 </figure>
+
+### Jiufen
+
+Jiufen is a historic mountain town. Once a prosperous gold mining town during the Japanese colonial period, it is now a popular tourist destination. The town is often referred to as the "real-life version of Spirited Away", a reference to the Japanese animated film directed by Hayao Miyazaki. The movie's fantastical, labyrinthine setting is said to have been inspired by Jiufen's narrow streets and steep staircases, as well as its traditional tea houses and street vendors. *(Hayao denies it.)*
+
+<figure>
+	<img src="./name.jpeg" alt="" height=auto width="400"/>
+	<figcaption>Jiufen</figcaption>
+</figure>
+
+In addition to its architecture, Jiufen is known for its stunning views of the Pacific Ocean and its vibrant night market. The night market offers local food, souvenirs, and street performances, while the town's old-world charm and modern amenities make it a unique travel experience.
