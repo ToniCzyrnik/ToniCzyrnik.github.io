@@ -5,7 +5,7 @@ theme: "anubis"
 
 params:
   author: "Toni Czyrnik"
-  description: "Personal Blog"
+  description: "My personal blog about my life and interests."
   dateFormat: "2006-01-02"
   paginationSinglePost: true
   style: "auto"
