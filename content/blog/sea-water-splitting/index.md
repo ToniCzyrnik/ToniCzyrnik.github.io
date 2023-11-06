@@ -20,7 +20,7 @@ keywords:
   - 
   - 
 
-summary: "Discussing how to best generate hydrogen."
+summary: "Exploring the revolutionary potential of seawater splitting for sustainable hydrogen production, a promising solution to energy crises that leverages the ocean's vast resources for clean energy. 💡"
 
 ---
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
