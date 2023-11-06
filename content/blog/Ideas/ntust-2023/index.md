@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "My Study at National Taiwan University of Science and Technology (NTUST)"
 author: "Toni Czyrnik"
 date: 2023-01-05
 publishDate: 2023-01-05
@@ -23,7 +23,6 @@ keywords:
 summary: ""
 ---
 
-## NTUST
 
 The National University of Science and Technology (NTUST) is one of Taiwan's top universities, known for its strong programs in engineering, computer science, and business. Located in the heart of Taipei, it is a popular destination for students from around the world.
 
@@ -32,7 +31,7 @@ The National University of Science and Technology (NTUST) is one of Taiwan's top
 	<figcaption>Me at NTUST</figcaption>
 </figure>
 
-### Facilities on Campus
+## Facilities on Campus
 
 The campus is designed to provide a convenient and accessible environment for students. With everything within a 5-minute walk, the compact campus is easy to navigate and provides a stress-free atmosphere. The campus is largely car-free, promoting a clean and quiet environment. The NTUST campus is equipped with well-maintained facilities, providing students with a comfortable and supportive environment for their academic and personal growth.
 
@@ -62,6 +61,32 @@ The campus offers sports facilities, including a free gym, an inexpensive swimmi
 	<figcaption>Gym</figcaption>
 </figure>
 
-### My Study
+<figure>
+	<img src="./pool.jpeg" alt="" height=auto width="400"/>
+	<figcaption>Pool</figcaption>
+</figure>
 
-- 2 courses from NTU and NTUT
+<figure>
+	<img src="./pool.jpeg" alt="" height=auto width="400"/>
+	<figcaption>Favourite Work Place</figcaption>
+</figure>
+
+
+## My Study
+
+### Deep Learning Architectures and Applications
+
+
+### Advanced Battery and Fuel Cell Technology
+
+
+### Detection and Recognition of Partial Discharges
+
+
+### Energy Science 
+
+NTU Course
+
+### International Companions for Learning (ICL)
+
+NTU Course 
