@@ -102,10 +102,10 @@ Usually, an overpotential of +2.00 V versus NHE is prefereable.
 
 ### Chlorine Evolution Reaction (ClER)
 
-In ClER, chloride ions \\(Cl-\\) are oxidized to form chlorine gas \\(Cl_2\\) at the anode. 
+In ClER, chloride ions \\(Cl^-\\) are oxidized to form chlorine gas \\(Cl_2\\) at the anode. 
 This reaction can occur in chloride-rich solutions like seawater and is represented by:
 
-$$2 C l^{-}(a q) \rightarrow C l_2(g)+2 e^{-}$$
+$$2 Cl^{-}(a q) \rightarrow Cl_2(g)+2 e^{-}$$
 
 The standard potential for this reaction is +1.36 V versus NHE. 
 ClER is kinetically favored in chloride-containing solutions compared to OER. [^1]
@@ -128,7 +128,7 @@ Preferring the Chlorine Evolution Reaction (ClER) during electrolysis not advisa
 
 Chlorine is a reactive and hazardous gas, which poses significant risks in handling and transportation.
 Due to its dangers, chlorine is typically produced on-site where it is needed for industrial processes. 
-According to the Eurochlor 2012 annual review, a small fraction (5-6%) of chlorine demand in Europe involves transportation.
+According to the Eurochlor 2012 annual review, a small fraction (5 - 6 %) of chlorine demand in Europe involves transportation.
 Transporting chlorine, whether by road, rail, or pipeline, involves strict regulations, specialized equipment, and robust safety protocols to prevent leaks and exposure.
 
 <figure>
@@ -144,7 +144,7 @@ This approach aligns with the larger goal of sustainable and environmentally fri
 
 Ensuring the predominance of the Oxygen Evolution Reaction (OER) over the Chlorine Evolution Reaction (ClER) in seawater electrolysis can be achieved through strategies that exclude chlorine from the reaction. 
 Employing electrocatalysts that lower the activation energy required for OER can make it more energetically competitive, reducing the window in which ClER can occur. 
-Additionally, designing selective membrane systems or modifying the electrolyte composition to physically or chemically inhibit chlorine ions from reaching the anode can minimize or prevent the occurrence of ClER.
+Additionally, designing selective membranes or modifying the electrolyte composition to physically or chemically inhibit chlorine ions from reaching the anode can minimize or prevent the occurrence of ClER.
 
 <figure>
 	<img src="./green_future.png" alt="" height=auto width="400"/>
@@ -159,7 +159,7 @@ A lower overpotential indicates a more efficient electrocatalyst, as less energy
 
 <figure>
 	<img src="./arrow.png" alt="" height=auto width="200"/>
-	<figcaption>Reducing overpotential ensures OER.</figcaption>
+	<figcaption>Reduced overpotential can ensure OER</figcaption>
 </figure>
 
 Research is looking for efficient catalysts with a high current density at low overpotentials. One research group finds Nitrogen-doped nickel molybdenum phosphide \\(N-NiMo_3P\\) as effective electrocatalysts for seawater splitting, showing lower overpotentials compared to commercial options and undoped counterparts. [^3]
@@ -217,14 +217,14 @@ This study proposes a direct seawater electrolysis method that overcomes the sid
 
 <figure>
 	<img src="./membrane_nature.png" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Proposed Electrolyser</figcaption>
 </figure>
 
 This system utilizes a hydrophobic porous polytetrafluoroethylene (PTFE)-based waterproof breathable membrane that acts as a critical gas-path interface. This membrane is designed to allow the selective diffusion of water vapor while blocking the passage of liquid seawater and its dissolved impurities, including ions. The use of the membrane facilitates an in situ water purification process, which is essential for the direct electrolysis of seawater. This process is based on a self-driven phase transition mechanism that converts seawater into pure water vapor through spontaneous evaporation, which then diffuses through the membrane. [^5]
 
 <figure>
 	<img src="./bubble.png" alt="" height=auto width="400"/>
-	<figcaption></figcaption>
+	<figcaption>Proposed waterproof breathable membrane</figcaption>
 </figure>
 
 The Self-Dampening Electrolyte (SDE), a concentrated potassium hydroxide (KOH) solution, is another key component of the system. The SDE serves a dual purpose: it functions as the electrolytic medium in which electrolysis occurs, and it maintains the necessary pressure differential across the membrane. As water vapor transits through the membrane from the seawater side, it is absorbed and re-liquefied by the SDE on the other side. This mechanism ensures that pure water is continuously supplied to the electrolyser, thereby sustaining the electrolysis process without the need for external water sources or purification systems. [^5]
@@ -238,7 +238,7 @@ This innovative setup achieves a new level of efficiency and sustainability in h
 
 ## Conclusion
 
-Seawater splitting represents a promising frontier in the pursuit of sustainable hydrogen production. With current technology, it is indeed possible to carry out this process, and we are witnessing successful prototypes and operational models. However, the key to unlocking its full potential lies in scaling up these operations.
+Seawater splitting represents a promising frontier in the pursuit of sustainable hydrogen production. With current technology, it is possible to produce hydrogen sustainably from seawater. However, the key to unlocking the full potential lies in scaling up the successful prototypes and operational models.
 
 <figure>
 	<img src="./Shut-Up-and-Take-My-Money.png" alt="" height=auto width="500"/>
