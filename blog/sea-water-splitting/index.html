@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+
+<html lang="en-us" data-theme="">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>How to produce green hydrogen scaleable? - Toni&#39;s Blog</title>
+
+<meta name="description" content="Discussing how to best generate hydrogen.">
+
+
+
+<link rel="icon" type="image/x-icon" href="https://czyrnik.me/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://czyrnik.me/favicon.png">
+
+
+
+    
+
+
+
+
+
+    
+    
+        
+    
+    
+
+    
+        <link rel="stylesheet" href="https://czyrnik.me/css/style.min.a11b8916e7fc33d397d735329bc39b452eba5901a3c1a497fadc20be86f83e54.css" integrity="sha256-oRuJFuf8M9OX1zUym8ObRS66WQGjwaSX&#43;twgvob4PlQ=">
+    
+
+
+
+
+
+
+<meta property="og:title" content="How to produce green hydrogen scaleable?" />
+<meta property="og:description" content="Discussing how to best generate hydrogen." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://czyrnik.me/blog/sea-water-splitting/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-06-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-05T00:00:00+00:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to produce green hydrogen scaleable?"/>
+<meta name="twitter:description" content="Discussing how to best generate hydrogen."/>
+
+
+
+
+
+
+
+
+
+
+
+    
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="container">
+        <header class="common-header"> 
+            
+                <div class="header-top">
+    <h1 class="site-title">
+        <a href="/">Toni&#39;s Blog</a>
+    </h1>
+    <ul class="social-icons">
+
+
+    
+        <li>
+            <a href="https://www.linkedin.com/in/czyrnik/" title="Linkedin" rel="me">
+            <span class="inline-svg" >
+
+
+
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
+</span>
+
+            </a>
+        </li>
+    
+
+    
+        <li>
+            <a href="https://github.com/ToniCzyrnik/ToniCzyrnik.github.io" title="Github" rel="me">
+            <span class="inline-svg" >
+
+
+
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+</span>
+
+            </a>
+        </li>
+    
+
+    
+        <li>
+            <a href="mailto:mail@czyrnik.me" title="Email" rel="me">
+            <span class="inline-svg" >
+
+
+
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg>
+
+</span>
+
+            </a>
+        </li>
+    
+
+</ul>
+
+</div>
+
+    <nav>
+        
+        
+        <a class="" href="https://czyrnik.me/blog/" title="">Blog</a>
+        
+        <a class="" href="https://czyrnik.me/newsletter/signup" title="">Newsletter</a>
+        
+        <a class="" href="https://czyrnik.me/about/" title="">About</a>
+        
+        <a class="" href="https://czyrnik.me/now" title="">Now</a>
+        
+    </nav>
+
+
+
+
+            
+        </header>
+        <main id="main" tabindex="-1"> 
+            
+    
+
+    <article class="post h-entry">
+        <div class="post-header">
+            <header>
+                <h1 class="p-name post-title">How to produce green hydrogen scaleable?</h1>
+
+                
+            </header>
+        </div>
+        <div class="content e-content">
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<p>Imagine a future where the vastness of the ocean becomes the fountain of our clean energy needs. Welcome to the cutting edge of seawater splitting — a revolutionary process poised to unlock an endless supply of hydrogen fuel.
+Dive with me into the deep blue as we explore how this remarkable technology could turn the tides on energy crises and solve the world&rsquo;s thirst for sustainable power! 🌊</p>
+<figure>
+	<img src="./intro.png" alt="" height=auto width="400"/>
+	<figcaption>Imaginary Offshore Hydrogen Production</figcaption>
+</figure>
+<h2 id="water-splitting">Water Splitting
+<span><a href="#water-splitting">#</a></span>
+</h2><p>Seawater splitting <em>or seawater electrolysis</em>, is the process of separating water  \(H_2O\) into its elements, hydrogen \(H_2\) and oxygen \(O_2\), through the application of electrical energy.
+In our case, hydrogen is the element we are interested in.</p>
+<figure>
+	<img src="./water_splitting.png" alt="" height=auto width="400"/>
+	<figcaption>Simple Setup for Water Splitting</figcaption>
+</figure>
+<h2 id="the-problem-with-freshwater-earths-water-distribution">The Problem with Freshwater: Earth&rsquo;s Water Distribution
+<span><a href="#the-problem-with-freshwater-earths-water-distribution">#</a></span>
+</h2><p>About 96.5 % of earth&rsquo;s water is stored in its oceans as seawater.
+Additionally, there&rsquo;s about 1 % saline groundwater.
+A small fraction of about 2.5 % is freshwater.</p>
+<p>The majority of freshwater is locked up in glaciers and ice caps, accounting for nearly 69 % of it.
+The remainder is groundwater (30 %) and surface freshwater like lakes and rivers (1 %).</p>
+<figure>
+	<img src="./water_distribution.png" alt="" height=auto width="400"/>
+	<figcaption>Saltwater vs. Freshwater</figcaption>
+</figure>
+<h3 id="hydrogen-in-sun-rich--arid-regions">Hydrogen in sun-rich &amp; arid regions
+<span><a href="#hydrogen-in-sun-rich--arid-regions">#</a></span>
+</h3><p>The production of hydrogen through the electrolysis with freshwater poses a sustainability challenge in sun-rich but arid regions.
+The process could exacerbate water scarcity by diverting freshwater from human, agricultural, and ecological needs. 🌵</p>
+<figure>
+	<img src="./sun_rich.png" alt="" height=auto width="400"/>
+	<figcaption>Imaginary sun-rich region</figcaption>
+</figure>
+<p>Innovations like direct seawater electrolysis and the use of treated wastewater are under research.
+Integrating hydrogen production with desalination plants could offer an alternative, although it increases energy consumption and decrease efficiency.
+Sustainable hydrogen production in these areas requires careful resource management and the development of technologies that minimize freshwater use.</p>
+<h2 id="composition-of-seawater">Composition of Seawater
+<span><a href="#composition-of-seawater">#</a></span>
+</h2><p>Seawater&rsquo;s unique composition presents both opportunities and challenges for water splitting applications.
+The salts affect the durability and efficiency of electrolysis by catalyzing competing side reactions.
+Furthermore, these salts may react with the electrodes, creating deposits that can block the electrode surfaces and impede the reaction.
+Additionally, the pH of seawater (around 8) is lower than desired for current water splitting technologies, which can lowers the efficiency and output of hydrogen generation. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<figure>
+	<img src="./sea_water.png" alt="" height=auto width="500"/>
+	<figcaption>Composition of Sea Water (Wikipedia)</figcaption>
+</figure>
+<h2 id="chemical-reactions-oer--cler">Chemical Reactions: OER &amp; ClER
+<span><a href="#chemical-reactions-oer--cler">#</a></span>
+</h2><p>The Oxygen Evolution Reaction (OER) and the Chlorine Evolution Reaction (ClER) are two competing electrochemical reactions that can occur during the electrolysis of chloride-containing solutions, such as seawater.</p>
+<h3 id="oer">OER
+<span><a href="#oer">#</a></span>
+</h3><p>OER is the desirable half-reaction in the water-splitting process, where water molecules are oxidized to produce oxygen gas, protons, and electrons.
+The overall reaction at the anode can be represented as:</p>
+<p>$$2 \mathrm{H}_2 \mathrm{O}(l) \rightarrow \mathrm{O}_2(g)+4 H^{+}(a q)+4 e^{-}$$</p>
+<p>This reaction has a standard potential of +1.23 V versus the Normal Hydrogen Electrode (NHE).
+However, a higher potential is required due to kinetic overpotentials.
+Usually, an overpotential of +2.00 V versus NHE is prefereable.</p>
+<h3 id="chlorine-evolution-reaction-cler">Chlorine Evolution Reaction (ClER)
+<span><a href="#chlorine-evolution-reaction-cler">#</a></span>
+</h3><p>In ClER, chloride ions \(Cl-\) are oxidized to form chlorine gas \(Cl_2\) at the anode.
+This reaction can occur in chloride-rich solutions like seawater and is represented by:</p>
+<p>$$2 C l^{-}(a q) \rightarrow C l_2(g)+2 e^{-}$$</p>
+<p>The standard potential for this reaction is +1.36 V versus NHE.
+ClER is kinetically favored in chloride-containing solutions compared to OER. <sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h3 id="competition-between-oer-and-cler">Competition between OER and ClER
+<span><a href="#competition-between-oer-and-cler">#</a></span>
+</h3><p>During the electrolysis of chloride-rich solutions like seawater, the Oxygen Evolution Reaction (OER) is challenged by the Chlorine Evolution Reaction (ClER).
+OER, which splits water to produce oxygen, is less energetically favorable and requires higher potentials than ClER, which generates chlorine gas from chloride ions and tends to occur more readily. <sup id="fnref2:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<figure>
+	<img src="./her_cler.png" alt="" height=auto width="500"/>
+	<figcaption>Conditions for OER</figcaption>
+</figure>
+<p>This rivalry not only lowers the efficiency of hydrogen production by favoring chlorine gas release but also risks contaminating the oxygen produced, degrading electrodes more quickly, and forming undesirable and potentially harmful chlorinated compounds. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<h2 id="the-problem-with-chlorine">The problem with Chlorine
+<span><a href="#the-problem-with-chlorine">#</a></span>
+</h2><p>Preferring the Chlorine Evolution Reaction (ClER) during electrolysis not advisable due to several reasons tied to chlorine&rsquo;s production, demand, and associated costs.</p>
+<p>Chlorine is a reactive and hazardous gas, which poses significant risks in handling and transportation.
+Due to its dangers, chlorine is typically produced on-site where it is needed for industrial processes.
+According to the Eurochlor 2012 annual review, a small fraction (5-6%) of chlorine demand in Europe involves transportation.
+Transporting chlorine, whether by road, rail, or pipeline, involves strict regulations, specialized equipment, and robust safety protocols to prevent leaks and exposure.</p>
+<figure>
+	<img src="./skull.png" alt="" height=auto width="200"/>
+	<figcaption>Chlorine is toxic.</figcaption>
+</figure>
+<p>Consequently, from an economic and safety perspective, minimizing the production of chlorine through ClER in favor of the Oxygen Evolution Reaction (OER) during electrolysis is preferred.
+This approach aligns with the larger goal of sustainable and environmentally friendly hydrogen production, where the risks and costs associated with chlorine can be avoided.</p>
+<h2 id="solutions-for-seawater-electrolysis">Solutions for Seawater Electrolysis
+<span><a href="#solutions-for-seawater-electrolysis">#</a></span>
+</h2><p>Ensuring the predominance of the Oxygen Evolution Reaction (OER) over the Chlorine Evolution Reaction (ClER) in seawater electrolysis can be achieved through strategies that exclude chlorine from the reaction.
+Employing electrocatalysts that lower the activation energy required for OER can make it more energetically competitive, reducing the window in which ClER can occur.
+Additionally, designing selective membrane systems or modifying the electrolyte composition to physically or chemically inhibit chlorine ions from reaching the anode can minimize or prevent the occurrence of ClER.</p>
+<figure>
+	<img src="./green_future.png" alt="" height=auto width="400"/>
+	<figcaption>Imaginary town using renewable power</figcaption>
+</figure>
+<h3 id="option-1-reducing-the-needed-overpotential-with-electrocatalysts">Option 1: Reducing the needed Overpotential with Electrocatalysts
+<span><a href="#option-1-reducing-the-needed-overpotential-with-electrocatalysts">#</a></span>
+</h3><p>The overpotential for the oxygen evolution reaction (OER) is a critical parameter when evaluating the efficiency of electrocatalysts used for water splitting.
+It is the extra voltage above the thermodynamic potential required to drive the OER at a certain current density.
+A lower overpotential indicates a more efficient electrocatalyst, as less energy is wasted in the form of heat and other losses like side reactions.</p>
+<figure>
+	<img src="./arrow.png" alt="" height=auto width="200"/>
+	<figcaption>Reducing overpotential ensures OER.</figcaption>
+</figure>
+<p>Research is looking for efficient catalysts with a high current density at low overpotentials. One research group finds Nitrogen-doped nickel molybdenum phosphide \(N-NiMo_3P\) as effective electrocatalysts for seawater splitting, showing lower overpotentials compared to commercial options and undoped counterparts. <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>\(N-NiMo_3P\) achieved an overpotential of 35 mV to reach a current density of 10 mA/cm² in seawater, outperforming commercial Pt/C which required 73.5 mV, and undoped \(NiMo_3P\) which required 73 mV under the same conditions.
+This performance is attributed to the nitrogen doping, which enhances the electrocatalytic activity by improving the catalyst&rsquo;s electrical conductivity and increasing the density of active sites for the oxygen evolution reaction (OER). <sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h3 id="option-2-protecting-the-anode-from-chlorine">Option 2: Protecting the Anode from Chlorine
+<span><a href="#option-2-protecting-the-anode-from-chlorine">#</a></span>
+</h3><p>Excluding chlorine from the anode reaction in seawater electrolysis can be achieved through anode coating and the use of selective membranes. Research and development in this area are ongoing to find cost-effective and durable solutions that can be applied on an industrial scale.</p>
+<figure>
+	<img src="./shield.png" alt="" height=auto width="200"/>
+	<figcaption>Excluding chlorine from the reaction.</figcaption>
+</figure>
+<h4 id="option-21-anode-coatings">Option 2.1: Anode Coatings
+<span><a href="#option-21-anode-coatings">#</a></span>
+</h4><p>Anode coatings are designed to enhance the selectivity of the Oxygen Evolution Reaction (OER) while suppressing the Chlorine Evolution Reaction (ClER).
+<em>The coatings can be applied through various techniques such as thermal decomposition, electroplating, or physical vapor deposition.</em>
+<em>The thickness, morphology, and composition of the coating are critical parameters that determine its effectiveness.</em>
+The aim is to create a surface that has high catalytic activity for water oxidation but a low affinity for chloride ion adsorption, thus preventing chlorine gas production.</p>
+<figure>
+	<img src="./coating.png" alt="" height=auto width="500"/>
+	<figcaption>Repelling chlorine from the electrode</figcaption>
+</figure>
+<h5 id="example-direct-seawater-electrolysis-by-adjusting-the-local-reaction-environment-of-a-catalyst">Example: Direct seawater electrolysis by adjusting the local reaction environment of a catalyst
+<span><a href="#example-direct-seawater-electrolysis-by-adjusting-the-local-reaction-environment-of-a-catalyst">#</a></span>
+</h5><p>The paper discusses a method for direct seawater electrolysis for hydrogen production without the need for desalination, aiming to address the shortage of freshwater resources. Seawater must be desalinated before it can be used in proton exchange membrane (PEM) electrolysers.</p>
+<p>The research introduces an approach where a Lewis Acid Layer with the help of \(Cr_2O_3\) is added to the catalysts. This modification helps to dynamically split water molecules and capture hydroxyl anions, thus generating local alkalinity that improves the kinetics of electrode reactions, avoids chloride attack, and prevents precipitate formation on the electrodes. <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<figure>
+	<img src="./schematic_nature.png" alt="" height=auto width="500"/>
+	<figcaption>Introducing a Lewis Acid Layer (LA) and an Electrical Double Layer (EDL)</figcaption>
+</figure>
+<p>The result is a improvement in system stability and performance, with the electrolysis system reaching over 100 hours of stable operation at 500 mA/cm², and achieving industrially viable current densities at lower voltages, comparable to traditional PEM electrolysers that use purified water. This method circumvents the need for desalination and could potentially tap into the vast reserves of seawater, making it a promising solution for sustainable and large-scale hydrogen production. <sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<h4 id="option-22-selective-membranes">Option 2.2: Selective Membranes
+<span><a href="#option-22-selective-membranes">#</a></span>
+</h4><p>Selective membranes, such as ion-exchange membranes, are used to separate the anode and cathode compartments, allowing specific ions to pass through. In the case of seawater electrolysis, the membranes would permit the passage of positive ions (cations) and block negative ions (anions), including chloride ions, from reaching the anode. This separation is critical to avoid the formation of chlorine gas. These membranes are not only selective but also have to withstand the harsh oxidative environment at the anode during OER.</p>
+<figure>
+	<img src="./membrane.png" alt="" height=auto width="500"/>
+	<figcaption>Using a membrane to separate sea water</figcaption>
+</figure>
+<h5 id="example-a-membrane-based-seawater-electrolyser-for-hydrogen-generation">Example: A membrane-based seawater electrolyser for hydrogen generation
+<span><a href="#example-a-membrane-based-seawater-electrolyser-for-hydrogen-generation">#</a></span>
+</h5><p>This study proposes a direct seawater electrolysis method that overcomes the side-reaction and corrosion issues without the need for a pre-desalination process. The authors demonstrate a system that operated stably at a current density of 250 mA/cm² for over 3,200 hours under practical conditions without failure.</p>
+<figure>
+	<img src="./membrane_nature.png" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+<p>This system utilizes a hydrophobic porous polytetrafluoroethylene (PTFE)-based waterproof breathable membrane that acts as a critical gas-path interface. This membrane is designed to allow the selective diffusion of water vapor while blocking the passage of liquid seawater and its dissolved impurities, including ions. The use of the membrane facilitates an in situ water purification process, which is essential for the direct electrolysis of seawater. This process is based on a self-driven phase transition mechanism that converts seawater into pure water vapor through spontaneous evaporation, which then diffuses through the membrane. <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+<figure>
+	<img src="./bubble.png" alt="" height=auto width="400"/>
+	<figcaption></figcaption>
+</figure>
+<p>The Self-Dampening Electrolyte (SDE), a concentrated potassium hydroxide (KOH) solution, is another key component of the system. The SDE serves a dual purpose: it functions as the electrolytic medium in which electrolysis occurs, and it maintains the necessary pressure differential across the membrane. As water vapor transits through the membrane from the seawater side, it is absorbed and re-liquefied by the SDE on the other side. This mechanism ensures that pure water is continuously supplied to the electrolyser, thereby sustaining the electrolysis process without the need for external water sources or purification systems. <sup id="fnref1:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+<figure>
+	<img src="./ion_concentration.png" alt="" height=auto width="400"/>
+	<figcaption>Constant concentration in the SDE due to the PTFE-membrane</figcaption>
+</figure>
+<p>This innovative setup achieves a new level of efficiency and sustainability in hydrogen production from seawater electrolysis. By establishing a thermodynamic equilibrium where the rate of water migration through the membrane matches the rate of electrolysis, the system maintains a consistent interface pressure difference. The result is a continuous and stable production of hydrogen, with the SDE playing a critical role in regulating the process. This method of direct seawater electrolysis eliminates the need for energy-intensive pre-desalination. <sup id="fnref2:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+<h2 id="conclusion">Conclusion
+<span><a href="#conclusion">#</a></span>
+</h2><p>Seawater splitting represents a promising frontier in the pursuit of sustainable hydrogen production. With current technology, it is indeed possible to carry out this process, and we are witnessing successful prototypes and operational models. However, the key to unlocking its full potential lies in scaling up these operations.</p>
+<figure>
+	<img src="./Shut-Up-and-Take-My-Money.png" alt="" height=auto width="500"/>
+	<figcaption>Give me seawater!</figcaption>
+</figure>
+<p>The future is bright for seawater splitting as part of a global move towards cleaner energy sources. 🚀</p>
+<h2 id="sources">Sources
+<span><a href="#sources">#</a></span>
+</h2><div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Recent advances in electrocatalysts for seawater splitting
+<a href="https://doi.org/10.1016/j.nanoms.2020.12.003">https://doi.org/10.1016/j.nanoms.2020.12.003</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Direct Electrolytic Splitting of Seawater: Opportunities and Challenges
+<a href="https://doi.org/10.1002/cssc.201501581">https://doi.org/10.1002/cssc.201501581</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Nitrogen-Doped Porous Nickel Molybdenum Phosphide Sheets for Efficient Seawater Splitting
+<a href="https://doi.org/10.1002/smll.202207310">https://doi.org/10.1002/smll.202207310</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>Direct seawater electrolysis by adjusting the local reaction environment of a catalyst
+<a href="https://doi.org/10.1038/s41560-023-01195-x">https://doi.org/10.1038/s41560-023-01195-x</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>A membrane-based seawater electrolyser for hydrogen generation
+<a href="https://doi.org/10.1038/s41586-022-05379-5">https://doi.org/10.1038/s41586-022-05379-5</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+        </div>
+        
+
+    
+
+
+<div class="post-info">
+    
+        <div class="post-date dt-published">2023-06-05</div>
+    
+
+    <a class="post-hidden-url u-url" href="https://czyrnik.me/blog/sea-water-splitting/">https://czyrnik.me/blog/sea-water-splitting/</a>
+    <a href="https://czyrnik.me" class="p-name p-author post-hidden-author h-card" rel="me">Toni Czyrnik</a>
+
+
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    
+                    <li><a href=""></a></li>
+                
+                    
+                    <li><a href=""></a></li>
+                
+            </ul>
+            
+            
+    </div>
+</div>
+
+    </article>
+
+    
+        
+    <div class="pagination post-pagination">
+        <div class="left pagination-item disabled">
+            
+        </div>
+        <div class="right pagination-item ">
+            
+                <a href="/blog/taipei-2023/">The Beauty and Culture of Taiwan: A Journey Through Time</a>
+            
+        </div>
+    </div>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+
+        </main>
+        
+            <footer class="common-footer">
+    
+    
+
+    <div class="common-footer-bottom">
+        
+        <div class="copyright">
+            <p>© Toni Czyrnik, 2023<br>
+            Powered by <a target="_blank" rel="noopener noreferrer" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" rel="noopener noreferrer" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.<br>
+            
+            </p>  
+        </div> 
+
+        
+
+    
+
+
+
+    <button class="theme-switcher">
+        Dark theme
+    </button>
+
+    <script>
+    const STORAGE_KEY = 'user-color-scheme'
+    const defaultTheme = "auto"
+
+    let currentTheme
+    let switchButton
+    let autoDefinedScheme = window.matchMedia('(prefers-color-scheme: dark)')
+
+    const autoChangeScheme = e => {
+        currentTheme = e.matches ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', currentTheme)
+        changeButtonText()
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        switchButton = document.querySelector('.theme-switcher')
+        currentTheme = detectCurrentScheme()
+        if (currentTheme == 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark')
+        }
+        if (currentTheme == 'auto') {
+            autoChangeScheme(autoDefinedScheme);
+            autoDefinedScheme.addListener(autoChangeScheme);
+        }
+        changeButtonText()
+        switchButton.addEventListener('click', switchTheme, false)
+    })
+
+    function detectCurrentScheme() {
+        if (localStorage.getItem(STORAGE_KEY)) {
+            return localStorage.getItem(STORAGE_KEY)
+        } 
+        if (defaultTheme) {
+            return defaultTheme
+        } 
+        if (!window.matchMedia) {
+            return 'light'
+        } 
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark'
+        }
+        return 'light'
+    }
+
+    function changeButtonText()
+    {   
+        switchButton.textContent = currentTheme == 'dark' ?  "Light theme" : "Dark theme"
+    }
+
+    function switchTheme(e) {
+        if (currentTheme == 'dark') {
+            localStorage.setItem(STORAGE_KEY, 'light')
+            document.documentElement.setAttribute('data-theme', 'light')
+            currentTheme = 'light'
+        } else {
+            localStorage.setItem(STORAGE_KEY, 'dark')
+            document.documentElement.setAttribute('data-theme', 'dark')
+            currentTheme = 'dark'
+        }
+        changeButtonText()
+    }
+    </script>
+   
+    </div>
+
+    <p class="h-card vcard">
+
+    <a href=https://czyrnik.me class="p-name u-url url fn" rel="me">Toni Czyrnik</a> 
+
+    
+
+    
+</p> 
+</footer>
+
+        
+    </div>
+</body>
+</html>

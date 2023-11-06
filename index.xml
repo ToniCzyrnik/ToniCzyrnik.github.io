@@ -6,10 +6,214 @@
     <description>Toni&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Jun 2023 00:00:00 +0000</lastBuildDate>
     
     <atom:link href="https://czyrnik.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to produce green hydrogen scaleable?</title>
+      <link>https://czyrnik.me/blog/sea-water-splitting/</link>
+      <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://czyrnik.me/blog/sea-water-splitting/</guid>
+      <description>&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Imagine a future where the vastness of the ocean becomes the fountain of our clean energy needs. Welcome to the cutting edge of seawater splitting — a revolutionary process poised to unlock an endless supply of hydrogen fuel.
+Dive with me into the deep blue as we explore how this remarkable technology could turn the tides on energy crises and solve the world&amp;rsquo;s thirst for sustainable power! 🌊&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./intro.png&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
+	&lt;figcaption&gt;Imaginary Offshore Hydrogen Production&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 id=&#34;water-splitting&#34;&gt;Water Splitting
+&lt;span&gt;&lt;a href=&#34;#water-splitting&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Seawater splitting &lt;em&gt;or seawater electrolysis&lt;/em&gt;, is the process of separating water  \(H_2O\) into its elements, hydrogen \(H_2\) and oxygen \(O_2\), through the application of electrical energy.
+In our case, hydrogen is the element we are interested in.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./water_splitting.png&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
+	&lt;figcaption&gt;Simple Setup for Water Splitting&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 id=&#34;the-problem-with-freshwater-earths-water-distribution&#34;&gt;The Problem with Freshwater: Earth&amp;rsquo;s Water Distribution
+&lt;span&gt;&lt;a href=&#34;#the-problem-with-freshwater-earths-water-distribution&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;About 96.5 % of earth&amp;rsquo;s water is stored in its oceans as seawater.
+Additionally, there&amp;rsquo;s about 1 % saline groundwater.
+A small fraction of about 2.5 % is freshwater.&lt;/p&gt;
+&lt;p&gt;The majority of freshwater is locked up in glaciers and ice caps, accounting for nearly 69 % of it.
+The remainder is groundwater (30 %) and surface freshwater like lakes and rivers (1 %).&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./water_distribution.png&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
+	&lt;figcaption&gt;Saltwater vs. Freshwater&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;hydrogen-in-sun-rich--arid-regions&#34;&gt;Hydrogen in sun-rich &amp;amp; arid regions
+&lt;span&gt;&lt;a href=&#34;#hydrogen-in-sun-rich--arid-regions&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;The production of hydrogen through the electrolysis with freshwater poses a sustainability challenge in sun-rich but arid regions.
+The process could exacerbate water scarcity by diverting freshwater from human, agricultural, and ecological needs. 🌵&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./sun_rich.png&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
+	&lt;figcaption&gt;Imaginary sun-rich region&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Innovations like direct seawater electrolysis and the use of treated wastewater are under research.
+Integrating hydrogen production with desalination plants could offer an alternative, although it increases energy consumption and decrease efficiency.
+Sustainable hydrogen production in these areas requires careful resource management and the development of technologies that minimize freshwater use.&lt;/p&gt;
+&lt;h2 id=&#34;composition-of-seawater&#34;&gt;Composition of Seawater
+&lt;span&gt;&lt;a href=&#34;#composition-of-seawater&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Seawater&amp;rsquo;s unique composition presents both opportunities and challenges for water splitting applications.
+The salts affect the durability and efficiency of electrolysis by catalyzing competing side reactions.
+Furthermore, these salts may react with the electrodes, creating deposits that can block the electrode surfaces and impede the reaction.
+Additionally, the pH of seawater (around 8) is lower than desired for current water splitting technologies, which can lowers the efficiency and output of hydrogen generation. &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./sea_water.png&#34; alt=&#34;&#34; height=auto width=&#34;500&#34;/&gt;
+	&lt;figcaption&gt;Composition of Sea Water (Wikipedia)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 id=&#34;chemical-reactions-oer--cler&#34;&gt;Chemical Reactions: OER &amp;amp; ClER
+&lt;span&gt;&lt;a href=&#34;#chemical-reactions-oer--cler&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;The Oxygen Evolution Reaction (OER) and the Chlorine Evolution Reaction (ClER) are two competing electrochemical reactions that can occur during the electrolysis of chloride-containing solutions, such as seawater.&lt;/p&gt;
+&lt;h3 id=&#34;oer&#34;&gt;OER
+&lt;span&gt;&lt;a href=&#34;#oer&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;OER is the desirable half-reaction in the water-splitting process, where water molecules are oxidized to produce oxygen gas, protons, and electrons.
+The overall reaction at the anode can be represented as:&lt;/p&gt;
+&lt;p&gt;$$2 \mathrm{H}_2 \mathrm{O}(l) \rightarrow \mathrm{O}_2(g)+4 H^{+}(a q)+4 e^{-}$$&lt;/p&gt;
+&lt;p&gt;This reaction has a standard potential of +1.23 V versus the Normal Hydrogen Electrode (NHE).
+However, a higher potential is required due to kinetic overpotentials.
+Usually, an overpotential of +2.00 V versus NHE is prefereable.&lt;/p&gt;
+&lt;h3 id=&#34;chlorine-evolution-reaction-cler&#34;&gt;Chlorine Evolution Reaction (ClER)
+&lt;span&gt;&lt;a href=&#34;#chlorine-evolution-reaction-cler&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;In ClER, chloride ions \(Cl-\) are oxidized to form chlorine gas \(Cl_2\) at the anode.
+This reaction can occur in chloride-rich solutions like seawater and is represented by:&lt;/p&gt;
+&lt;p&gt;$$2 C l^{-}(a q) \rightarrow C l_2(g)+2 e^{-}$$&lt;/p&gt;
+&lt;p&gt;The standard potential for this reaction is +1.36 V versus NHE.
+ClER is kinetically favored in chloride-containing solutions compared to OER. &lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;competition-between-oer-and-cler&#34;&gt;Competition between OER and ClER
+&lt;span&gt;&lt;a href=&#34;#competition-between-oer-and-cler&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;During the electrolysis of chloride-rich solutions like seawater, the Oxygen Evolution Reaction (OER) is challenged by the Chlorine Evolution Reaction (ClER).
+OER, which splits water to produce oxygen, is less energetically favorable and requires higher potentials than ClER, which generates chlorine gas from chloride ions and tends to occur more readily. &lt;sup id=&#34;fnref2:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./her_cler.png&#34; alt=&#34;&#34; height=auto width=&#34;500&#34;/&gt;
+	&lt;figcaption&gt;Conditions for OER&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;This rivalry not only lowers the efficiency of hydrogen production by favoring chlorine gas release but also risks contaminating the oxygen produced, degrading electrodes more quickly, and forming undesirable and potentially harmful chlorinated compounds. &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-problem-with-chlorine&#34;&gt;The problem with Chlorine
+&lt;span&gt;&lt;a href=&#34;#the-problem-with-chlorine&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Preferring the Chlorine Evolution Reaction (ClER) during electrolysis not advisable due to several reasons tied to chlorine&amp;rsquo;s production, demand, and associated costs.&lt;/p&gt;
+&lt;p&gt;Chlorine is a reactive and hazardous gas, which poses significant risks in handling and transportation.
+Due to its dangers, chlorine is typically produced on-site where it is needed for industrial processes.
+According to the Eurochlor 2012 annual review, a small fraction (5-6%) of chlorine demand in Europe involves transportation.
+Transporting chlorine, whether by road, rail, or pipeline, involves strict regulations, specialized equipment, and robust safety protocols to prevent leaks and exposure.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./skull.png&#34; alt=&#34;&#34; height=auto width=&#34;200&#34;/&gt;
+	&lt;figcaption&gt;Chlorine is toxic.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Consequently, from an economic and safety perspective, minimizing the production of chlorine through ClER in favor of the Oxygen Evolution Reaction (OER) during electrolysis is preferred.
+This approach aligns with the larger goal of sustainable and environmentally friendly hydrogen production, where the risks and costs associated with chlorine can be avoided.&lt;/p&gt;
+&lt;h2 id=&#34;solutions-for-seawater-electrolysis&#34;&gt;Solutions for Seawater Electrolysis
+&lt;span&gt;&lt;a href=&#34;#solutions-for-seawater-electrolysis&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Ensuring the predominance of the Oxygen Evolution Reaction (OER) over the Chlorine Evolution Reaction (ClER) in seawater electrolysis can be achieved through strategies that exclude chlorine from the reaction.
+Employing electrocatalysts that lower the activation energy required for OER can make it more energetically competitive, reducing the window in which ClER can occur.
+Additionally, designing selective membrane systems or modifying the electrolyte composition to physically or chemically inhibit chlorine ions from reaching the anode can minimize or prevent the occurrence of ClER.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./green_future.png&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
+	&lt;figcaption&gt;Imaginary town using renewable power&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;option-1-reducing-the-needed-overpotential-with-electrocatalysts&#34;&gt;Option 1: Reducing the needed Overpotential with Electrocatalysts
+&lt;span&gt;&lt;a href=&#34;#option-1-reducing-the-needed-overpotential-with-electrocatalysts&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;The overpotential for the oxygen evolution reaction (OER) is a critical parameter when evaluating the efficiency of electrocatalysts used for water splitting.
+It is the extra voltage above the thermodynamic potential required to drive the OER at a certain current density.
+A lower overpotential indicates a more efficient electrocatalyst, as less energy is wasted in the form of heat and other losses like side reactions.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./arrow.png&#34; alt=&#34;&#34; height=auto width=&#34;200&#34;/&gt;
+	&lt;figcaption&gt;Reducing overpotential ensures OER.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Research is looking for efficient catalysts with a high current density at low overpotentials. One research group finds Nitrogen-doped nickel molybdenum phosphide \(N-NiMo_3P\) as effective electrocatalysts for seawater splitting, showing lower overpotentials compared to commercial options and undoped counterparts. &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;\(N-NiMo_3P\) achieved an overpotential of 35 mV to reach a current density of 10 mA/cm² in seawater, outperforming commercial Pt/C which required 73.5 mV, and undoped \(NiMo_3P\) which required 73 mV under the same conditions.
+This performance is attributed to the nitrogen doping, which enhances the electrocatalytic activity by improving the catalyst&amp;rsquo;s electrical conductivity and increasing the density of active sites for the oxygen evolution reaction (OER). &lt;sup id=&#34;fnref1:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;option-2-protecting-the-anode-from-chlorine&#34;&gt;Option 2: Protecting the Anode from Chlorine
+&lt;span&gt;&lt;a href=&#34;#option-2-protecting-the-anode-from-chlorine&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Excluding chlorine from the anode reaction in seawater electrolysis can be achieved through anode coating and the use of selective membranes. Research and development in this area are ongoing to find cost-effective and durable solutions that can be applied on an industrial scale.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./shield.png&#34; alt=&#34;&#34; height=auto width=&#34;200&#34;/&gt;
+	&lt;figcaption&gt;Excluding chlorine from the reaction.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h4 id=&#34;option-21-anode-coatings&#34;&gt;Option 2.1: Anode Coatings
+&lt;span&gt;&lt;a href=&#34;#option-21-anode-coatings&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;Anode coatings are designed to enhance the selectivity of the Oxygen Evolution Reaction (OER) while suppressing the Chlorine Evolution Reaction (ClER).
+&lt;em&gt;The coatings can be applied through various techniques such as thermal decomposition, electroplating, or physical vapor deposition.&lt;/em&gt;
+&lt;em&gt;The thickness, morphology, and composition of the coating are critical parameters that determine its effectiveness.&lt;/em&gt;
+The aim is to create a surface that has high catalytic activity for water oxidation but a low affinity for chloride ion adsorption, thus preventing chlorine gas production.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./coating.png&#34; alt=&#34;&#34; height=auto width=&#34;500&#34;/&gt;
+	&lt;figcaption&gt;Repelling chlorine from the electrode&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h5 id=&#34;example-direct-seawater-electrolysis-by-adjusting-the-local-reaction-environment-of-a-catalyst&#34;&gt;Example: Direct seawater electrolysis by adjusting the local reaction environment of a catalyst
+&lt;span&gt;&lt;a href=&#34;#example-direct-seawater-electrolysis-by-adjusting-the-local-reaction-environment-of-a-catalyst&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h5&gt;&lt;p&gt;The paper discusses a method for direct seawater electrolysis for hydrogen production without the need for desalination, aiming to address the shortage of freshwater resources. Seawater must be desalinated before it can be used in proton exchange membrane (PEM) electrolysers.&lt;/p&gt;
+&lt;p&gt;The research introduces an approach where a Lewis Acid Layer with the help of \(Cr_2O_3\) is added to the catalysts. This modification helps to dynamically split water molecules and capture hydroxyl anions, thus generating local alkalinity that improves the kinetics of electrode reactions, avoids chloride attack, and prevents precipitate formation on the electrodes. &lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./schematic_nature.png&#34; alt=&#34;&#34; height=auto width=&#34;500&#34;/&gt;
+	&lt;figcaption&gt;Introducing a Lewis Acid Layer (LA) and an Electrical Double Layer (EDL)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The result is a improvement in system stability and performance, with the electrolysis system reaching over 100 hours of stable operation at 500 mA/cm², and achieving industrially viable current densities at lower voltages, comparable to traditional PEM electrolysers that use purified water. This method circumvents the need for desalination and could potentially tap into the vast reserves of seawater, making it a promising solution for sustainable and large-scale hydrogen production. &lt;sup id=&#34;fnref1:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h4 id=&#34;option-22-selective-membranes&#34;&gt;Option 2.2: Selective Membranes
+&lt;span&gt;&lt;a href=&#34;#option-22-selective-membranes&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;Selective membranes, such as ion-exchange membranes, are used to separate the anode and cathode compartments, allowing specific ions to pass through. In the case of seawater electrolysis, the membranes would permit the passage of positive ions (cations) and block negative ions (anions), including chloride ions, from reaching the anode. This separation is critical to avoid the formation of chlorine gas. These membranes are not only selective but also have to withstand the harsh oxidative environment at the anode during OER.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./membrane.png&#34; alt=&#34;&#34; height=auto width=&#34;500&#34;/&gt;
+	&lt;figcaption&gt;Using a membrane to separate sea water&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h5 id=&#34;example-a-membrane-based-seawater-electrolyser-for-hydrogen-generation&#34;&gt;Example: A membrane-based seawater electrolyser for hydrogen generation
+&lt;span&gt;&lt;a href=&#34;#example-a-membrane-based-seawater-electrolyser-for-hydrogen-generation&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h5&gt;&lt;p&gt;This study proposes a direct seawater electrolysis method that overcomes the side-reaction and corrosion issues without the need for a pre-desalination process. The authors demonstrate a system that operated stably at a current density of 250 mA/cm² for over 3,200 hours under practical conditions without failure.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./membrane_nature.png&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
+	&lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;This system utilizes a hydrophobic porous polytetrafluoroethylene (PTFE)-based waterproof breathable membrane that acts as a critical gas-path interface. This membrane is designed to allow the selective diffusion of water vapor while blocking the passage of liquid seawater and its dissolved impurities, including ions. The use of the membrane facilitates an in situ water purification process, which is essential for the direct electrolysis of seawater. This process is based on a self-driven phase transition mechanism that converts seawater into pure water vapor through spontaneous evaporation, which then diffuses through the membrane. &lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./bubble.png&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
+	&lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The Self-Dampening Electrolyte (SDE), a concentrated potassium hydroxide (KOH) solution, is another key component of the system. The SDE serves a dual purpose: it functions as the electrolytic medium in which electrolysis occurs, and it maintains the necessary pressure differential across the membrane. As water vapor transits through the membrane from the seawater side, it is absorbed and re-liquefied by the SDE on the other side. This mechanism ensures that pure water is continuously supplied to the electrolyser, thereby sustaining the electrolysis process without the need for external water sources or purification systems. &lt;sup id=&#34;fnref1:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./ion_concentration.png&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
+	&lt;figcaption&gt;Constant concentration in the SDE due to the PTFE-membrane&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;This innovative setup achieves a new level of efficiency and sustainability in hydrogen production from seawater electrolysis. By establishing a thermodynamic equilibrium where the rate of water migration through the membrane matches the rate of electrolysis, the system maintains a consistent interface pressure difference. The result is a continuous and stable production of hydrogen, with the SDE playing a critical role in regulating the process. This method of direct seawater electrolysis eliminates the need for energy-intensive pre-desalination. &lt;sup id=&#34;fnref2:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;span&gt;&lt;a href=&#34;#conclusion&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Seawater splitting represents a promising frontier in the pursuit of sustainable hydrogen production. With current technology, it is indeed possible to carry out this process, and we are witnessing successful prototypes and operational models. However, the key to unlocking its full potential lies in scaling up these operations.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./Shut-Up-and-Take-My-Money.png&#34; alt=&#34;&#34; height=auto width=&#34;500&#34;/&gt;
+	&lt;figcaption&gt;Give me seawater!&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The future is bright for seawater splitting as part of a global move towards cleaner energy sources. 🚀&lt;/p&gt;
+&lt;h2 id=&#34;sources&#34;&gt;Sources
+&lt;span&gt;&lt;a href=&#34;#sources&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
+&lt;/h2&gt;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Recent advances in electrocatalysts for seawater splitting
+&lt;a href=&#34;https://doi.org/10.1016/j.nanoms.2020.12.003&#34;&gt;https://doi.org/10.1016/j.nanoms.2020.12.003&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref2:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Direct Electrolytic Splitting of Seawater: Opportunities and Challenges
+&lt;a href=&#34;https://doi.org/10.1002/cssc.201501581&#34;&gt;https://doi.org/10.1002/cssc.201501581&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;Nitrogen-Doped Porous Nickel Molybdenum Phosphide Sheets for Efficient Seawater Splitting
+&lt;a href=&#34;https://doi.org/10.1002/smll.202207310&#34;&gt;https://doi.org/10.1002/smll.202207310&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;Direct seawater electrolysis by adjusting the local reaction environment of a catalyst
+&lt;a href=&#34;https://doi.org/10.1038/s41560-023-01195-x&#34;&gt;https://doi.org/10.1038/s41560-023-01195-x&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34;&gt;
+&lt;p&gt;A membrane-based seawater electrolyser for hydrogen generation
+&lt;a href=&#34;https://doi.org/10.1038/s41586-022-05379-5&#34;&gt;https://doi.org/10.1038/s41586-022-05379-5&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref2:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>The Beauty and Culture of Taiwan: A Journey Through Time</title>
@@ -90,25 +294,25 @@
       <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://czyrnik.me/blog/lantern-festival-2023/</guid>
-      <description>&lt;p&gt;The Lantern Festival in Taiwan is an important traditional Chinese festival that marks the end of the Lunar New Year celebrations. It is a time when people gather to light and appreciate colourful lanterns, participate in various cultural activities, and enjoy performances and traditional food.&lt;/p&gt;
+      <description>&lt;p&gt;The Lantern Festival in Taiwan is an important traditional Chinese festival that marks the end of the Lunar New Year celebrations. It is a time when people gather to light and appreciate colorful lanterns, participate in various cultural activities, and enjoy performances and traditional food.&lt;/p&gt;
 &lt;p&gt;There are several places where you can watch the Lantern Festival. I combined the day with a trip to Jiufen and finished with the lantern festival in Pingxi. There&amp;rsquo;s another town called Shifen nearby. I am told you can buy and release lanterns all year round next to the railway.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&#34;./lantern.gif&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
+	&lt;figcaption&gt;Start of the Lanterns in Pingxi&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;h2 id=&#34;pingxi-festival&#34;&gt;Pingxi Festival
 &lt;span&gt;&lt;a href=&#34;#pingxi-festival&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h2&gt;&lt;p&gt;The Pingxi Lantern Festival is a part of the larger Taipei Lantern Festival and takes place annually in the small town of Pingxi since 1999. It&amp;rsquo;s the most famous celebration in Taiwan. The highlight of the festival is the release of sky lanterns, made of paper with a candle or fuel cell inside, which rise into the sky after participants write their wishes on them. People gather in groups and release their lanterns at the same time. The release of sky lanterns is a breathtaking sight, with the sky filled with floating lanterns of different colors and sizes. The festival attracts thousands of visitors each year. It is a celebration of local culture and a time for families and friends to come together.&lt;/p&gt;
 &lt;figure&gt;
-	&lt;img src=&#34;./lantern.gif&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
-	&lt;figcaption&gt;Start of the lanterns&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
 	&lt;img src=&#34;./pingxi.jpeg&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
-	&lt;figcaption&gt;Pingxi&lt;/figcaption&gt;
+	&lt;figcaption&gt;Pingxi during Latern Festival&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;h3 id=&#34;jiufen&#34;&gt;Jiufen
 &lt;span&gt;&lt;a href=&#34;#jiufen&#34;&gt;#&lt;/a&gt;&lt;/span&gt;
 &lt;/h3&gt;&lt;p&gt;Jiufen is a historic mountain town. Once a prosperous gold mining town during the Japanese colonial period, it is now a popular tourist destination. The town is referred to as the &amp;ldquo;real-life version of Spirited Away&amp;rdquo;, a reference to the Japanese animated film directed by Hayao Miyazaki. The movie&amp;rsquo;s fantastical, labyrinthine setting is said to have been inspired by Jiufen&amp;rsquo;s narrow streets and steep staircases, its traditional tea houses and street vendors. &lt;em&gt;(Hayao denies it.)&lt;/em&gt;&lt;/p&gt;
 &lt;figure&gt;
 	&lt;img src=&#34;./jiufen.jpeg&#34; alt=&#34;&#34; height=auto width=&#34;400&#34;/&gt;
-	&lt;figcaption&gt;Jiufen&lt;/figcaption&gt;
+	&lt;figcaption&gt;Jiufen Teahouse&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;In addition to its architecture, Jiufen is known for its stunning views of the Pacific Ocean and its vibrant night market. The night market offers local food, souvenirs, and street performances, while the town&amp;rsquo;s old-world charm and modern amenities make it a unique travel experience.&lt;/p&gt;
 </description>
